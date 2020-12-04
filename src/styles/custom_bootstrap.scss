@@ -1,0 +1,104 @@
+// Override default variables before the import
+$body-bg: #ece9e7;
+
+
+// Import Bootstrap and its default variables
+// you must prefix imports from node_modules with ~ as displayed above.
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.container-700 {
+    max-width: 700px;
+}
+
+.question-card {
+    position: relative;
+    .question-idx {
+        font-size: 30px;
+        position: absolute;
+        font-style: initial;
+        font-weight: bold;
+        text-align: center;
+        width: 50px;
+        padding-right: 15px;
+        color: #b5b5b5;
+    }
+
+    .question-card-content {
+        background: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        min-height: 200px;
+        margin: 20px auto 20px 50px;
+        position: relative;
+
+        .question-title {
+            font-weight: 400;
+            font-size: 16px;
+            color: #2a4b4a;
+            line-height: 1.5em;
+            padding-right: 60px;
+        }
+        .question-badge {
+            font-size: 12px;
+            background: #eee;
+            border-left: 4px solid #42605e;
+            color: #42605e;
+            border-radius: 0 5px 5px 0;
+            padding: 1px 8px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            display: block;
+        }
+
+        .question-bm-btn {
+            border: none;
+            background-color: #ece9e7;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            outline: none;
+            line-height: 16px;
+            &:hover {
+                background-color: darken(#ece9e7, 3%);
+            }
+            &.active {
+                color: #795548;
+            }
+        }
+        .ans-btn-group {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        .ans-btn {
+            min-width: 70px;
+            display: inline-block;
+            background-color: #ece9e7;
+            border-bottom: 5px solid #a8a8a8;
+            padding: 5px;
+            margin: 0 5px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #212529;
+            // &:hover {
+            //     background-color: darken(#c5b7a2, 10%);
+            // }
+            &:active {
+                transform: translate(0px, 5px);
+                -webkit-transform: translate(0px, 5px);
+                border-bottom: 2px solid #a8a8a8;
+            }
+        }
+    }
+}
