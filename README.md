@@ -54,3 +54,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 npm uninstall node-sass
 npm install node-sass@4.14.1
 ```
+ 
+2. install TypeScript
+
+To solve this editor error: 
+Specify JSX code generation: 'preserve', 'react', 'react-jsx', 'react-jsxdev' or'react-native'. Requires TypeScript version 2.2 or late
+
+npm install -g typescript
