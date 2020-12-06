@@ -37,20 +37,28 @@ body {
 
         .question-title {
             font-weight: 400;
-            font-size: 16px;
+            font-size: 17px;
             color: #2a4b4a;
-            line-height: 1.5em;
+            line-height: 1.6em;
             padding-right: 60px;
         }
         .question-badge {
             font-size: 12px;
             background: #eee;
-            border-left: 4px solid #42605e;
-            color: #42605e;
+            border-left: 4px solid transparent;
+            color: #333;
             border-radius: 0 5px 5px 0;
             padding: 1px 8px;
             display: inline-block;
             margin-bottom: 10px;
+            &.badge-market {
+                border-left-color: #42605e;
+                color: #42605e;
+            }
+            &.badge-ethics {
+                border-left-color: #6f4608;
+                color: #6f4608;
+            }
         }
 
         button {
@@ -78,27 +86,52 @@ body {
             }
         }
         .ans-btn-group {
-            margin-left: -5px;
-            margin-right: -5px;
-        }
-        .ans-btn {
-            min-width: 70px;
-            display: inline-block;
-            background-color: #ece9e7;
-            border-bottom: 5px solid #a8a8a8;
-            padding: 5px;
-            margin: 0 5px;
-            border-radius: 10px;
-            font-weight: bold;
-            color: #212529;
-            // &:hover {
-            //     background-color: darken(#c5b7a2, 10%);
-            // }
-            &:active {
-                transform: translate(0px, 5px);
-                -webkit-transform: translate(0px, 5px);
-                border-bottom: 2px solid #a8a8a8;
+            .custom-control {
+                min-height: 2rem;
+                margin: 12px auto;
+                // padding-left: 35px;
+                // &:hover {
+                //     background: #f3ede3;
+                //     border-radius: 4px;   
+                // }
+            }
+            label {
+                font-size: 15px;
+                color: #192525;
+                padding: 4px 0;
+            }
+            .custom-control-label {
+                cursor: pointer;
+                &:before {
+                    top: calc(0.25rem + 4px);
+                }
+                &:after {
+                    top: calc(0.25rem + 4px);
+                }
+            }
+            .custom-control-input:checked ~ .custom-control-label::before {
+                border-color: #FF9800;
+                background-color: #FF9800;
             }
         }
+        // .ans-btn {
+        //     min-width: 70px;
+        //     display: inline-block;
+        //     background-color: #ece9e7;
+        //     border-bottom: 5px solid #a8a8a8;
+        //     padding: 5px;
+        //     margin: 0 5px;
+        //     border-radius: 10px;
+        //     font-weight: bold;
+        //     color: #212529;
+        //     // &:hover {
+        //     //     background-color: darken(#c5b7a2, 10%);
+        //     // }
+        //     &:active {
+        //         transform: translate(0px, 5px);
+        //         -webkit-transform: translate(0px, 5px);
+        //         border-bottom: 2px solid #a8a8a8;
+        //     }
+        // }
     }
 }

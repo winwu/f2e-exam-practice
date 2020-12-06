@@ -18,7 +18,7 @@ const Practice = () => {
   return (
     <>
       <div>
-        <h2>practice</h2>
+        <h2>模擬考模式</h2>
       </div>
 
       {
@@ -27,9 +27,7 @@ const Practice = () => {
             <div className="question-idx">{idx + 1}</div>
             <div className="question-card-content">
               <div>
-                <span className="question-badge">{
-                categoryMap[d.category]
-                }:{d.qn}</span>
+                <span className={`question-badge badge-${d.category}`}>{categoryMap[d.category]} {d.qn}</span>
               </div>
               <button className="question-bm-btn">
                 {
@@ -41,7 +39,13 @@ const Practice = () => {
                 {
                   d.options.map((o: IOption) => {
                     return (
-                      <button key={`${o.text}`} className="ans-btn">{o.text}</button>
+                      // <label htmlFor={`opt-${idx}-${o.val}`}>
+                      //   <button key={`${o.text}`} id={`opt-${idx}-${o.val}`} className="ans-btn">{o.val}</button>{o.text}
+                      // </label>
+                      <div key={`${o.text}`} className="custom-control custom-radio">
+                        <input type="radio" id={`opt-${idx}-${o.val}`} name="customRadio" className="custom-control-input" />
+                        <label className="custom-control-label d-block" htmlFor={`opt-${idx}-${o.val}`}>({o.val}) {o.text}</label>
+                      </div>
                     )
                   })
                 }
