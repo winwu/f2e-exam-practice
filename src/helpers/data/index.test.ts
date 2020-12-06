@@ -1,5 +1,18 @@
 import { formatJsonData, getAllQuestion, convertQuestionTitleToAnsMapping, pickQuestion, pickHalfHalfQuestion } from './index';
 
+let originalWarn: any;
+
+beforeAll(() => {
+    originalWarn = global.console.warn;
+    // mock console.warn
+    global.console.warn = jest.fn();
+});
+
+afterAll(() => {
+    // revert original warn
+    global.console.warn = originalWarn;
+});
+
 describe('[Helpers]', () => {
     test('[getAllQuestion] get all 1119 questions array', () => {
         const result = getAllQuestion();
@@ -39,8 +52,7 @@ describe('[Helpers]', () => {
         const str = `demo question title? (1)ans 1 (2)ans 2 (3)ans 3\n  (4)ans 4`;
         const result2 = convertQuestionTitleToAnsMapping(str);
     
-        console.log(str);
-        console.log('result2', result2);
+
         expect(result2).toMatchObject({
             title: 'demo question title?',
             options: [
@@ -68,6 +80,7 @@ describe('[Helpers]', () => {
         const text = `demo question title? (1)ans 1 (2)ans 2 (3)ans`;
         const result = convertQuestionTitleToAnsMapping(text);
         expect(result).toBeNull();
+        expect(global.console.warn).toHaveBeenCalledWith(`${text} is invalid question title format`);
     });
 
     test('formatJsonData', () => {

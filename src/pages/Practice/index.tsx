@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { bookmark, bookmarkFill } from '../../components/icons';
-import tempData from './data.json';
 
-interface IQuestion {
-  qn: string | number;
-  ans: string | number;
-  title: string;
-  category: string;
-}
+import { IOption, IformatedQuestion, pickHalfHalfQuestion} from '../../helpers/data/index';
+const tempData = pickHalfHalfQuestion(100);
+
+const categoryMap: {
+  [categoryKey: string]: string
+} = {
+  market: '金融市場常識',
+  ethics: '職業道德'
+};
 
 const Practice = () => {
-  const [data] = useState<IQuestion[]>(tempData);
+  
+  const [data] = useState<IformatedQuestion[]>(tempData);
 
   return (
     <>
@@ -19,12 +22,14 @@ const Practice = () => {
       </div>
 
       {
-        data.map((d: IQuestion, idx: number) => (
+        data.map((d: any, idx: number) => (
           <div className="question-card" key={idx}>
             <div className="question-idx">{idx + 1}</div>
             <div className="question-card-content">
               <div>
-                <span className="question-badge">Cate badge{d.qn}</span>
+                <span className="question-badge">{
+                categoryMap[d.category]
+                }:{d.qn}</span>
               </div>
               <button className="question-bm-btn">
                 {
@@ -34,9 +39,9 @@ const Practice = () => {
               <h3 className="question-title">{d.title}</h3>
               <div className="ans-btn-group">
                 {
-                  ['A', 'B', 'C', 'D'].map((ans) => {
+                  d.options.map((o: IOption) => {
                     return (
-                      <button key={ans} className="ans-btn">{ans}</button>
+                      <button key={`${o.text}`} className="ans-btn">{o.text}</button>
                     )
                   })
                 }

@@ -1,45 +1,81 @@
-var Chance = require('chance');
-var chance = new Chance();
-
 import marketData from '../../datas/market_formated.json';
 import ethicsData from '../../datas/ethics_formated.json';
 
-const regex: RegExp = /(.*?)\s*\(1\)(.*?)\s*\(2\)(.*?)\s*\(3\)(.*?)\s*\(4\)(.*?)\s*$/gm;
-
-interface IOption {
-    val: number;
-    text: string;
-};
+var Chance = require('chance');
+var chance = new Chance();
 
 type originalQuestion = {
     ans: number;
     qn: string | number;
     title: string;
-    category: 'market' | 'ethics'
+    category: 'market' | 'ethics' | string;
 }
 
-type formatedQuestion = {
+export interface IOption {
+    val: number;
+    text: string;
+};
+
+export interface IformatedQuestion {
     ans: number;
     qn: string | number;
     title?: string;
     options?: IOption[];
-    category: 'market' | 'ethics'
+    category: 'market' | 'ethics' | string;
 }
 
-export const formatJsonData = (datas: originalQuestion[]) : formatedQuestion[] => {
+export const convertQuestionTitleToAnsMapping = (str: string) : {
+    title: string;
+    options: IOption[]
+} | null => {
+    // regex can't defined as global variable
+    // please search "RegExp.exec() returns NULL sporadically"
+    const regex: RegExp = /(.*?)\s*\(1\)(.*?)\s*\(2\)(.*?)\s*\(3\)(.*?)\s*\(4\)(.*?)\s*$/g;
+    const match: RegExpExecArray | null = regex.exec(str);
+    
+    if (!Array.isArray(match)) {
+        console.warn(`${str} is invalid question title format`);
+        return null;
+    }
+
+    let options = [];
+    let optionsCounter = 1;
+    // index 2 ~ 5 means A, B, C, D
+    for (let idx = 2; idx <= 5; idx++) {
+        options.push({
+            val: optionsCounter,
+            // remove \n
+            text: match[idx].trim()
+        })
+        optionsCounter++;
+    }
+
+    return {
+        title: match[1] || 'no title',
+        options
+    };
+}
+
+export const formatJsonData = (datas: originalQuestion[]) : IformatedQuestion[] => {
     const result = datas.map((d) => {
+
+        const trimedTitle = d.title.replace(/\n/g,' ');
+
         return {
             ans: Math.abs(d.ans),
             qn: d.qn,
             category: d.category,
-            ...convertQuestionTitleToAnsMapping(d.title)
+            ...convertQuestionTitleToAnsMapping(trimedTitle)
         }
     });
     return result;
 }   
 
+const formattedMarketData = formatJsonData(marketData);
+const fommattedEthicsData = formatJsonData(ethicsData);
+
 export const getAllQuestion = () => {
-    return [...marketData, ...ethicsData];
+    return [...formattedMarketData, ...fommattedEthicsData];
 }
 
 export const pickQuestion = (examLib: 'market' | 'ethics' | '*', quantity?: number | null) => {
@@ -47,7 +83,7 @@ export const pickQuestion = (examLib: 'market' | 'ethics' | '*', quantity?: numb
     if (examLib === '*') {
         source = getAllQuestion();
     } else {
-        source = examLib === 'market' ? marketData : ethicsData;
+        source = examLib === 'market' ? formattedMarketData : fommattedEthicsData;
     }
 
     if (quantity === null) {
@@ -68,40 +104,9 @@ export const pickQuestion = (examLib: 'market' | 'ethics' | '*', quantity?: numb
 export const pickHalfHalfQuestion = (quantity: 50 | 100) => {
     const amount = quantity / 2;
 
-    const marketPicked = chance.pickset(marketData, amount);
-    const ethicsPicked = chance.pickset(ethicsData, amount);
+    const marketPicked = chance.pickset(formattedMarketData, amount);
+    const ethicsPicked = chance.pickset(fommattedEthicsData, amount);
 
     return [...marketPicked, ...ethicsPicked];
 }
 
-export const convertQuestionTitleToAnsMapping = (title: string) : {
-    title: string;
-    options: IOption[]
-} | null => {
-    const match: RegExpExecArray | null = regex.exec(title);
-
-    let result: {
-        title: string;
-        options: IOption[]
-    } | null = null;
-
-    if (Array.isArray(match)) {
-        let options = [];
-        let optionsCounter = 1;
-        for (let idx = 2; idx <= match.length; idx++) {
-            if (match[idx]) {
-                options.push({
-                    val: optionsCounter,
-                    // remove \n
-                    text: match[idx].trim()
-                })
-                optionsCounter++;
-            }
-        }
-        result = {
-            title:  match[1],
-            options
-        }
-    }
-    return result;
-}
