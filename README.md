@@ -61,3 +61,5 @@ To solve this editor error:
 Specify JSX code generation: 'preserve', 'react', 'react-jsx', 'react-jsxdev' or'react-native'. Requires TypeScript version 2.2 or late
 
 npm install -g typescript
+
+3. vscode 右下角選擇 typescrip -> 使用工作區的版本
