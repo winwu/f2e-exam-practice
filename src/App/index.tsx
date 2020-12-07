@@ -9,33 +9,41 @@ import {
 // pages
 import Home from '../pages/Home';
 import Practice from '../pages/Practice';
+import { chevronLeftWhite } from '../components/icons';
 
 function App() {
   return (
-    <div className="container container-700">
-      <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/practice">Practice</Link>
-            </li>
-          </ul>
+    <Router>
+      {/* <nav className="navbar sticky-top navbar-light bg-light">
+        <a className="navbar-brand" href="#">⾦融市場常識與職業道德</a>
+      </nav> */}
 
-          <hr />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/practice">
-              <Practice />
-            </Route>
-          </Switch>
+      <header className="app-header py-3">
+        <div className="container container-700">
+          <div className="row flex-nowrap justify-content-between align-items-center">
+              <div className="col-2">
+                <Link to="/" style={{lineHeight: '16px', verticalAlign: 'top'}}>{chevronLeftWhite}</Link>
+              </div>
+              <div className="col-8 text-center">
+                <div className="header-logo">⾦融市場常識與職業道德</div>
+              </div>
+              <div className="col-2 d-flex justify-content-end align-items-center">
+                {/* <a className="btn btn-sm btn-outline-secondary" href="#">Sign up</a> */}
+              </div>
+          </div>
         </div>
-      </Router>
-    </div>
+      </header>
+      <div className="container container-700">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/practice">
+            <Practice />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

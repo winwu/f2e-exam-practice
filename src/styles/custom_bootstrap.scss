@@ -14,33 +14,74 @@ body {
     max-width: 700px;
 }
 
+.app-header {
+    // background: #42605e;
+    // color: #fff;
+    // margin-bottom: 15px;
+    a {
+        color:#333;
+    }
+}
+
+.home-jumbotron {
+    color: #494a4a;
+    background: #d0d0d0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-shadow: 0px 1px 7px #d4d4d4;
+    .home-jumbotron-title {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+}
+.exams-wrap {
+    padding-bottom: 60px;
+}
+
 .question-card {
+    margin-bottom: 20px;
     position: relative;
+    &.has-error {
+        .question-card-content {
+            border-color: red;
+        }
+    }
+    // &.has-success {
+    //     .question-card-content {
+    //         border: 2px solid red;
+    //     }
+    // }
     .question-idx {
-        font-size: 30px;
-        position: absolute;
+        font-size: 20px;
         font-style: initial;
         font-weight: bold;
-        text-align: center;
-        width: 80px;
-        padding-right: 15px;
+        min-width: 30px;
+        padding-right: 10px;
         color: #b5b5b5;
+        display: inline-block;
+        text-align: left;
     }
-
+    
     .question-card-content {
         background: #fff;
         padding: 10px 15px;
         border-radius: 5px;
         min-height: 200px;
-        margin: 20px auto 20px 80px;
+        margin: 0 auto;
         position: relative;
-
+        border: 2px solid transparent;
+        .question-card-header {
+            margin-bottom: 10px;
+        }
         .question-title {
             font-weight: 400;
             font-size: 17px;
             color: #2a4b4a;
             line-height: 1.6em;
             padding-right: 60px;
+            vertical-align: middle;   
         }
         .question-badge {
             font-size: 12px;
@@ -50,7 +91,6 @@ body {
             border-radius: 0 5px 5px 0;
             padding: 1px 8px;
             display: inline-block;
-            margin-bottom: 10px;
             &.badge-market {
                 border-left-color: #42605e;
                 color: #42605e;
@@ -86,52 +126,134 @@ body {
             }
         }
         .ans-btn-group {
+            color: #192525;
             .custom-control {
                 min-height: 2rem;
-                margin: 12px auto;
+                margin: 2px auto;
                 // padding-left: 35px;
                 // &:hover {
                 //     background: #f3ede3;
                 //     border-radius: 4px;   
                 // }
+                &.correct-ans-marked {
+                    background: #fff3f3;
+                    .custom-control-label {
+                        color: red;
+                    }
+                }
             }
             label {
                 font-size: 15px;
-                color: #192525;
-                padding: 4px 0;
+                
+                padding: 8px 0;
             }
             .custom-control-label {
                 cursor: pointer;
                 &:before {
-                    top: calc(0.25rem + 4px);
+                    top: calc(0.25rem + 8px);
                 }
                 &:after {
-                    top: calc(0.25rem + 4px);
+                    top: calc(0.25rem + 8px);
                 }
             }
             .custom-control-input:checked ~ .custom-control-label::before {
-                border-color: #FF9800;
-                background-color: #FF9800;
+                border-color: #333;
+                background-color: #333;
             }
         }
-        // .ans-btn {
-        //     min-width: 70px;
-        //     display: inline-block;
-        //     background-color: #ece9e7;
-        //     border-bottom: 5px solid #a8a8a8;
-        //     padding: 5px;
-        //     margin: 0 5px;
-        //     border-radius: 10px;
-        //     font-weight: bold;
-        //     color: #212529;
-        //     // &:hover {
-        //     //     background-color: darken(#c5b7a2, 10%);
-        //     // }
-        //     &:active {
-        //         transform: translate(0px, 5px);
-        //         -webkit-transform: translate(0px, 5px);
-        //         border-bottom: 2px solid #a8a8a8;
-        //     }
-        // }
     }
 }
+
+.ans-btn-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: #ebe9e6;
+    box-shadow: 0px -2px 9px #d8d8d8;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.ans-btn {
+    outline: none;
+    border: none;
+    min-width: 170px;
+    background-color: #42605e;
+    border-bottom: 5px solid #a8a8a8;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+
+    &.full-w {
+        width: 100%;
+        display: block;
+    }
+    &:hover {
+        background-color: darken(#c5b7a2, 10%);
+    }
+    &:disabled {
+        border-bottom: none;
+        background: #999;   
+    }
+    &:active {
+        transform: translate(0px, 5px);
+        -webkit-transform: translate(0px, 5px);
+        border-bottom: 2px solid #a8a8a8;
+    }
+
+    &.practice-bg {
+        background-color: #8c6830;
+        &:hover {
+            background-color: darken(#8c6830, 10%);
+        }
+    }
+    &.exam-bg {
+        background-color: #42605e;
+        &:hover {
+            background-color: darken(#42605e, 10%);
+        }
+    }
+}
+
+.score-result {
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #fff;
+    background: #ff4400;
+    border-radius: 10px;
+    margin: 0 10px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.portal-btn-group {
+    .col {
+        min-height: 100px;
+    }
+}
+
+// .portal-btn {
+//     display: block;
+//     border-radius: 10px;
+//     padding: 10px 16px;
+//     text-align: center;
+//     color: #393d40;
+//     background: #ffffff;
+//     box-shadow: 0px 2px 5px #d2d2d2;
+    
+//     &:hover {
+//         text-decoration: none;
+//     }
+// }
