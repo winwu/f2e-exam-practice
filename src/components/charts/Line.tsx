@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
-const timeFormat = d3.timeFormat("%H:%M:%S");
+const timeFormat = d3.timeFormat("%H:%M");
 
 const LineChart = (props: {
     datas: any[]
@@ -41,7 +41,7 @@ const LineChart = (props: {
         const minTime: any = d3.min(newData, (d: any) => d.time);
         const maxTime: any = d3.max(newData, (d: any) => d.time);
         // const min: any = d3.min(datas, (d) => d.score);
-        // const max: any = d3.max(datas, (d) => d.score);
+        const max: any = d3.max(datas, (d) => d.score);
     
     
         console.log('transformData newData', newData);
@@ -77,29 +77,48 @@ const LineChart = (props: {
             .attr('class', 'x-axis')
             .attr('transform', `translate(0, ${height - margin.bottom})`)
             // .attr('transform', `translate(${margin.left}, ${height - margin.bottom})`)
-            .call(d3.axisBottom(x).tickFormat((d: any) => timeFormat(d)).tickSizeOuter(0));
+            .call(d3.axisBottom(x).tickFormat((d: any) => timeFormat(d)).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
 
         svgElement.append("g")
             .attr('class', 'y-axis')
             // .attr('transform', `translate(${margin.left},0)`)
             .attr('transform', `translate(${margin.left},0)`)
-            .call(d3.axisLeft(y).ticks(5).tickSizeOuter(0));
+            .call(d3.axisLeft(y).ticks(5).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
             // .tickSize(-width)
         
         
-        // svgElement.select(".domain").remove()
 
-        svgElement.selectAll('.y-axis .tick line').attr('stroke', '#000').attr('stroke-width', 2);
-        svgElement.selectAll('.y-axis path').attr('stroke', '#000').attr('stroke-width', 2);
+        // svgElement.select(".domain").remove();
+        
+        svgElement.select('.domain').attr("stroke", "#999")
+        svgElement.selectAll('.x-axis text').attr('style', 'font-size: 12px;color: #999;font-weight: 500;');
+        
+        svgElement.selectAll('.y-axis text').attr('style', 'font-weight: bold;color: #999;');
+        svgElement.selectAll('.y-axis path').attr('stroke', '#999').attr('stroke-width', 1);
 
+
+        // Set the gradient
+        svgElement.append("linearGradient")
+            .attr("id", "line-gradient")
+            .attr("gradientUnits", "userSpaceOnUse")
+            .selectAll("stop")
+                .data([
+                {offset: "0%", color: "#ffa00b"},
+                {offset: "100%", color: "#42605e"}
+            ])
+            .enter().append("stop")
+                .attr("offset", function(d: any) { return d.offset; })
+                .attr("stop-color", function(d: any) { return d.color; });
 
         svgElement.append('path')
             .attr('class', 'line')
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 1.5)
+            .attr("stroke", "url(#line-gradient)")
+            .attr("stroke-width", 5)
             .attr("fill", "none")
             .attr("stroke-linejoin", "round")
+            // cornerRadius
             .attr('d', drawline(newData));
+            
 
     }, [datas]);
 
