@@ -9,9 +9,9 @@ const LineChart = (props: {
     // const [datas] = useState(props.datas);
     const [datas] = useState([
         {time: 1607413425097, score: 20},
-        {time: 1607414929214, score: 50},
+        {time: 1607414429214, score: 50},
         {time: 1607415121362, score: 100},
-        {time: 1607415146935, score: 80}
+        {time: 1607415446935, score: 80}
     ]);
     const ref = useRef<SVGSVGElement>(null);
         
@@ -23,9 +23,9 @@ const LineChart = (props: {
     // console.log('測試 timeFormat', timeFormat(new Date(1607326845882)));
 
     useEffect(() => {
-        const margin = ({top: 20, right: 0, bottom: 20, left: 40});
+        const margin = ({top: 20, right: 10, bottom: 20, left: 40});
         const width = document?.querySelector('#root .container')?.clientWidth ?? 300;
-        const height = 200;
+        const height = 240;
         
         console.log('datas', datas);
         const newData: any = [...datas];
@@ -41,7 +41,7 @@ const LineChart = (props: {
         const minTime: any = d3.min(newData, (d: any) => d.time);
         const maxTime: any = d3.max(newData, (d: any) => d.time);
         // const min: any = d3.min(datas, (d) => d.score);
-        const max: any = d3.max(datas, (d) => d.score);
+        // const max: any = d3.max(datas, (d) => d.score);
     
     
         console.log('transformData newData', newData);
@@ -52,11 +52,9 @@ const LineChart = (props: {
         // const x = d3.scaleTime()
         //     .domain([minTime, maxTime])
         //     .range([margin.left, width - margin.right]);
-        // const x = d3.scaleTime().range([0, width]);
-        // const x = d3.scaleTime().range([0, width]);
         const x: any = d3.scaleTime()
             // .range([0, width])
-            .range([margin.left, width - margin.right])
+            .range([margin.left + 10, width - margin.right])
             .domain([minTime, maxTime]);
 
         const y = d3.scaleLinear()
@@ -81,45 +79,80 @@ const LineChart = (props: {
 
         svgElement.append("g")
             .attr('class', 'y-axis')
-            // .attr('transform', `translate(${margin.left},0)`)
-            .attr('transform', `translate(${margin.left},0)`)
-            .call(d3.axisLeft(y).ticks(5).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
-            // .tickSize(-width)
+            .attr('transform', `translate(${margin.left}, 0)`)
+            // .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
+            .call(d3.axisLeft(y).ticks(4).tickSize(-width).tickPadding(15));
+            // tickSize(-width) 畫出每條橫軸
+            // tickPadding  每一個 y 軸上文字與橫線的間距
+            // ticks 要拆幾格
         
-        
-
-        // svgElement.select(".domain").remove();
-        
+    
+        // remove both underline
+        svgElement.selectAll(".domain").remove();
         svgElement.select('.domain').attr("stroke", "#999")
         svgElement.selectAll('.x-axis text').attr('style', 'font-size: 12px;color: #999;font-weight: 500;');
-        
         svgElement.selectAll('.y-axis text').attr('style', 'font-weight: bold;color: #999;');
         svgElement.selectAll('.y-axis path').attr('stroke', '#999').attr('stroke-width', 1);
+        svgElement.selectAll('.y-axis .tick line').attr('stroke', '#ebe9e6').attr('stroke-width', 2).attr('opacity', 0.5);
 
 
         // Set the gradient
         svgElement.append("linearGradient")
             .attr("id", "line-gradient")
             .attr("gradientUnits", "userSpaceOnUse")
-            .selectAll("stop")
-                .data([
-                {offset: "0%", color: "#ffa00b"},
-                {offset: "100%", color: "#42605e"}
-            ])
+            .selectAll("stop").data([
+                { offset: "0%", color: "#ffa00b"},
+                { offset: "100%", color: "#42605e"
+            }])
             .enter().append("stop")
-                .attr("offset", function(d: any) { return d.offset; })
-                .attr("stop-color", function(d: any) { return d.color; });
+            .attr("offset", function(d: any) { return d.offset; })
+            .attr("stop-color", function(d: any) { return d.color; });
 
         svgElement.append('path')
             .attr('class', 'line')
             .attr("stroke", "url(#line-gradient)")
-            .attr("stroke-width", 5)
+            .attr("stroke-width", 3)
             .attr("fill", "none")
-            .attr("stroke-linejoin", "round")
+            // http://www.d3noob.org/2014/02/styles-in-d3js.html
+            .style("stroke-linecap", "round")
+            // .attr("stroke-linejoin", "round")
             // cornerRadius
             .attr('d', drawline(newData));
-            
+        
+        
+        // filters go in defs element
+        // https://observablehq.com/@bumbeishvili/svg-drop-shadows
+        var defs = svgElement.append("defs");
+        var filter = defs.append("filter")
+            .attr("id", "drop-shadow")
+            .attr('height', height)
+        filter.append("feGaussianBlur")
+            .attr("in", "SourceAlpha")
+            .attr("stdDeviation", 4)
+            .attr("result", "blur");
+        
+            filter.append("feOffset")
+            .attr("in", "blur")
+            .attr("dx", 0)
+            .attr("dy", 15)
+            .attr("result", "offsetBlur");
+        var feMerge = filter.append("feMerge");
+        
+        feMerge.append("feMergeNode").attr("in", "offsetBlur")
+        feMerge.append("feMergeNode").attr("in", "SourceGraphic");
 
+        svgElement.append('path')
+            .attr('class', 'line-shadow')
+            .attr("stroke", "#f3f3f3")
+            // .attr("stroke", "url(#line-gradient)")
+            .attr("stroke-width", 3)
+            // .attr('transform', 'translate(0, 12)')
+            .attr('opacity', 0.2)
+            .attr("fill", "none")
+            // http://www.d3noob.org/2014/02/styles-in-d3js.html
+            .style("stroke-linecap", "round")
+            .style("filter", "url(#drop-shadow)")
+            .attr('d', drawline(newData));
     }, [datas]);
 
     return (
