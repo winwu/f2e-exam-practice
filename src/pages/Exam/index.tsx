@@ -1,28 +1,20 @@
 import React, { useState, SyntheticEvent } from 'react';
-import { bookmark, bookmarkFill } from '../../components/icons';
-import { IOption, IformatedQuestion, pickHalfHalfQuestion} from '../../helpers/data/index';
+import { IformatedQuestion, pickHalfHalfQuestion} from '../../helpers/data/index';
+
+import QuestionCard from '../../components/QuestionCard';
 
 const TOTAL = 50;
 const tempData = pickHalfHalfQuestion(TOTAL);
 
-const categoryMap: {
-  [categoryKey: string]: string
-} = {
-  market: '金融市場常識',
-  ethics: '職業道德'
-};
-
-const Practice = () => {
-  
+const Exam = () => {
   const [data] = useState<IformatedQuestion[]>(tempData);
   const [userAnswer, updateUserAnswer] = useState(new Array(data.length).fill(null));
   const [score, setScore] = useState<null | number>(null);
 
-  const onAnsChanged = (e: React.ChangeEvent<HTMLInputElement>, questionIndex: number):void => {
-    console.log(e.target.value);
-    const newAns = [...userAnswer];
-    newAns[questionIndex] = e.target.value;
-    updateUserAnswer(newAns);
+  const updateAnsArray = (newValue: string | number, questionIndex: number):void => {
+    const newAnsAry = [...userAnswer];
+    newAnsAry[questionIndex] = newValue;
+    updateUserAnswer(newAnsAry);
   }
   
   const submit = (e: SyntheticEvent) => {
@@ -72,40 +64,13 @@ const Practice = () => {
       <div className="exams-wrap">
         {
           data.map((d: any, idx: number) => (
-            <div className={`question-card ${score !== null && Number(userAnswer[idx]) !== Number(d.ans) ? 'has-error' : ''}`} key={idx}>
-              <div className="question-card-content">
-                <div className="question-card-header">
-                  <div className="question-idx">{idx + 1}</div>
-                  <span className={`question-badge badge-${d.category}`}>{categoryMap[d.category]} {d.qn}</span>
-                </div>
-                <button className="question-bm-btn">
-                  {
-                    Number(d.category)%2 === 1 ? bookmark : bookmarkFill
-                  }
-                </button>
-                <h3 className="question-title">{d.title}</h3>
-                <div className="ans-btn-group">
-                  {
-                    d.options.map((o: IOption) => {
-                      return (
-                        <div key={`${o.text}`} className={`custom-control custom-radio ${score !== null && Number(userAnswer[idx]) !== Number(d.ans) && o.val === d.ans ? 'correct-ans-marked' : ''}`}>
-                          <input 
-                            type="radio"
-                            id={`opt-${idx}-${o.val}`}
-                            name={`q-${idx}`}
-                            value={o.val}
-                            checked={userAnswer[idx] === o.val.toString()} 
-                            onChange={(e) => onAnsChanged(e, idx)}
-                            disabled={score !== null}
-                            className="custom-control-input" />
-                          <label className="custom-control-label d-block" htmlFor={`opt-${idx}-${o.val}`}>({o.val}) {o.text}</label>
-                        </div>
-                      )
-                    })
-                  }
-                </div>
-              </div>
-            </div>
+            <QuestionCard 
+              key={idx}
+              seq={idx}
+              data={d}
+              haveSubmitted={score !== null ? true : false}
+              onAnsChanged={updateAnsArray}
+            />
           ))
         }
       </div>
@@ -121,5 +86,5 @@ const Practice = () => {
   );
 }
 
-export default Practice;
+export default Exam;
 
