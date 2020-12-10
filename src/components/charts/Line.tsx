@@ -25,7 +25,7 @@ const LineChart = (props: {
     useEffect(() => {
         const margin = ({top: 20, right: 10, bottom: 20, left: 40});
         const width = document?.querySelector('#root .container')?.clientWidth ?? 300;
-        const height = 240;
+        const height = 250;
         
         console.log('datas', datas);
         const newData: any = [...datas];

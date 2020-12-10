@@ -8,7 +8,9 @@ import {
 
 // pages
 import Home from '../pages/Home';
+import Exam from '../pages/Exam';
 import Practice from '../pages/Practice';
+
 import { chevronLeftWhite } from '../components/icons';
 
 function App() {
@@ -33,10 +35,13 @@ function App() {
           </div>
         </div>
       </header>
-      <div className="container container-700">
+      <div className="container container-700 mt-3 mb-5">
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/exam">
+            <Exam />
           </Route>
           <Route path="/practice">
             <Practice />

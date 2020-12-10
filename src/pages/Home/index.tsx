@@ -25,10 +25,10 @@ const Home = () => {
         </div>
         <div className="row align-items-center portal-btn-group">
             <div className="col">
-              <Link to="/" className="ans-btn full-w practice-bg">考題練習</Link>
+              <Link to="/practice" className="ans-btn full-w practice-bg">考題練習</Link>
             </div>
             <div className="col">
-              <Link to="/practice" className="ans-btn full-w exam-bg">模擬測驗</Link>
+              <Link to="/exam" className="ans-btn full-w exam-bg">模擬測驗</Link>
             </div>
         </div>
       </>
