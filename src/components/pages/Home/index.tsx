@@ -16,7 +16,7 @@ const Home = () => {
               <p className="mb-0"><a href="#" className="text-white font-weight-bold">Continue reading...</a></p>
           </div>
         </div> */}
-        <div className="container-fluid pt-2 pb-2">
+        <div className="container-fluid container-700 pt-2 pb-2">
           <div className="row align-items-center">
               <div className="col-6">
                 <Link to="/practice" className="ans-btn full-w practice-bg">考題練習</Link>
