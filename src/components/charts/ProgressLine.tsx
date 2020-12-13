@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
 const ProgressLine = (props: {
@@ -29,7 +29,6 @@ const ProgressLine = (props: {
         svgElement.attr("viewBox", [0, 0, width, height]).attr('class', 'line-chart');
 
         const g = svgElement.append('g').attr('class', 'g-transform').attr('transform', `translate(${width/2}, ${height/2})`);
-        const defs = svgElement.append('defs');
 
         const meter = g.append('g').attr('class', 'progress-meter');
         meter.append('path')

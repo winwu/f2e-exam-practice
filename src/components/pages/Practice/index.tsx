@@ -7,7 +7,9 @@ const tempData = getAllQuestion();
 
 const Practice = () => {
   const [data] = useState<IformatedQuestion[]>(tempData);
-  const [currentIndex, updateCurrent] = useState<number>(0);
+
+  const defaultIndex = window.localStorage.getItem('practice-max-last-index') ? Number(window.localStorage.getItem('practice-max-last-index')) : 0; 
+  const [currentIndex, updateCurrent] = useState<number>(defaultIndex);
   const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
   // const [userAnswer, updateUserAnswer] = useState(new Array(data.length).fill(null));
 
@@ -19,7 +21,16 @@ const Practice = () => {
 
   const next = (e: SyntheticEvent) => {
     updateHasSubmit(false);
-    updateCurrent(currentIndex + 1);
+    const newIndex = currentIndex + 1;
+    if (window.localStorage.getItem('practice-max-last-index')) {
+      if (newIndex >= Number(window.localStorage.getItem('practice-max-last-index'))) {
+        window.localStorage.setItem('practice-max-last-index', String(newIndex));
+      }
+    } else {
+      window.localStorage.setItem('practice-max-last-index', String(newIndex));
+    }
+    
+    updateCurrent(newIndex);
   }
 
   const updateAnsArray = (newValue: string | number, questionIndex: number):void => {
@@ -54,7 +65,7 @@ const Practice = () => {
               <button className="ans-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
             </div>
             <div className="col-6 text-right">
-              <button className="ans-btn" onClick={(e) => next(e)} disabled={currentIndex +1  == tempData.length}>下一題 Next</button>
+              <button className="ans-btn" onClick={(e) => next(e)} disabled={currentIndex +1 === tempData.length}>下一題 Next</button>
             </div>
           </div>
         </div>
