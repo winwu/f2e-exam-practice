@@ -65,9 +65,9 @@ const Practice = () => {
   }
 
   return (
-    <>
+    <div className="container container-700 mt-3 mb-5">
       <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}}>
-        <div>模擬考</div>
+        <div>模擬測驗</div>
       </nav>
       <div className="exams-wrap">
         {
@@ -117,7 +117,7 @@ const Practice = () => {
           }
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

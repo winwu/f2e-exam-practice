@@ -35,19 +35,17 @@ function App() {
           </div>
         </div>
       </header>
-      <div className="container container-700 mt-3 mb-5">
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/exam">
-            <Exam />
-          </Route>
-          <Route path="/practice">
-            <Practice />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/exam">
+          <Exam />
+        </Route>
+        <Route path="/practice">
+          <Practice />
+        </Route>
+      </Switch>
     </Router>
   );
 }

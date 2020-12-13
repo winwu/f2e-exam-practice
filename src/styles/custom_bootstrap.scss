@@ -184,9 +184,8 @@ body {
 .ans-btn {
     outline: none;
     border: none;
-    min-width: 170px;
+    min-width: 160px;
     background-color: #42605e;
-    border-bottom: 5px solid #a8a8a8;
     padding: 10px 15px;
     border-radius: 10px;
     font-weight: bold;
@@ -194,16 +193,14 @@ body {
     display: inline-block;
     width: auto;
     text-align: center;
-    
     &:hover {
         text-decoration: none;
         color: #fff;
     }
-    
-
     &.full-w {
         width: 100%;
         display: block;
+        min-width: auto;
     }
     &:hover {
         background-color: darken(#c5b7a2, 10%);
@@ -212,12 +209,6 @@ body {
         border-bottom: none;
         background: #999;   
     }
-    &:active {
-        transform: translate(0px, 5px);
-        -webkit-transform: translate(0px, 5px);
-        border-bottom: 2px solid #a8a8a8;
-    }
-
     &.practice-bg {
         background-color: #8c6830;
         &:hover {
@@ -244,12 +235,6 @@ body {
     text-align: center;
 }
 
-.portal-btn-group {
-    .col {
-        margin-bottom: 15px;
-    }
-}
-
 // .portal-btn {
 //     display: block;
 //     border-radius: 10px;
@@ -268,12 +253,54 @@ body {
     background: #fff;
     padding: 15px 10px;
     border-radius: 8px;
-    box-shadow: 0px 1px 7px #d4d4d4;
+    // box-shadow: 0px 1px 7px #d4d4d4;
     margin-bottom: 15px;
 }
 
 .statistics-item-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: #42605e;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.progress-line-wrap {
+    background: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    position: relative;
+    .progress-line-item {
+        position: absolute;
+        width: 33%;
+        font-size: 12px;
+        height: 20px;
+        vertical-align: middle;
+        top: 50%;
+        margin-top: -10px;
+        font-weight: 500;
+        color: #333;
+    }
+    .progress-finished-dl {
+        margin: -20px auto 0 auto;
+        position: absolute;
+        width: 33%;
+        right: 0;
+        top: 50%;
+        height: 40px;
+        dt, dd {
+            display: block;
+            text-align: center;
+        }
+        dt {
+            font-weight: normal;
+            font-size: 12px;
+        }
+        dd {
+            font-family: Arial;
+            font-weight: bold;
+            color: #8c682f;
+            margin: 0 auto;
+        }
+    }
 }
