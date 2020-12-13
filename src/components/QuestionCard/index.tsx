@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { bookmark, bookmarkFill } from '../../components/icons';
+import { bookmark, bookmarkFill } from '../../components/Icons';
 import { IformatedQuestion, IOption } from '../../helpers/data/index';
 
 const categoryMap: { [categoryKey: string]: string } = {

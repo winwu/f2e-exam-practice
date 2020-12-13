@@ -1,6 +1,6 @@
 import React, { useState, SyntheticEvent } from 'react';
-import { bookmark, bookmarkFill } from '../../components/icons';
-import { IOption, IformatedQuestion, pickHalfHalfQuestion} from '../../helpers/data/index';
+import { bookmark, bookmarkFill } from '../../Icons';
+import { IOption, IformatedQuestion, pickHalfHalfQuestion} from '../../../helpers/data/index';
 
 const TOTAL = 50;
 const tempData = pickHalfHalfQuestion(TOTAL);
@@ -66,7 +66,7 @@ const Practice = () => {
 
   return (
     <>
-      <nav className="navbar sticky-top navbar-light" style={{backgroundColor: '#ebe9e6'}}>
+      <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}}>
         <div>模擬考</div>
       </nav>
       <div className="exams-wrap">

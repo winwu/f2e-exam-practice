@@ -7,11 +7,11 @@ import {
 } from "react-router-dom";
 
 // pages
-import Home from '../pages/Home';
-import Exam from '../pages/Exam';
-import Practice from '../pages/Practice';
+import Home from './pages/Home';
+import Exam from './pages/Exam';
+import Practice from './pages/Practice';
 
-import { chevronLeftWhite } from '../components/icons';
+import { chevronLeftWhite } from './Icons';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <a className="navbar-brand" href="#">⾦融市場常識與職業道德</a>
       </nav> */}
 
-      <header className="app-header py-3">
+      <header className="app-header py-3 sticky-top">
         <div className="container container-700">
           <div className="row flex-nowrap justify-content-between align-items-center">
               <div className="col-2">

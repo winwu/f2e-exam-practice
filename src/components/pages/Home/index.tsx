@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Link
 } from "react-router-dom";
-import LineChart from '../../components/charts/Line';
+import LineChart from '../../Charts/Line';
 
 const Home = () => {
     return (

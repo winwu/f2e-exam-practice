@@ -1,7 +1,7 @@
 import React, { useState, SyntheticEvent } from 'react';
-import { IformatedQuestion, pickHalfHalfQuestion} from '../../helpers/data/index';
+import { IformatedQuestion, pickHalfHalfQuestion} from '../../../helpers/data/index';
 
-import QuestionCard from '../../components/QuestionCard';
+import QuestionCard from '../../QuestionCard';
 
 const TOTAL = 50;
 const tempData = pickHalfHalfQuestion(TOTAL);
@@ -58,7 +58,7 @@ const Exam = () => {
 
   return (
     <>
-      <nav className="navbar sticky-top navbar-light" style={{backgroundColor: '#ebe9e6'}}>
+      <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}}>
         <div>模擬考</div>
       </nav>
       <div className="exams-wrap">
