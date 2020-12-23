@@ -6,11 +6,8 @@ const ProgressLine = (props: {
     fillColor: string;
 }) => {
     const ref = useRef<SVGSVGElement>(null);
-
     const width = document?.querySelector('#root .container')?.clientWidth ?? 300;
-    const height = 100;
-
-    
+    const height = 100;    
     const radius = 50;
     const border = 5;
     

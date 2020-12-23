@@ -42,7 +42,7 @@ function App() {
         <Route exact path="/exam">
           <Exam />
         </Route>
-        <Route path="/practice">
+        <Route path="/practice/:practiceType">
           <Practice />
         </Route>
       </Switch>

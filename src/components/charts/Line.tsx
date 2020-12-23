@@ -6,18 +6,11 @@ const timeFormat = d3.timeFormat("%H:%M");
 const LineChart = (props: {
     datas: any[]
 }) => {
-    // const [datas] = useState(props.datas);
-    const [datas] = useState([
-        {time: 1607413425097, score: 20},
-        {time: 1607414429214, score: 50},
-        {time: 1607415121362, score: 100},
-        {time: 1607415446935, score: 80}
-    ]);
+    const [datas] = useState(props.datas);
     const ref = useRef<SVGSVGElement>(null);
         
     // const parseTime = d3.timeParse('%s');
     // const timeFormat = d3.timeFormat("%Y-%m-%d %H:%M");
-    
 
     // console.log('測試 parseTime', parseTime("1607326845882"));
     // console.log('測試 timeFormat', timeFormat(new Date(1607326845882)));
