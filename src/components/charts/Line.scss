@@ -1,0 +1,52 @@
+.line-chart-container {
+    .x-axis {
+        text {
+            font-size: 12px;
+            color: #999;
+            font-weight: 500;
+        }
+    }
+    .y-axis {
+        text {
+            font-weight: bold;
+            color: #999;
+        }
+        path {
+            stroke: '#999';
+            stroke-width: 1;
+        }
+        .tick line {
+            stroke: #ebe9e6;
+            stroke-width: 2;
+            opacity: 0.5;
+        }
+    }
+    .line-shadow {
+        stroke: #f3f3f3;
+        stroke-width: 3;
+        opacity: 0.2;
+        fill: none;
+        pointer-events: 'none';
+        stroke-linecap: round;
+    }
+    .d3-tooltip {
+        position: absolute;
+        text-align: left;
+        width: 140px;
+        height: 42px;
+        padding: 2px 10px;
+        background: #333333;
+        border: 0px;
+        border-radius: 5px;
+        color: #fff;
+        pointer-events: none;
+        font-size: 12px;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        transition: left 0.5s ease, top 0.5s ease;
+        &.active {
+            opacity: 0.9;
+        }
+    }
+}

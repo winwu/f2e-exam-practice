@@ -22,7 +22,7 @@ const Header = () => {
                         <div className="header-logo">⾦融市場常識與職業道德</div>
                     </div>
                     <div className="col-2 d-flex justify-content-end align-items-center">
-                        <a className="btn btn-sm btn-outline-secondary" href="#">List</a>
+                        {/* <a className="btn btn-sm btn-outline-secondary" href="#">List</a> */}
                     </div>
                 </div>
             </div>

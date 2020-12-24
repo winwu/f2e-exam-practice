@@ -1,14 +1,19 @@
 import { useState, useRef, useEffect } from 'react';
 import * as d3 from 'd3';
+import './Line.scss';
 
 const LineChart = (props: {
     datas: any[]
 }) => {
+    const [isShowTooltip, setIsShowTooltip] = useState<Boolean>(false);
+    const [tooltipContent, setTooltipContent] = useState<JSX.Element | string>('');
     const [datas] = useState(props.datas);
     const ref = useRef<SVGSVGElement>(null);
-
+    const tooltipRef = useRef<HTMLDivElement>(null);
+    
     useEffect(() => {
         const timeFormat = d3.timeFormat('%H:%M:%S');
+        const tooltipTimeFormat = d3.timeFormat('%Y-%b-%d %H:%M:%S');
         const margin = ({top: 20, right: 10, bottom: 20, left: 40});
         const width = document?.querySelector('#root .container')?.clientWidth ?? 300;
         const height = 250;
@@ -18,6 +23,7 @@ const LineChart = (props: {
             // formar time
             // console.log('parseTime', parseTime("1607326845882"));
             // console.log('timeFormat', timeFormat(new Date(1607326845882)));
+            d.timestamp = d.time;
             d.time = timeFormat(d.time);
         });
         
@@ -51,16 +57,16 @@ const LineChart = (props: {
             .y((d: any) => y(d.score))
 
         svgElement = d3.select(ref.current)
-        svgElement.attr("viewBox", [0, 0, width, height]).attr('class', 'line-chart');
+        svgElement.attr('viewBox', [0, 0, width, height]).attr('class', 'line-chart');
 
-        svgElement.append("g")
+        svgElement.append('g')
             .attr('class', 'x-axis')
             .attr('transform', `translate(0, ${height - margin.bottom})`)
             // if use timeScale
             // .call(d3.axisBottom(x).tickFormat((d: any) => timeFormat(d)).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
             .call(d3.axisBottom(x).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
 
-        svgElement.append("g")
+        svgElement.append('g')
             .attr('class', 'y-axis')
             .attr('transform', `translate(${margin.left}, 0)`)
             // .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
@@ -70,71 +76,98 @@ const LineChart = (props: {
             // ticks 要拆幾格
     
         // remove both underline
-        svgElement.selectAll(".domain").remove();
-        svgElement.select('.domain').attr("stroke", "#999")
-        svgElement.selectAll('.x-axis text').attr('style', 'font-size: 12px;color: #999;font-weight: 500;');
-        svgElement.selectAll('.y-axis text').attr('style', 'font-weight: bold;color: #999;');
-        svgElement.selectAll('.y-axis path').attr('stroke', '#999').attr('stroke-width', 1);
-        svgElement.selectAll('.y-axis .tick line').attr('stroke', '#ebe9e6').attr('stroke-width', 2).attr('opacity', 0.5);
+        svgElement.selectAll('.domain').remove();
+        svgElement.select('.domain').attr('stroke', '#999')
 
         // Set the gradient
-        svgElement.append("linearGradient")
-            .attr("id", "line-gradient")
-            .attr("gradientUnits", "userSpaceOnUse")
-            .selectAll("stop").data([
-                { offset: "0%", color: "#ffa00b" },
-                { offset: "100%", color: "#42605e" }
+        svgElement.append('linearGradient')
+            .attr('id', 'line-gradient')
+            .attr('gradientUnits', 'userSpaceOnUse')
+            .selectAll('stop').data([
+                { offset: '0%', color: '#ffa00b' },
+                { offset: '100%', color: '#42605e' }
             ])
-            .enter().append("stop")
-            .attr("offset", (d: any) => d.offset )
-            .attr("stop-color", (d: any) => d.color );
+            .enter().append('stop')
+            .attr('offset', (d: any) => d.offset )
+            .attr('stop-color', (d: any) => d.color );
 
         svgElement.append('path')
             .attr('class', 'line')
-            .attr("stroke", "url(#line-gradient)")
-            .attr("stroke-width", 3)
-            .attr("fill", "none")
-            .style("stroke-linecap", "round")
+            .attr('stroke', 'url(#line-gradient)')
+            .attr('stroke-width', 3)
+            .attr('fill', 'none')
+            .style('stroke-linecap', 'round')
             .attr('d', drawline(newData));
         
         
         // filters go in defs element
-        var defs = svgElement.append("defs");
-        var filter = defs.append("filter")
-            .attr("id", "drop-shadow")
+        var defs = svgElement.append('defs');
+        var filter = defs.append('filter')
+            .attr('id', 'drop-shadow')
             .attr('height', height)
-        filter.append("feGaussianBlur")
-            .attr("in", "SourceAlpha")
-            .attr("stdDeviation", 4)
-            .attr("result", "blur");
+        filter.append('feGaussianBlur')
+            .attr('in', 'SourceAlpha')
+            .attr('stdDeviation', 4)
+            .attr('result', 'blur');
+        filter.append('feOffset')
+            .attr('in', 'blur')
+            .attr('dx', 0)
+            .attr('dy', 15)
+            .attr('result', 'offsetBlur');
+        var feMerge = filter.append('feMerge');
         
-            filter.append("feOffset")
-            .attr("in", "blur")
-            .attr("dx", 0)
-            .attr("dy", 15)
-            .attr("result", "offsetBlur");
-        var feMerge = filter.append("feMerge");
+        feMerge.append('feMergeNode').attr('in', 'offsetBlur')
+        feMerge.append('feMergeNode').attr('in', 'SourceGraphic');
         
-        feMerge.append("feMergeNode").attr("in", "offsetBlur")
-        feMerge.append("feMergeNode").attr("in", "SourceGraphic");
-
-        // @TODO
         svgElement.append('path')
             .attr('class', 'line-shadow')
-            .attr("stroke", "#f3f3f3")
-            // .attr("stroke", "url(#line-gradient)")
-            .attr("stroke-width", 3)
-            // .attr('transform', 'translate(0, 12)')
-            .attr('opacity', 0.2)
-            .attr("fill", "none")
-            .style("stroke-linecap", "round")
-            .style("filter", "url(#drop-shadow)")
+            .style('filter', 'url(#drop-shadow)')
             .attr('d', drawline(newData));
+        
+        // insert circles
+        svgElement.selectAll('circle')
+            .data(newData)
+            .enter()
+            .append('circle')
+            .attr('r', 5)
+            .attr('cx', (d: any) => x(d.time))
+            .attr('cy', (d: any ) => y(d.score))
+            .style('cursor', 'pointer')
+            .style('fill', () => {
+                return '#795548';
+            })
+            .on('mouseover', function(d: any) {
+                if (tooltipRef?.current) {
+                    setIsShowTooltip(true);
+                    const { pageX, pageY } = (d3 as any).event;
+                    
+                    if (pageX + 140 > window.innerWidth) {
+                        tooltipRef.current.style.left = 'initial';
+                        tooltipRef.current.style.right = (window.innerWidth - pageX) + 'px';
+                    } else {
+                        tooltipRef.current.style.left = pageX + 'px';
+                    }
+
+                    tooltipRef.current.style.top = (pageY - 70) + 'px';
+                    
+                    
+                    setTooltipContent(<div>
+                        <div>{tooltipTimeFormat(d.timestamp)}</div>
+                        <div><strong>Score</strong>: {d.score}</div>
+                    </div>);
+                }
+            })					
+            .on('mouseout', function(d: any) {
+                if (tooltipRef?.current) {
+                    setIsShowTooltip(false);
+                }
+            });
     }, [datas]);
 
     return (
         <div className="line-chart-container">
             <svg ref={ref}></svg>
+            <div className={`d3-tooltip ${isShowTooltip ? 'active' : '' }`} ref={tooltipRef}>{tooltipContent}</div>
         </div>
     )
 

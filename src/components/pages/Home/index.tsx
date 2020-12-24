@@ -42,13 +42,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* <div className="jumbotron home-jumbotron p-3">
-        <div>
-            <h2 className="home-jumbotron-title">Title of a longer featured blog post</h2>
-            <p className="my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-            <p className="mb-0"><a href="#" className="text-white font-weight-bold">Continue reading...</a></p>
-        </div>
-      </div> */}
       <div className="container-fluid container-700 pt-2 pb-2">
         <div className="mb-4">
           <h3 className="section-heading">考題練習</h3>
@@ -90,6 +83,10 @@ const Home = () => {
           <div className="statistics-card">
             <LineChart datas={getScoreHistory()}/>
           </div>
+        </section>
+        <section>
+          <h3 className="section-heading">注意事項</h3>
+          <small>此網頁之題目內容皆取自<a href="https://webline.sfi.org.tw/T/ethics/download.asp" target="_blank" rel="noreferrer noopener">金融市場常識與職業道德題庫專區</a>，此網頁所取得之題庫內容之最後更新日期為 2020/12/04，如答案判斷有疑惑或錯誤，請以 webline.sfi.org.tw/T/ethics/download.asp 網站所提供之內容為主。</small>
         </section>
       </div>
     </div>

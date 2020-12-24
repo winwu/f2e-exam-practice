@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
 const ProgressLine = (props: {
@@ -6,20 +6,18 @@ const ProgressLine = (props: {
     fillColor: string;
 }) => {
     const ref = useRef<SVGSVGElement>(null);
-    const width = document?.querySelector('#root .container')?.clientWidth ?? 300;
-    const height = 100;    
-    const radius = 50;
-    const border = 5;
-    
-    var twoPi = Math.PI * 2;
-    var formatPercent = d3.format('.0%');
-    
-    const arc = d3.arc()
-        .startAngle(0)
-        .innerRadius(radius)
-        .outerRadius(radius - border);
 
     useEffect(() => {
+        const width = document?.querySelector('#root .container')?.clientWidth ?? 300;
+        const height = 100;    
+        const radius = 50;
+        const border = 5;
+        const twoPi = Math.PI * 2;
+        const formatPercent = d3.format('.0%');
+        const arc = d3.arc()
+            .startAngle(0)
+            .innerRadius(radius)
+            .outerRadius(radius - border);
         const progress = Number((props.percentage / 100).toFixed(2));
 
         const svgElement: any = d3.select(ref.current);
@@ -53,7 +51,8 @@ const ProgressLine = (props: {
         front.attr('d', arc.endAngle(twoPi * progress));
         displayText.text(formatPercent(progress));
 
-    }, [props.percentage]);
+    }, [props]);
+
 
     return (
         <div className="line-chart-container">
