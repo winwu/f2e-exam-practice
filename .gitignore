@@ -26,4 +26,5 @@ yarn-error.log*
 .eslintcache
 
 # datas
-src/datas
+src/datas/ethics_formated.json
+src/datas/market_formated.json

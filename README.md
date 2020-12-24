@@ -1,13 +1,27 @@
-# My-practice-App
+# 金融市場常識與職業道德題庫練習網頁
+
+此 repository 之題目內容皆取自 https://webline.sfi.org.tw/T/ethics/download.asp 金融市場常識與職業道德題庫專區，此 repository 所取得之題庫內容之最後更新日期為 2020/12/04，如答案判斷有疑惑或錯誤，請以 webline.sfi.org.tw/T/ethics/download.asp 網站所提供之內容為主。</small>
+
+
+## 匯入題庫並編譯
+
+1. 從 https://webline.sfi.org.tw/T/ethics/download.asp 下載題庫後，分別將兩份題庫之 pdf 轉換為 csv 格式，格式參考 src/datas/ethics_formated.example.json 及 market_formated.example.json，並將檔名改為 ethics_formated.json 及 market_formated.json。
+
+2. 執行 npm i && npm start (將開啟 localhost:3000) 或 npm i && npm run build
+
+
+---
 
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
 
 Stacks:
 
 - Bootstrap
 - TypeScript
 - Sass
+
 
 ## Available Scripts
 
