@@ -11,15 +11,14 @@ import Home from './pages/Home';
 import Exam from './pages/Exam';
 import Practice from './pages/Practice';
 
+// components
 import { chevronLeftWhite } from './Icons';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
     <Router>
-      {/* <nav className="navbar sticky-top navbar-light bg-light">
-        <a className="navbar-brand" href="#">⾦融市場常識與職業道德</a>
-      </nav> */}
-
+      <ScrollToTop />
       <header className="app-header py-3 sticky-top">
         <div className="container container-700">
           <div className="row flex-nowrap justify-content-between align-items-center">
