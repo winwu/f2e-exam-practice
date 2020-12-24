@@ -9,17 +9,37 @@ import ProgressLine from '../../Charts/ProgressLine';
 const Home = () => {
 
   const getPercentage = (type: 'market' | 'ethics') => {
-    if (!window.localStorage.getItem(`${type}-pra-history`)) {
+    const histories = JSON.parse(window.localStorage.getItem(`${type}-pra-history`) as string);
+    
+    if (!histories) {
       return 0;
     }
-    const histories = JSON.parse(window.localStorage.getItem(`${type}-pra-history`) as string);
+    
     const totalCount = histories.length;
     const finishCount = histories.filter((d: null | string) => d !== null).length;
     return Math.round((finishCount/totalCount) * 100)
   }
 
+  const getFinisheCount = (type: 'market' | 'ethics') => {
+    const histories = JSON.parse(window.localStorage.getItem(`${type}-pra-history`) as string);
+
+    if (!histories) {
+      return 0;
+    }
+
+    return histories.filter((d: any) => d !== null).length;
+  }
+
   const marketPercentage = getPercentage('market');
   const ethicsPercentage = getPercentage('ethics');
+
+  const getScoreHistory = () => {
+    const histories = JSON.parse(window.localStorage.getItem('scoreHistory') as string);
+    if (!histories || !Array.isArray(histories)) {
+      return [];
+    }
+    return histories.slice(-5);
+  }
 
   return (
     <div>
@@ -54,7 +74,7 @@ const Home = () => {
             <ProgressLine percentage={marketPercentage} fillColor='#8c682f'/>
             <dl className="progress-finished-dl">
               <dt>已作答</dt>
-              <dd>{ marketPercentage }</dd>
+              <dd>{ getFinisheCount('market') }</dd>
             </dl>
           </div>
           <div className="progress-line-wrap">
@@ -62,19 +82,14 @@ const Home = () => {
             <ProgressLine percentage={ethicsPercentage} fillColor='#8c682f'/>
             <dl className="progress-finished-dl">
               <dt>已作答</dt>
-              <dd>{ ethicsPercentage }</dd>
+              <dd>{ getFinisheCount('ethics') }</dd>
             </dl>
           </div>
         </section>
         <section>
-          <h3 className="section-heading">歷史模擬測驗分數 Score Histories</h3>
+          <h3 className="section-heading">近期模擬測驗分數 Latest Score Histories</h3>
           <div className="statistics-card">
-            <LineChart datas={[
-              {time: 1607413425097, score: 20},
-              {time: 1607414429214, score: 50},
-              {time: 1607415121362, score: 100},
-              {time: 1607415446935, score: 80}
-            ]}/>
+            <LineChart datas={getScoreHistory()}/>
           </div>
         </section>
       </div>
