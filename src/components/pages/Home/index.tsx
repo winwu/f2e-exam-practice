@@ -7,7 +7,6 @@ import LineChart from '../../Charts/Line';
 import ProgressLine from '../../Charts/ProgressLine';
 
 const Home = () => {
-
   const getPercentage = (type: 'market' | 'ethics') => {
     const histories = JSON.parse(window.localStorage.getItem(`${type}-pra-history`) as string);
     
