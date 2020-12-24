@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { bookmark, bookmarkFill } from '../../components/Icons';
 import { IformatedQuestion, IOption } from '../../helpers/data/index';
+import './QuestionCard.scss';
 
 const categoryMap: { [categoryKey: string]: string } = {
     market: '金融市場常識',

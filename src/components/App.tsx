@@ -11,14 +11,14 @@ import Exam from './pages/Exam';
 import Practice from './pages/Practice';
 
 // components
-import Header from './Header';
+import AppHeader from './AppHeader';
 import ScrollToTop from './ScrollToTop';
 
 function App() {
     return (
         <Router>
             <ScrollToTop />
-            <Header />
+            <AppHeader />
             <Switch>
                 <Route exact path="/">
                     <Home />

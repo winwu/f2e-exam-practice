@@ -5,12 +5,12 @@ import {
 } from "react-router-dom";
 
 import { chevronLeftWhite } from '../Icons';
+import './AppHeader.scss';
 
-const Header = () => {
+const AppHeader = () => {
     const location = useLocation();
-
     return (
-        <header className="app-header py-3 sticky-top">
+        <header className="app-header sticky-top">
             <div className="container container-700">
                 <div className="row flex-nowrap justify-content-between align-items-center">
                     <div className="col-2">
@@ -30,4 +30,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default AppHeader;
