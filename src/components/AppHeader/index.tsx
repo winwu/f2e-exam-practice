@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  Link,
-  useLocation
+    Link,
+    useLocation
 } from "react-router-dom";
 
 import { chevronLeftWhite } from '../Icons';

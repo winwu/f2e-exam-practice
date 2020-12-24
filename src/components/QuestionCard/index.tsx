@@ -35,32 +35,33 @@ const QuestionCard = (props: {
                     <div className="question-idx">{idx + 1}</div>
                     <span className={`question-badge badge-${data.category}`}>{categoryMap[data.category]} {data.qn}</span>
                     <button className="question-bm-btn">
-                    {
-                        Number(data.category)%2 === 1 ? bookmark : bookmarkFill
-                    }
+                        {
+                            Number(data.category)%2 === 1 ? bookmark : bookmarkFill
+                        }
                     </button>
                 </div>
                 
                 <h3 className="question-title">{data.title}</h3>
                 
                 <div className="ans-btn-group">
-                { data.options ? data.options.map((o: IOption) => {
-                    const isTheChosenAnswerWrong = haveSubmitted === true && Number(selected) !== Number(data.ans) && o.val === data.ans;
+                    { data.options ? data.options.map((o: IOption) => {
+                        const isTheChosenAnswerWrong = haveSubmitted === true && Number(selected) !== Number(data.ans) && o.val === data.ans;
 
-                    return (<div key={`${o.text}`} className={`custom-control custom-radio ${isTheChosenAnswerWrong ? 'correct-ans-marked' : ''}`}>
-                        <input 
-                            type="radio"
-                            id={`opt-${idx}-${o.val}`}
-                            name={`q-${idx}`}
-                            value={o.val}
-                            checked={selected === o.val.toString()} 
-                            onChange={(e) => onSelect(e)}
-                            disabled={props.haveSubmitted === true}
-                            className="custom-control-input" />
-                        <label className="custom-control-label d-block" htmlFor={`opt-${idx}-${o.val}`}>({o.val}) {o.text}</label>
-                    </div>
-                )}) : null
-                }
+                        return (
+                            <div key={`${o.text}`} className={`custom-control custom-radio ${isTheChosenAnswerWrong ? 'correct-ans-marked' : ''}`}>
+                                <input 
+                                    type="radio"
+                                    id={`opt-${idx}-${o.val}`}
+                                    name={`q-${idx}`}
+                                    value={o.val}
+                                    checked={selected === o.val.toString()} 
+                                    onChange={(e) => onSelect(e)}
+                                    disabled={props.haveSubmitted === true}
+                                    className="custom-control-input" />
+                                <label className="custom-control-label d-block" htmlFor={`opt-${idx}-${o.val}`}>({o.val}) {o.text}</label>
+                            </div>
+                        )}) : null
+                    }
                 </div>
             </div>
         </div>)

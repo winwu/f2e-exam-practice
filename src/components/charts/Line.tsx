@@ -70,11 +70,11 @@ const LineChart = (props: {
             .attr('class', 'y-axis')
             .attr('transform', `translate(${margin.left}, 0)`)
             // .call(d3.axisLeft(y).ticks(5).tickSize(-width).tickSizeOuter(0).tickSizeInner(0).tickPadding(10));
-            .call(d3.axisLeft(y).ticks(4).tickSize(-width).tickPadding(15));
             // tickSize(-width) 畫出每條橫軸
             // tickPadding  每一個 y 軸上文字與橫線的間距
             // ticks 要拆幾格
-    
+            .call(d3.axisLeft(y).ticks(4).tickSize(-width).tickPadding(15));
+            
         // remove both underline
         svgElement.selectAll('.domain').remove();
         svgElement.select('.domain').attr('stroke', '#999')
