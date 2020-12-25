@@ -38,7 +38,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="container-fluid container-700 pt-2 pb-2">
+            <div id="practice-sec" className="container-fluid container-700 pt-2 pb-2">
                 <div className="mb-3">
                     <h3 className="section-heading">考題練習</h3>
                     <div className="row align-items-center">
