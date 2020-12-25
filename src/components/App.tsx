@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 
 // pages
-import Home from './pages/Home';
-import Exam from './pages/Exam';
-import Practice from './pages/Practice';
+import Home from './Pages/Home';
+import Exam from './Pages/Exam';
+import Practice from './Pages/Practice';
 
 // components
 import AppHeader from './AppHeader';
