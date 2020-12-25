@@ -26,7 +26,7 @@
 
 首先先執行 `npm i` 以下載所需要之相關開發套件。
 
-1. 本地開發與編譯 
+#### 1. 本地開發與編譯 
 
 ```
 npm start
@@ -35,7 +35,7 @@ npm start
 npm start 後將使用 [http://localhost:3000](http://localhost:3000。
 
 
-2. 執行測試
+#### 2. 執行測試
 
 ```
 npm test
@@ -48,7 +48,7 @@ npm test:coverage
 ```
 
 
-3. 編譯 production 版本的 code
+#### 3. 編譯 production 版本的 code
 
 ```
 npm run build`
