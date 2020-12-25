@@ -43,15 +43,15 @@ const Home = () => {
                     <h3 className="section-heading">考題練習</h3>
                     <div className="row align-items-center">
                         <div className="col-6">
-                            <Link to="/practice/market" className="ans-btn full-w practice-bg">金融市場常識</Link>
+                            <Link to="/practice/market" className="ans-btn practice-bg">金融市場常識</Link>
                         </div>
                         <div className="col-6">
-                            <Link to="/practice/ethics" className="ans-btn full-w practice-bg">職業道德</Link>
+                            <Link to="/practice/ethics" className="ans-btn practice-bg">職業道德</Link>
                         </div>
                     </div>
                 </div>
                 <h3 className="section-heading">模擬考試</h3>
-                <Link to="/exam" className="ans-btn full-w exam-bg">模擬測驗</Link>
+                <Link to="/exam" className="ans-btn exam-bg">模擬測驗</Link>
             </div>
             
             <div className="container container-700 mt-3 mb-5">

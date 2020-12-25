@@ -32,22 +32,16 @@ body {
 .ans-btn {
     outline: none;
     border: none;
-    min-width: 160px;
     background-color: #42605e;
     padding: 8px 15px;
     border-radius: 10px;
     color: #fff;
-    display: inline-block;
-    width: auto;
+    width: 100%;
     text-align: center;
+    display: block;
     &:hover {
         text-decoration: none;
         color: #fff;
-    }
-    &.full-w {
-        width: 100%;
-        display: block;
-        min-width: auto;
     }
     &:hover {
         background-color: darken(#c5b7a2, 10%);
