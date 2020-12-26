@@ -1,11 +1,11 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react';
 import { useParams } from 'react-router-dom';
-import { IformatedQuestion, pickQuestion} from '../../../helpers/data/index';
+import { IformatedQuestion, pickQuestion } from '../../../helpers/data/index';
 import QuestionCard from '../../QuestionCard';
 
 const Practice = () => {
     const { practiceType } = useParams<{ practiceType: 'market' | 'ethics' }>();
-  
+    
     let defaultIndex = 0;
     if (window.localStorage.getItem(`${practiceType}-pra-history`)) {
         const histories = JSON.parse(window.localStorage.getItem(`${practiceType}-pra-history`) as string);
