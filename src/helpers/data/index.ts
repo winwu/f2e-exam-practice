@@ -42,16 +42,21 @@ export const convertQuestionTitleToAnsMapping = (str: string) : {
     let optionsCounter = 1;
     // index 2 ~ 5 means A, B, C, D
     for (let idx = 2; idx <= 5; idx++) {
+        // remove \n
+        const text = match[idx].trim().replace(' ', '').replace('\\n', '').replace('\n', '');
+
         options.push({
             val: optionsCounter,
-            // remove \n
-            text: match[idx].trim()
-        })
+            text
+        });
         optionsCounter++;
     }
 
+
+    const title = match[1].trim().replace(' ', '').replace('\\n', '').replace('\n', '');
+
     return {
-        title: match[1] || 'no title',
+        title: title || 'no title',
         options
     };
 }
