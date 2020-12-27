@@ -94,10 +94,17 @@
                 //     background: #f3ede3;
                 //     border-radius: 4px;   
                 // }
-                &.correct-ans-marked {
+                
+                &.wrong-ans-marked {
                     background: #fff3f3;
                     .custom-control-label {
                         color: red;
+                    }
+                }
+                &.correct-ans-marked {
+                    background: #eaf7c6;
+                    .custom-control-label {
+                        color: green;
                     }
                 }
             }

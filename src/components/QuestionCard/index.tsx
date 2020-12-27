@@ -45,10 +45,16 @@ const QuestionCard = (props: {
                 
                 <div className="ans-btn-group">
                     { data.options ? data.options.map((o: IOption) => {
-                        const isTheChosenAnswerWrong = haveSubmitted === true && Number(selected) !== Number(data.ans) && o.val === data.ans;
+                        
+                        let appendCss = '';
+                        if (haveSubmitted === true) {
+                            const isTheChosenAnswerWrong = Number(selected) !== Number(data.ans) && o.val === data.ans;
+                            const isTheChosenCorrectWrong = Number(selected) === Number(data.ans) && o.val === data.ans;
+                            appendCss = isTheChosenAnswerWrong ? 'wrong-ans-marked' :  isTheChosenCorrectWrong ? 'correct-ans-marked' : '';
+                        }
 
                         return (
-                            <div key={`${o.text}`} className={`custom-control custom-radio ${isTheChosenAnswerWrong ? 'correct-ans-marked' : ''}`}>
+                            <div key={`${o.text}`} className={`custom-control custom-radio ${appendCss}`}>
                                 <input 
                                     type="radio"
                                     id={`opt-${idx}-${o.val}`}

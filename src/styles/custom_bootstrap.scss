@@ -10,6 +10,11 @@ body {
     font-size: 15px;
 }
 
+.btn:focus,
+.btn.focus {
+    box-shadow: none;
+}
+
 .container-700 {
     max-width: 700px;
 }
