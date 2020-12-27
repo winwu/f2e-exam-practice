@@ -9,6 +9,7 @@ import {
 import Home from './Pages/Home';
 import Exam from './Pages/Exam';
 import Practice from './Pages/Practice';
+import Review from './Pages/Review';
 
 // components
 import AppHeader from './AppHeader';
@@ -28,6 +29,9 @@ function App() {
                 </Route>
                 <Route path="/practice/:practiceType">
                     <Practice />
+                </Route>
+                <Route path="/review/:practiceType">
+                    <Review />
                 </Route>
             </Switch>
         </Router>

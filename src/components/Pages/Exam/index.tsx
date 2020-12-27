@@ -72,7 +72,7 @@ const Exam = () => {
             </div>
             <div className="ans-btn-fixed">
                 <div className="container container-700">
-                    <button className="ans-btn" onClick={(e) => submit(e)} disabled={score !== null}>{score !== null ? '已' : ''}交卷</button>
+                    <button className="ans-btn d-inline-block w-50" onClick={(e) => submit(e)} disabled={score !== null}>{score !== null ? '已' : ''}交卷</button>
                     {
                         score !== null && (<div className="score-result">成績: {score}</div>)
                     }

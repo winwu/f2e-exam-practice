@@ -2,22 +2,21 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import LineChart from '../../Charts/Line';
 import ProgressLine from '../../Charts/ProgressLine';
-
+import { getHistories, getWrongQuestions } from '../../../services';
 const Home = () => {
     const getPercentage = (type: 'market' | 'ethics') => {
-        const histories = JSON.parse(window.localStorage.getItem(`${type}-pra-history`) as string);
+        const histories = getHistories(type);
     
         if (!histories) {
             return 0;
         }
-    
         const totalCount = histories.length;
         const finishCount = histories.filter((d: null | string) => d !== null).length;
         return Math.round((finishCount/totalCount) * 100)
     }
 
     const getFinisheCount = (type: 'market' | 'ethics') => {
-        const histories = JSON.parse(window.localStorage.getItem(`${type}-pra-history`) as string);
+        const histories = getHistories(type);
 
         if (!histories) {
             return 0;
@@ -36,11 +35,27 @@ const Home = () => {
         return histories.slice(-5);
     }
 
+
+    const wrongMarketQuestions = getWrongQuestions('market');
+    const wrongEthicsQuestions = getWrongQuestions('ethics');
+    
+    let reviewItems = [];
+    if (wrongMarketQuestions.length) {
+        reviewItems.push(<div key="market" className="col-6">
+            <Link to="/review/market" className="ans-btn review-bg">金融市場常識</Link>
+        </div>);
+    }
+    if (wrongEthicsQuestions.length) {
+        reviewItems.push(<div key="ethics" className="col-6">
+            <Link to="/review/ethics" className="ans-btn review-bg">職業道德</Link>
+        </div>);
+    }
+
     return (
         <div>
-            <div id="practice-sec" className="container-fluid container-700 pt-2 pb-2">
-                <div className="mb-3">
-                    <h3 className="section-heading">考題練習</h3>
+            <div className="container-fluid container-700 pt-2 pb-2">
+                <div id="practice-sec" className="mb-3">
+                    <h3 className="section-heading">考題練習 Practice</h3>
                     <div className="row align-items-center">
                         <div className="col-6">
                             <Link to="/practice/market" className="ans-btn practice-bg">金融市場常識</Link>
@@ -50,9 +65,22 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <h3 className="section-heading">模擬考試</h3>
+
+                {
+                    wrongMarketQuestions.length || wrongEthicsQuestions.length ? (
+                        <div id="review-sec" className="mb-3">
+                            <h3 className="section-heading">複習錯誤題目 Review</h3>
+                            <div className="row align-items-center">
+                                {reviewItems}
+                            </div>
+                        </div>
+                    ) : null
+                }
+                
+                <h3 className="section-heading">模擬考試 Mock examination</h3>
                 <Link to="/exam" className="ans-btn exam-bg">模擬測驗</Link>
             </div>
+
             
             <div className="container container-700 mt-3 mb-5">
                 <section>

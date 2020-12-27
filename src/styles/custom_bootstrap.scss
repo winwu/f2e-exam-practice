@@ -39,6 +39,7 @@ body {
     width: 100%;
     text-align: center;
     display: block;
+    font-size: 14px;
     &:hover {
         text-decoration: none;
         color: #fff;
@@ -54,6 +55,13 @@ body {
         background-color: #8c6830;
         &:hover {
             background-color: darken(#8c6830, 10%);
+        }
+    }
+    &.review-bg {
+        background-color: #fbfbfb;
+        color: #8c682f;
+        &:hover {
+            background-color: #fff;
         }
     }
     &.exam-bg {
