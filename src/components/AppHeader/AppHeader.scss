@@ -2,7 +2,61 @@
     background: #333;
     color: #fff;
     padding: 12px 10px;
-    a {
+    a,
+    button {
         color:#fff;
+        &:hover {
+            color: #8c6830;
+        }
+    }
+    .btn-menu {
+        svg {
+            transition: transform .33s ease;
+        }
+        &.active {
+            color: #8c6830;
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .menu {
+        position: fixed;
+        top: 55px;
+        left: 100%;
+        width: 100%;
+        min-height: 100vh;
+        transition: all .33s ease;
+        z-index: 10;
+        background: #333;
+        &.active {
+            left: 0%;
+        }
+
+        ul {
+            padding: 10px 0;
+            margin: 0 auto;
+            li, a, button {
+                display: block;
+            }
+            a, button {
+                padding: 12px 15px;
+                font-size: 14px;
+                text-decoration: none;
+                text-align: left;
+            }
+            button {
+                width: 100%;
+                background: transparent;
+                border: none;
+            }
+            .menu-icon {
+                display: inline-block;
+                vertical-align: text-bottom;
+                margin-right: 10px;
+                color: #8c6830;
+            }
+        }
     }
 }
