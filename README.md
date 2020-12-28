@@ -2,24 +2,26 @@
 
 <img src="../master/public/demo_localhost_3000_.png?raw=true" width="320">
 
-此 repository 之題目內容皆取自 https://webline.sfi.org.tw/T/ethics/download.asp 金融市場常識與職業道德題庫專區，此 repository 所取得之題庫內容之最後更新日期為 2020/12/04，如答案判斷有疑惑或錯誤，請以 webline.sfi.org.tw/T/ethics/download.asp 網站所提供之內容為主。</small>
+主要功能: 所有題目之練習作答、查看練習進度、模擬試題、查看模擬練習分數、瀏覽答錯之題目。
 
 
 ## 前置作業說明
 
+因為尚未聯絡到 https://webline.sfi.org.tw/T/ethics/download.asp 該單位，不確定是否能公開題庫內容之重置為 JSON 格式後的內容及此練習網頁，因此如需使用此網頁須自行整理題庫之 PDF 等內容，不好意思...。
+
 ### 匯入題庫並編譯
 
-1. 從 https://webline.sfi.org.tw/T/ethics/download.asp 下載題庫後，分別將兩份題庫之 pdf 轉換為 csv 格式，格式參考 src/datas/ethics_formated.example.json 及 market_formated.example.json，並將檔名改為 ethics_formated.json 及 market_formated.json。
+1. 從 https://webline.sfi.org.tw/T/ethics/download.asp 下載兩份題庫後，分別將兩份題庫之 pdf 轉換為 csv 格式，可以使用 Adobe 的 pdf-to-excel 線上工具進行轉換
 
-2. 執行 npm i && npm start (將開啟 localhost:3000) 或 npm i && npm run build
+2. 轉換後需整理 excel 檔案之格式，並製作 json 檔案，格式參考 src/datas/ethics_formated.example.json 及 market_formated.example.json，並將檔名改為 ethics_formated.json 及 market_formated.json。
 
-
----
 
 ## 開發環境
 
+需要 Node.js 環境。
+
 * 初始化專案使用 [Create React App](https://github.com/facebook/create-react-app)
-* Bootstrap / TypeScript / sass / d3.js ... blabla...
+* Bootstrap / TypeScript / sass / d3.js ... 
 
 
 ### 相關指令
@@ -32,7 +34,7 @@
 npm start
 ```
 
-npm start 後將使用 [http://localhost:3000](http://localhost:3000。
+npm start 後將使用 [http://localhost:3000](http://localhost:3000)。
 
 
 #### 2. 執行測試
@@ -54,6 +56,8 @@ npm test:coverage
 npm run build`
 ```
 
+
+---
 
 
 ### Troubleshooting
