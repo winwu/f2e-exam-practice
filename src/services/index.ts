@@ -23,7 +23,11 @@ export const getWrongQuestions = (type: 'market' | 'ethics') : IformatedQuestion
             }
         })    
     }
-
-    console.log('pickedQuestions', pickedQuestions);
+    
     return pickedQuestions;
+}
+
+export const clean = () => {
+    window.localStorage.clear();
+    window.location.reload();
 }

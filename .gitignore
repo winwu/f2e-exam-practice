@@ -28,3 +28,5 @@ yarn-error.log*
 # datas
 src/datas/ethics_formated.json
 src/datas/market_formated.json
+
+*_original*

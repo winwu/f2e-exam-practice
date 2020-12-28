@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 
 import { chevronLeftWhite, threeDots, bookmarkFill, trash } from '../Icons/index';
+import { clean } from '../../services';
+
 import './AppHeader.scss';
 
 const AppHeader = () => {
@@ -15,6 +17,14 @@ const AppHeader = () => {
         e.preventDefault();
         toggleMenu(!showMenu);
     };
+
+    const localstorageClean = (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        const ans = window.confirm('您確定要清除所有作答記錄嗎?');
+        if (ans) {
+            clean();
+        }
+    }
 
     return (
         <header className="app-header sticky-top">
@@ -39,7 +49,7 @@ const AppHeader = () => {
                         <Link to="/"><i className="menu-icon">{bookmarkFill}</i>書籤列表</Link>
                     </li>
                     <li>
-                        <button><i className="menu-icon">{trash}</i>清除作答記錄</button>
+                        <button onClick={localstorageClean}><i className="menu-icon">{trash}</i>清除作答記錄</button>
                     </li>
                 </ul>
             </div>
