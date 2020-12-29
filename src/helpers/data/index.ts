@@ -21,7 +21,7 @@ export interface IformatedQuestion {
     qn: string | number;
     title?: string;
     options?: IOption[];
-    category: 'market' | 'ethics' | string;
+    category: 'market' | 'ethics';
 }
 
 export const convertQuestionTitleToAnsMapping = (str: string) : {
@@ -69,7 +69,7 @@ export const formatJsonData = (datas: originalQuestion[]) : IformatedQuestion[] 
         return {
             ans: Math.abs(d.ans),
             qn: d.qn,
-            category: d.category,
+            category: d.category as 'market' | 'ethics',
             ...convertQuestionTitleToAnsMapping(trimedTitle)
         }
     });

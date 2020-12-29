@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { bookmark, bookmarkFill } from '../../components/Icons';
+import React, { useState, useEffect } from 'react';
+import { bookmark, bookmarkFill } from '../../components/Icons/index';
 import { IformatedQuestion, IOption } from '../../helpers/data/index';
+import { getIsBookmarked, setBookmark, removeBookmark } from '../../services/index';
+
 import './QuestionCard.scss';
 
 const categoryMap: { [categoryKey: string]: string } = {
@@ -17,6 +19,8 @@ const QuestionCard = (props: {
 
     const [selected, updateSelected] = useState<string | null>(null);
 
+    const [bookmarked, setBookmarked] = useState<Boolean>(false);
+
     const idx = props.seq;
     const { data, haveSubmitted, onAnsChanged } = props;
     
@@ -26,17 +30,32 @@ const QuestionCard = (props: {
         onAnsChanged(e.target.value, idx);
     }
 
-    let content = null;
+    const toggleBookmark = (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        const current = !bookmarked;
+        
+        setBookmarked(current);
+        if (current === false) {
+            removeBookmark(data.category, Number(data.qn));
+        } else {
+            setBookmark(data.category, Number(data.qn));
+        }
+    }
 
+    useEffect(() => {
+        setBookmarked(getIsBookmarked(data.category, Number(data.qn)));
+    }, [data]);
+
+    let content = null;
     content = (
         <div className={`question-card ${haveSubmitted === true && Number(selected) !== Number(data.ans) ? 'has-error' : ''}`}>
             <div className="question-card-content">
                 <div className="question-card-header">
                     <div className="question-idx">{idx + 1}</div>
                     <span className={`question-badge badge-${data.category}`}>{categoryMap[data.category]} {data.qn}</span>
-                    <button className="question-bm-btn">
+                    <button className="question-bm-btn" onClick={ toggleBookmark }>
                         {
-                            Number(data.category)%2 === 1 ? bookmark : bookmarkFill
+                            bookmarked ? bookmarkFill : bookmark
                         }
                     </button>
                 </div>
