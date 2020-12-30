@@ -62,6 +62,24 @@ const Practice = () => {
         }
     }
 
+    const jump = (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        const goto: any = window.prompt('直接移動到第幾題?');
+        if (!goto) {
+            return;
+        }
+        if (isNaN(goto)) {
+            return alert('很抱歉，請輸入正確的題號');
+        }
+        if (Number(goto) <= 0) {
+            return updateCurrent(0);
+        }
+        if (Number(goto) > data.length) {
+            return updateCurrent(data.length - 1);
+        }
+        return updateCurrent(Number(goto) - 1);
+    }
+
     const currentQuestion = data?.[currentIndex] ?? null;
   
     let renderContent = null;
@@ -71,8 +89,9 @@ const Practice = () => {
     } else {
         renderContent = (
             <div className="container container-700 mt-3 mb-5">
-                <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}}>
+                <nav className="navbar p-0 mb-3" style={{backgroundColor: '#ebe9e6'}}>
                     <div>考題練習 {currentIndex + 1}/{data.length}</div>
+                    <button className="btn btn-outline-primary btn-sm pt-0 pb-0" onClick={jump}>移至</button>
                 </nav>
                 <div className="exams-wrap">
                     <QuestionCard

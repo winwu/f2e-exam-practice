@@ -3,7 +3,7 @@ import { IformatedQuestion, pickHalfHalfQuestion} from '../../../helpers/data/in
 
 import QuestionCard from '../../QuestionCard';
 
-const TOTAL = 50;
+const TOTAL = 100;
 const tempData = pickHalfHalfQuestion(TOTAL);
 
 const Exam = () => {
