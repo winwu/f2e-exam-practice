@@ -35,16 +35,19 @@ const Practice = () => {
         }
     }, [practiceType, data]);  
 
-    const prev = (e: SyntheticEvent) => {
+    const resetSubmitRecord = () => {
         // reset hasSubmit to false
         updateHasSubmit(false);
+    };
+
+    const prev = (e: SyntheticEvent) => {
+        resetSubmitRecord();
 
         updateCurrent(currentIndex - 1);
     }
 
     const next = (e: SyntheticEvent) => {
-        // reset hasSubmit to false
-        updateHasSubmit(false);
+        resetSubmitRecord();
 
         const newIndex = currentIndex + 1;
         updateCurrent(newIndex);
@@ -64,19 +67,27 @@ const Practice = () => {
 
     const jump = (e: React.SyntheticEvent) => {
         e.preventDefault();
+        
         const goto: any = window.prompt('直接移動到第幾題?');
+        
         if (!goto) {
             return;
         }
+        
         if (isNaN(goto)) {
             return alert('很抱歉，請輸入正確的題號');
         }
-        if (Number(goto) <= 0) {
+        
+        resetSubmitRecord();
+        
+        if (Number(goto) <= 0) {    
             return updateCurrent(0);
         }
+        
         if (Number(goto) > data.length) {
             return updateCurrent(data.length - 1);
         }
+        
         return updateCurrent(Number(goto) - 1);
     }
 
