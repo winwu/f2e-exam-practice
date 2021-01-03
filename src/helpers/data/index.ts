@@ -43,7 +43,7 @@ export const convertQuestionTitleToAnsMapping = (str: string) : {
     // index 2 ~ 5 means A, B, C, D
     for (let idx = 2; idx <= 5; idx++) {
         // remove \n
-        const text = match[idx].trim().replace(' ', '').replace('\\n', '').replace('\n', '').replace('\n ', '');
+        const text = match[idx].trim().replace(' ', '');
 
         options.push({
             val: optionsCounter,
@@ -53,7 +53,7 @@ export const convertQuestionTitleToAnsMapping = (str: string) : {
     }
 
 
-    const title = match[1].trim().replace(' ', '').replace('\\n', '').replace('\n', '').replace('\n ', '');
+    const title = match[1].trim().replace(' ', '');
 
     return {
         title: title || 'no title',
@@ -64,7 +64,7 @@ export const convertQuestionTitleToAnsMapping = (str: string) : {
 export const formatJsonData = (datas: originalQuestion[]) : IformatedQuestion[] => {
     const result = datas.map((d) => {
 
-        const trimedTitle = d.title.replace(/\n/g,' ');
+        const trimedTitle = d.title.replace(/\n/g, '');
 
         return {
             ans: Math.abs(d.ans),

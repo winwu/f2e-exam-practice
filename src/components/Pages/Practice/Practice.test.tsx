@@ -42,7 +42,7 @@ it('<Practice /> prev and next button', () => {
         render(<Practice />, container);
     });
 
-    expect(container.querySelector('.container .navbar').textContent).toBe('考題練習 1/504');
+    expect(container.querySelector('.container .navbar').textContent).toBe('考題練習 1/504移至');
 
     const prev = container.querySelectorAll('.ans-btn-fixed .ans-btn')[0];
     const next = container.querySelectorAll('.ans-btn-fixed .ans-btn')[1];
@@ -51,7 +51,7 @@ it('<Practice /> prev and next button', () => {
     act(() => {
         next.dispatchEvent(new MouseEvent('click', { bubbles: true })); 
     });
-    expect(container.querySelector('.container .navbar').textContent).toBe('考題練習 2/504');
+    expect(container.querySelector('.container .navbar').textContent).toBe('考題練習 2/504移至');
 
     // click prev
     act(() => {
@@ -59,7 +59,7 @@ it('<Practice /> prev and next button', () => {
         
     });
     
-    expect(container.querySelector('.container .navbar').textContent).toBe('考題練習 1/504');
+    expect(container.querySelector('.container .navbar').textContent).toBe('考題練習 1/504移至');
     expect(prev).toBeDisabled();
 });
 
