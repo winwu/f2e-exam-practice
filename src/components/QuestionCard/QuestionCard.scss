@@ -6,11 +6,6 @@
             border-color: red;
         }
     }
-    // &.has-success {
-    //     .question-card-content {
-    //         border: 2px solid red;
-    //     }
-    // }
     .question-idx {
         font-size: 20px;
         font-style: initial;
@@ -39,7 +34,9 @@
             font-size: 16px;
             color: #333;
             line-height: 1.5em;
-            vertical-align: middle
+            vertical-align: middle;
+            margin-bottom: 15px;
+            text-align: justify;
         }
         .question-badge {
             font-size: 12px;
@@ -88,12 +85,7 @@
             
             .custom-control {
                 min-height: 2rem;
-                margin: 2px auto;
-                // padding-left: 35px;
-                // &:hover {
-                //     background: #f3ede3;
-                //     border-radius: 4px;   
-                // }
+                margin: 8px auto;
                 
                 &.wrong-ans-marked {
                     background: #fff3f3;
@@ -110,7 +102,7 @@
             }
             label {
                 font-size: 15px;
-                
+                text-align: justify;   
                 padding: 8px 0;
             }
             .custom-control-label::before,
