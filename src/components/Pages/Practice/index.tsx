@@ -48,7 +48,6 @@ const Practice = () => {
 
     const next = (e: SyntheticEvent) => {
         resetSubmitRecord();
-
         const newIndex = currentIndex + 1;
         updateCurrent(newIndex);
     }
@@ -65,11 +64,12 @@ const Practice = () => {
         }
     }
 
-    const jump = (e: React.SyntheticEvent) => {
+    const promptJump = (e: React.SyntheticEvent) => {
         e.preventDefault();
-        
-        const goto: any = window.prompt('直接移動到第幾題?');
-        
+        jumpTo((window as any).prompt('直接移動到第幾題?'));
+    }
+
+    const jumpTo = (goto: number) => {
         if (!goto) {
             return;
         }
@@ -91,18 +91,40 @@ const Practice = () => {
         return updateCurrent(Number(goto) - 1);
     }
 
+    const pager = (
+        <div className="ans-btn-fixed">
+            <div className="container container-700">
+                <div className="row">
+                    <div className="col-6 text-left">
+                        <button className="ans-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
+                    </div>
+                    <div className="col-6 text-right">
+                        <button className="ans-btn" onClick={(e) => next(e)} disabled={currentIndex + 1  > data.length}>下一題 Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
     const currentQuestion = data?.[currentIndex] ?? null;
   
     let renderContent = null;
-
-    if (data.length === 0 || !currentQuestion) {
+    if (data.length === 0) {
         renderContent = (<div className="text-center">Loading</div>);
+    } else if (currentIndex >= data.length) {
+        renderContent = (
+            <div className="text-center">
+                <div>
+                    沒有題目了
+                </div>
+                <span className="btn btn-link" onClick={() => jumpTo(1)}>回到第一題</span>
+            </div>);
     } else {
         renderContent = (
-            <div className="container container-700 mt-3 mb-5">
+            <>
                 <nav className="navbar p-0 mb-3" style={{backgroundColor: '#ebe9e6'}}>
                     <div>考題練習 {currentIndex + 1}/{data.length}</div>
-                    <button className="btn btn-outline-primary btn-sm pt-0 pb-0" onClick={jump}>移至</button>
+                    <button className="btn btn-outline-primary btn-sm pt-0 pb-0" onClick={promptJump}>移至</button>
                 </nav>
                 <div className="exams-wrap">
                     <QuestionCard
@@ -113,23 +135,16 @@ const Practice = () => {
                         onAnsChanged={updateAnsArray}
                     />
                 </div>
-                <div className="ans-btn-fixed">
-                    <div className="container container-700">
-                        <div className="row">
-                            <div className="col-6 text-left">
-                                <button className="ans-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
-                            </div>
-                            <div className="col-6 text-right">
-                                <button className="ans-btn" onClick={(e) => next(e)} disabled={currentIndex +1 === data.length}>下一題 Next</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </>
         )
     }
 
-    return renderContent;
+    return (
+        <div className="container container-700 mt-3 mb-5">
+            { renderContent }
+            { pager }
+        </div>
+    );
 }
 
 export default Practice;
