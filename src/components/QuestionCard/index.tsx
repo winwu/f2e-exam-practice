@@ -50,7 +50,7 @@ const QuestionCard = (props: {
     let hasError = haveSubmitted === true && Number(selected) !== Number(data.ans);
 
     content = (
-        <div className={`question-card ${hasError ? 'has-error' : ''}`} data-testid={ hasError ? "que-card-has-error" :  "que-card"}>
+        <div className={`question-card ${hasError ? 'has-error' : ''}`} data-testid="que-card">
             <div className="question-card-content">
                 <div className="question-card-header">
                     <div className="question-idx">{idx + 1}</div>
