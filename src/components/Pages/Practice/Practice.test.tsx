@@ -33,7 +33,7 @@ afterEach(() => {
 it('<Practice /> show loading before data loaded', () => {
     act(() => {
         render(<Practice />, container);
-        expect(container.textContent).toBe('Loading');
+        expect(container.textContent).toBe('Loading上一題 Prev下一題 Next');
     });
 });
 

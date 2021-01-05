@@ -47,20 +47,22 @@ const QuestionCard = (props: {
     }, [data]);
 
     let content = null;
+    let hasError = haveSubmitted === true && Number(selected) !== Number(data.ans);
+
     content = (
-        <div className={`question-card ${haveSubmitted === true && Number(selected) !== Number(data.ans) ? 'has-error' : ''}`}>
+        <div className={`question-card ${hasError ? 'has-error' : ''}`} data-testid={ hasError ? "que-card-has-error" :  "que-card"}>
             <div className="question-card-content">
                 <div className="question-card-header">
                     <div className="question-idx">{idx + 1}</div>
-                    <span className={`question-badge badge-${data.category}`}>{categoryMap[data.category]} {data.qn}</span>
-                    <button className="question-bm-btn" onClick={ toggleBookmark }>
+                    <span className={`question-badge badge-${data.category}`} data-testid="que-badge">{categoryMap[data.category]} {data.qn}</span>
+                    <button className="question-bm-btn" data-testid="que-bm-btn" onClick={ toggleBookmark }>
                         {
                             bookmarked ? bookmarkFill : bookmark
                         }
                     </button>
                 </div>
                 
-                <h3 className="question-title">{data.title}</h3>
+                <h3 className="question-title" data-testid="que-title">{data.title}</h3>
                 
                 <div className="ans-btn-group">
                     { data.options ? data.options.map((o: IOption) => {
@@ -82,7 +84,8 @@ const QuestionCard = (props: {
                                     checked={selected === o.val.toString()} 
                                     onChange={(e) => onSelect(e)}
                                     disabled={props.haveSubmitted === true}
-                                    className="custom-control-input" />
+                                    className="custom-control-input"
+                                    data-testid="que-input" />
                                 <label className="custom-control-label d-block" htmlFor={`opt-${idx}-${o.val}`}>({o.val}) {o.text}</label>
                             </div>
                         )}) : null
