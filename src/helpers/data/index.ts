@@ -43,7 +43,8 @@ export const convertQuestionTitleToAnsMapping = (str: string) : {
     // index 2 ~ 5 means A, B, C, D
     for (let idx = 2; idx <= 5; idx++) {
         // remove \n
-        const text = match[idx].trim().replace(' ', '');
+        // const text = match[idx].trim().replace(' ', '');
+        const text = match[idx].trim();
 
         options.push({
             val: optionsCounter,
@@ -53,7 +54,8 @@ export const convertQuestionTitleToAnsMapping = (str: string) : {
     }
 
 
-    const title = match[1].trim().replace(' ', '');
+    // const title = match[1].trim().replace(' ', '');
+    const title = match[1].trim();
 
     return {
         title: title || 'no title',
