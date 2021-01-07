@@ -110,7 +110,7 @@ const Practice = () => {
   
     let renderContent = null;
     if (data.length === 0) {
-        renderContent = (<div className="text-center">Loading</div>);
+        renderContent = (<div className="text-center" data-testid="loading">Loading</div>);
     } else if (currentIndex >= data.length) {
         renderContent = (
             <div className="text-center">

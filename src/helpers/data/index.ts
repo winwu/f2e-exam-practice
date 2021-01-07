@@ -90,7 +90,11 @@ export const pickQuestion = (examLib: 'market' | 'ethics' | '*', quantity?: numb
     if (examLib === '*') {
         source = getAllQuestion();
     } else {
-        source = examLib === 'market' ? formattedMarketData : fommattedEthicsData;
+        if (examLib === 'market') {
+            source = formattedMarketData;
+        } else if (examLib === 'ethics') {
+            source = fommattedEthicsData;
+        }
     }
 
     if (quantity === null) {
