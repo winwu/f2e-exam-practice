@@ -96,10 +96,10 @@ const Practice = () => {
             <div className="container container-700">
                 <div className="row">
                     <div className="col-6 text-left">
-                        <button className="ans-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
+                        <button className="ans-btn" data-testid="prev-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
                     </div>
                     <div className="col-6 text-right">
-                        <button className="ans-btn" onClick={(e) => next(e)} disabled={currentIndex + 1  > data.length}>下一題 Next</button>
+                        <button className="ans-btn" data-testid="next-btn" onClick={(e) => next(e)} disabled={currentIndex + 1  > data.length}>下一題 Next</button>
                     </div>
                 </div>
             </div>
@@ -123,8 +123,8 @@ const Practice = () => {
         renderContent = (
             <>
                 <nav className="navbar p-0 mb-3" style={{backgroundColor: '#ebe9e6'}}>
-                    <div>考題練習 {currentIndex + 1}/{data.length}</div>
-                    <button className="btn btn-outline-primary btn-sm pt-0 pb-0" onClick={promptJump}>移至</button>
+                    <div data-testid="pra-heading">考題練習 {currentIndex + 1}/{data.length}</div>
+                    <button className="btn btn-outline-primary btn-sm pt-0 pb-0" data-testid="jump-btn" onClick={promptJump}>移至</button>
                 </nav>
                 <div className="exams-wrap">
                     <QuestionCard
