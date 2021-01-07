@@ -114,10 +114,10 @@ const Practice = () => {
     } else if (currentIndex >= data.length) {
         renderContent = (
             <div className="text-center">
-                <div>
+                <div data-testid="empty-content">
                     沒有題目了
                 </div>
-                <span className="btn btn-link" onClick={() => jumpTo(1)}>回到第一題</span>
+                <span className="btn btn-link" data-testid="reset-currentindex" onClick={() => jumpTo(1)}>回到第一題</span>
             </div>);
     } else {
         renderContent = (

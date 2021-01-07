@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route, MemoryRouter } from 'react-router-dom';
-import LocalStorageMock from '../../../local-storage-mock.js';
 import { render, fireEvent, cleanup } from '@testing-library/react';
+import { Route, MemoryRouter } from 'react-router-dom';
 import Practice from './index';
+// import LocalStorageMock from '../../../local-storage-mock.js';
 
 afterEach(cleanup);
 
-(window as any).localStorage = LocalStorageMock;
+// (window as any).localStorage = LocalStorageMock;
 
 /* 
  * another way to mock router
@@ -95,5 +95,25 @@ describe('<Practice>', () => {
         fireEvent.click(prev);
         expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/504');
         expect(prev).toBeDisabled();
+    });
+
+    it('should show message after go through all of questions', () => {
+        const { getByTestId } = render(
+            <MemoryRouter initialEntries={['practice/market']}>
+                <Route path='practice/:practiceType'>
+                    <Practice />
+                </Route>
+            </MemoryRouter>
+        ); 
+    
+        const next = getByTestId('next-btn');
+        for (let i = 0; i < 504; i++) {
+            // click until to the last question
+            fireEvent.click(next);
+        }
+        
+        expect(getByTestId('empty-content')).toBeInTheDocument();
+        fireEvent.click(getByTestId('reset-currentindex'));
+        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/504');
     });
 });
