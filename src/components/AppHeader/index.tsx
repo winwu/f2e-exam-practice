@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import {
     Link,
-    useLocation
+    useLocation,
+    useHistory
 } from "react-router-dom";
 
 import { chevronLeftWhite, threeDots, bookmarkFill, trash } from '../Icons/index';
@@ -12,11 +13,17 @@ import './AppHeader.scss';
 const AppHeader = () => {
     const [showMenu, toggleMenu] = useState<Boolean>(false);
     const location = useLocation();
+    const history = useHistory();
 
     const toToggleMenu = (e: React.SyntheticEvent) => {
         e.preventDefault();
         toggleMenu(!showMenu);
     };
+
+    const goToBookmarks = (e: React.SyntheticEvent) => {
+        toToggleMenu(e);
+        history.push("/bookmarks");
+    }
 
     const localstorageClean = (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -46,7 +53,7 @@ const AppHeader = () => {
             <div className={`menu ${showMenu ? 'active' : ''}`}>
                 <ul>
                     <li>
-                        <Link to="/"><i className="menu-icon">{bookmarkFill}</i>書籤列表</Link>
+                        <button onClick={goToBookmarks}><i className="menu-icon">{bookmarkFill}</i>書籤列表</button>
                     </li>
                     <li>
                         <button onClick={localstorageClean}><i className="menu-icon">{trash}</i>清除作答記錄</button>

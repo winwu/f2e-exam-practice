@@ -10,6 +10,7 @@ import Home from './Pages/Home';
 import Exam from './Pages/Exam';
 import Practice from './Pages/Practice';
 import Review from './Pages/Review';
+import Bookmarks from './Pages/Bookmarks';
 
 // components
 import AppHeader from './AppHeader';
@@ -32,6 +33,9 @@ function App() {
                 </Route>
                 <Route path="/review/:practiceType">
                     <Review />
+                </Route>
+                <Route path="/bookmarks">
+                    <Bookmarks />
                 </Route>
             </Switch>
         </Router>

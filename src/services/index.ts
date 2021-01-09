@@ -22,7 +22,7 @@ export const getWrongQuestions = (type: questionList) : IformatedQuestion[] => {
             if (h === "false") {
                 pickedQuestions.push(allQuestion[index])
             }
-        })    
+        });
     }
     
     return pickedQuestions;
@@ -66,9 +66,17 @@ export const removeBookmark = (type: questionList, qn: number) => {
 
 export const getIsBookmarked = (type: questionList, qn: number) => {
     const bookmarks = getBookmarks();
-    return bookmarks[type].includes(qn);
+    return bookmarks[type] && bookmarks[type].includes(qn) ? true : false;
 }
 
+export const getBookmarkedList = () : IformatedQuestion[] => {
+    const { market = [], ethics = [] } = getBookmarks();
+    const marketQuestions = pickQuestion('market', null);
+    const ethicsQuestions = pickQuestion('ethics', null);
+    const filteredMarket = marketQuestions.filter((i: IformatedQuestion) => market.includes(i.qn));
+    const filteredEthics = ethicsQuestions.filter((i: IformatedQuestion) => ethics.includes(i.qn));
+    return [...filteredMarket, ...filteredEthics];
+}
 
 export const clean = () => {
     window.localStorage.clear();
