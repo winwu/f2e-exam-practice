@@ -4,10 +4,10 @@ import { IformatedQuestion, pickHalfHalfQuestion} from '../../../helpers/data/in
 import QuestionCard from '../../QuestionCard';
 
 const TOTAL = 100;
-const tempData = pickHalfHalfQuestion(TOTAL);
+
 
 const Exam = () => {
-    const [data] = useState<IformatedQuestion[]>(tempData);
+    const [data] = useState<IformatedQuestion[]>(pickHalfHalfQuestion(TOTAL));
     const [userAnswer, updateUserAnswer] = useState(new Array(data.length).fill(null));
     const [score, setScore] = useState<null | number>(null);
 
@@ -21,8 +21,8 @@ const Exam = () => {
         e.preventDefault();
         if (userAnswer.includes(null)) {
             alert('尚未有題目未作答');
-            const getNotAnsQuestion = [...userAnswer].map((d, i) => d === null ? i : null).filter(x => x);
-            console.log('未填答', getNotAnsQuestion); 
+            // const getUnAnsweredQuestions = [...userAnswer].map((d, i) => d === null ? i : null).filter(x => x);
+            // console.log('未填答', getUnAnsweredQuestions); 
         }
         const thisScore = calculateScore();
         alert(`成績 ${thisScore}`);
@@ -55,8 +55,8 @@ const Exam = () => {
     }
 
     return (
-        <div className="container container-700 mt-3 mb-5">
-            <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}}>
+        <div className="container container-700 mt-3 mb-5" data-testid="exam-page">
+            <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
                 <div>模擬考</div>
             </nav>
             <div className="exams-wrap">
@@ -76,23 +76,6 @@ const Exam = () => {
                     {
                         score !== null && (<div className="score-result">成績: {score}</div>)
                     }
-                </div>
-            </div>
-            <div className="modal fade" tabIndex={-1}>
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title">Modal title</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-body">
-                            <p>Modal body text goes here.</p>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
