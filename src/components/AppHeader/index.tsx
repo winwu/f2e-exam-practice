@@ -34,12 +34,12 @@ const AppHeader = () => {
     }
 
     return (
-        <header className="app-header sticky-top">
+        <header className="app-header sticky-top" data-testid="app-header">
             <div className="container container-700">
                 <div className="row flex-nowrap justify-content-between align-items-center">
                     <div className="col-2">
                         {
-                            location.pathname !== '/' ?  <Link to="/" style={{lineHeight: '16px', verticalAlign: 'top'}}>{chevronLeftWhite}</Link> : null
+                            location.pathname !== '/' ?  <Link to="/" data-testid="back-link" style={{lineHeight: '16px', verticalAlign: 'top'}}>{chevronLeftWhite}</Link> : null
                         }                        
                     </div>
                     <div className="col-8 text-center">

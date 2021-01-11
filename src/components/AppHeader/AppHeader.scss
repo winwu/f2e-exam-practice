@@ -50,6 +50,9 @@
                 width: 100%;
                 background: transparent;
                 border: none;
+                &.active {
+                    background: #000;
+                }
             }
             .menu-icon {
                 display: inline-block;
