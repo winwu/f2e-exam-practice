@@ -3,10 +3,21 @@ import { render, fireEvent, cleanup } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
 import AppHeader from './';
 
-
 afterEach(cleanup);
 
 describe('<AppHeader>', () => {
+    const originalReload = window.location.reload;
+
+    beforeAll(() => {
+        Object.defineProperty(window, 'location', {
+            value: { reload: jest.fn() }
+        });
+    });
+
+    afterAll(() => {
+        window.location.reload = originalReload;
+    });
+    
     it('sholud render properly', () => {
         const { getByTestId } = render(
             <MemoryRouter initialEntries={['']}>
@@ -37,33 +48,53 @@ describe('<AppHeader>', () => {
         }
     });
 
-    // it('sholud clean data after click 清除作答記錄', () => {
-    //     const { getByTestId, debug } = render(
-    //         <MemoryRouter initialEntries={['bookmarks']}>
-    //             <Route path='bookmarks'>
-    //                 <AppHeader />
-    //             </Route>
-    //         </MemoryRouter>
-    //     );
+    it('sholud clean data after click 清除作答記錄 with Yes', () => {
+        const { getByTestId } = render(
+            <MemoryRouter initialEntries={['bookmarks']}>
+                <Route path='bookmarks'>
+                    <AppHeader />
+                </Route>
+            </MemoryRouter>
+        );
         
-    //     expect(getByTestId('back-link')).toBeInTheDocument();
+        expect(getByTestId('back-link')).toBeInTheDocument();
         
-    //     const header = getByTestId('app-header');
-    //     const menuBtn = header.querySelector('.btn-menu');
-    //     const resetBtn = header.querySelectorAll('.menu li')[1];
+        const header = getByTestId('app-header');
+        const resetBtn = header.querySelectorAll('.menu li')[1].getElementsByTagName('button')[0];
+        
+        if (resetBtn) {
+            expect(resetBtn).toBeInTheDocument();
+            // will not reload if cancel window.confirm
+            window.confirm = jest.fn().mockImplementation(() => false)
+            
+            fireEvent.click(resetBtn);
+            expect(window.confirm).toBeCalled();
+        }
+    });
 
-    //     if (menuBtn) {
-    //         // open menu
-    //         fireEvent.click(menuBtn);
-    //         expect(resetBtn).toBeInTheDocument();
+    it('sholud not clean data after click 清除作答記錄 with No', () => {
+        const { getByTestId } = render(
+            <MemoryRouter initialEntries={['bookmarks']}>
+                <Route path='bookmarks'>
+                    <AppHeader />
+                </Route>
+            </MemoryRouter>
+        );
 
-    //         // window.confirm = jest.fn();
-    //         window.confirm = jest.fn(() => true) 
+        expect(getByTestId('back-link')).toBeInTheDocument();
 
-    //         fireEvent.click(resetBtn);
+        const header = getByTestId('app-header');
+        const resetBtn = header.querySelectorAll('.menu li')[1].getElementsByTagName('button')[0];
 
-    //         expect(window.confirm).toBeCalled();
-    //     }
-    // });
+        if (resetBtn) {
+            expect(resetBtn).toBeInTheDocument();
+            
+            // will reload if cancel window.confirm
+            window.confirm = jest.fn().mockImplementation(() => true)
+
+            fireEvent.click(resetBtn);
+            expect(window.location.reload).toHaveBeenCalled();
+        }
+    });
 });
 
