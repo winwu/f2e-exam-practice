@@ -19,7 +19,7 @@
 
 1. 從 https://webline.sfi.org.tw/T/ethics/download.asp 下載兩份題庫後，分別將兩份題庫之 pdf 轉換為 csv 格式，可以使用 Adobe 的 pdf-to-excel 線上工具進行轉換
 
-2. 轉換後需整理 excel 檔案之格式，並製作 json 檔案，格式參考 src/datas/ethics_formated.example.json 及 market_formated.example.json，並將檔名改為 ethics_formated.json 及 market_formated.json。
+2. 轉換後需整理 excel 檔案之格式，並製作 json 檔案，格式參考 public/data/ethics_formated.example.json 及 market_formated.example.json，並將檔名改為 ethics_formated.json 及 market_formated.json。
 
 
 ## 開發環境
