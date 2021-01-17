@@ -1,15 +1,37 @@
-import React, { useState, SyntheticEvent } from 'react';
-import { IformatedQuestion, pickHalfHalfQuestion} from '../../../helpers/data/index';
-
+import React, { useState, useEffect, SyntheticEvent } from 'react';
+import { IformatedQuestion, pickHalfHalfQuestion } from '../../../helpers/data/index';
+import { getData } from '../../../services/index';
 import QuestionCard from '../../QuestionCard';
 
 const TOTAL = 100;
 
-
 const Exam = () => {
-    const [data] = useState<IformatedQuestion[]>(pickHalfHalfQuestion(TOTAL));
-    const [userAnswer, updateUserAnswer] = useState(new Array(data.length).fill(null));
+    const [data, setData] = useState<IformatedQuestion[]>([]);
+    const [userAnswer, updateUserAnswer] = useState<any[]>([]);
     const [score, setScore] = useState<null | number>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const [market, ethics] : [IformatedQuestion[], IformatedQuestion[]] = [
+                await getData('market'),
+                await getData('ethics')
+            ];
+
+            const datas = {
+                market,
+                ethics
+            };
+            // generate questions
+            setData(pickHalfHalfQuestion(datas, TOTAL));
+        }
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        if (data.length) {
+            updateUserAnswer(new Array(data.length).fill(null));
+        }
+    }, [data]);
 
     const updateAnsArray = (newValue: string | number, questionIndex: number):void => {
         const newAnsAry = [...userAnswer];
@@ -56,20 +78,28 @@ const Exam = () => {
 
     return (
         <div className="container container-700 mt-3 mb-5" data-testid="exam-page">
-            <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
-                <div>模擬考</div>
-            </nav>
-            <div className="exams-wrap">
-                { data.map((d: any, idx: number) => (
-                    <QuestionCard 
-                        key={idx}
-                        seq={idx}
-                        data={d}
-                        haveSubmitted={score !== null ? true : false}
-                        onAnsChanged={updateAnsArray}
-                    />
-                ))}
-            </div>
+            {
+                data.length === 0 ?
+                    <div className="text-center" data-testid="loading">Loading</div>
+                    :
+                    <>
+                        <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
+                            <div>模擬考</div>
+                        </nav>
+                        <div className="exams-wrap">
+                            { data.map((d: any, idx: number) => (
+                                <QuestionCard 
+                                    key={idx}
+                                    seq={idx}
+                                    data={d}
+                                    haveSubmitted={score !== null ? true : false}
+                                    onAnsChanged={updateAnsArray}
+                                />
+                            ))}
+                        </div>
+                    </>
+            }
+            
             <div className="ans-btn-fixed">
                 <div className="container container-700">
                     <button className="ans-btn d-inline-block w-50" onClick={(e) => submit(e)} disabled={score !== null}>{score !== null ? '已' : ''}交卷</button>

@@ -9,10 +9,12 @@ const Bookmarks = () => {
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
   
     useEffect(() => {
-        let bookmarkedQuestions = getBookmarkedList();
-        setData(bookmarkedQuestions);
+        const fetchData = async () => {
+            let databookmarkedQuestionss = await getBookmarkedList();
+            setData(databookmarkedQuestionss);
+        }
+        fetchData();
     }, []);
-
 
     const prev = (e: SyntheticEvent) => {
         // reset hasSubmit to false

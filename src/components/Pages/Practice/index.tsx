@@ -1,6 +1,7 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react';
 import { useParams } from 'react-router-dom';
 import { IformatedQuestion, pickQuestion } from '../../../helpers/data/index';
+import { getData } from '../../../services/index';
 import QuestionCard from '../../QuestionCard';
 
 const Practice = () => {
@@ -21,13 +22,22 @@ const Practice = () => {
     const [data, setData] = useState<IformatedQuestion[]>([]);
     const [currentIndex, updateCurrent] = useState<number>(defaultIndex);
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
-  
+
     useEffect(() => {
-        // generate questions by practice type
-        setData(pickQuestion(practiceType, null));
+        if (practiceType === 'market' || practiceType === 'ethics') {
+            const fetchData = async () => {
+                let datas = await getData(practiceType);
+                
+                // generate questions by practice type
+                setData(pickQuestion(datas, null));
+            }
+            fetchData();
+        } else {
+            console.warn('practiceType should be market or ethics');
+        }
     }, [practiceType]);
 
-    useEffect(() => {    
+    useEffect(() => {
         if (data.length > 0) {
             if (!window.localStorage.getItem(`${practiceType}-pra-history`)) {
                 window.localStorage.setItem(`${practiceType}-pra-history`, JSON.stringify(Array(data.length).fill(null))); 

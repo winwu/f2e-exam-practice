@@ -10,10 +10,17 @@ const Review = () => {
     const [currentIndex, updateCurrent] = useState<number>(0);
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
   
+
     useEffect(() => {
-        let pickedQuestions = getWrongQuestions(practiceType);
-        
-        setData(pickedQuestions);
+        if (practiceType === 'market' || practiceType === 'ethics') {
+            const fetchData = async () => {
+                const pickedQuestions = await getWrongQuestions(practiceType);
+                setData(pickedQuestions);
+            }
+            fetchData();
+        } else {
+            console.warn('practiceType should be market or ethics');
+        }
     }, [practiceType]);
 
 

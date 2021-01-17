@@ -1,11 +1,9 @@
 import React from 'react';
-import { render, fireEvent, cleanup } from '@testing-library/react';
+import { render, fireEvent, cleanup, waitFor, screen } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
+import ethicsData from '../../../../public/data/ethics_formated.json';
+import marketData from '../../../../public/data/market_formated.json';
 import Exam from './index';
-
-afterEach(cleanup);
-
-// (window as any).localStorage = LocalStorageMock;
 
 /* 
  * another way to mock router
@@ -19,8 +17,35 @@ afterEach(cleanup);
     }));
 */
 
+beforeEach(() => {
+    jest.spyOn(window, 'fetch').mockImplementation((url) => {
+        console.log('url----------', url);
+        if ((url as string).includes('market_formated.json')) {
+            return Promise.resolve({
+                headers: null,
+                ok: true,
+                json: () => Promise.resolve(marketData)
+            });
+        } else if ((url as string).includes('ethics_formated.json')) {
+            return Promise.resolve({
+                headers: null,
+                ok: true,
+                json: () => Promise.resolve(ethicsData)
+            });
+        } else {
+            // when the url is not /practice/market or /practice/ethics
+            return Promise.reject();
+        }
+    });
+});
+
+afterEach(() => {
+    cleanup();
+    jest.restoreAllMocks();
+});
+
 describe('<Exam>', () => {
-    it('should render 100 question', () => {
+    it('should render 100 question', async () => {
         const { getByTestId, getAllByTestId } = render(
             <MemoryRouter initialEntries={['exam']}>
                 <Route path='exam'>
@@ -28,25 +53,29 @@ describe('<Exam>', () => {
                 </Route>
             </MemoryRouter>
         );
+
+        const loading = await waitFor(() => getByTestId('loading'));
+        expect(loading).toHaveTextContent('Loading');
+
+        await waitFor(() => screen.getByTestId('navbar'));
         expect(getByTestId('navbar').textContent).toContain('模擬考');
         expect(getAllByTestId('que-card').length).toBe(100);
-
         const submitButton = getByTestId('exam-page').querySelector('.ans-btn-fixed .ans-btn');
         expect(submitButton).toBeInTheDocument();
         expect(getByTestId('exam-page').querySelector('.ans-btn-fixed .ans-btn')?.textContent).toBe('交卷');
     });
 
-    it('should calculate the score after pressing the submit button and without answering any question', () => {
-        const { getByTestId, getAllByTestId, debug } = render(
+    it('should calculate the score after pressing the submit button and without answering any question', async () => {
+        const { getByTestId } = render(
             <MemoryRouter initialEntries={['exam']}>
                 <Route path='exam'>
                     <Exam />
                 </Route>
             </MemoryRouter>
         );
+        await waitFor(() => screen.getByTestId('navbar'));
 
         window.alert = jest.fn();
-
         const submitButton = getByTestId('exam-page').querySelector('.ans-btn-fixed .ans-btn');
         
         if (submitButton) {

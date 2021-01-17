@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import LineChart from '../../Charts/Line';
 import ProgressLine from '../../Charts/ProgressLine';
 import { getHistories, getWrongQuestions } from '../../../services';
+import { IformatedQuestion } from '../../../helpers/data';
+
 const Home = () => {
+    const [wrongMarket, setWrongMarket] = useState<IformatedQuestion[]>([]);
+    const [wrongEthics, setWrongEthics] = useState<IformatedQuestion[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            // @FIX ME
+            const wrongMarketQuestions = await getWrongQuestions('market');
+            const wrongEthicsQuestions = await getWrongQuestions('ethics');
+
+            setWrongMarket(wrongMarketQuestions);
+            setWrongEthics(wrongEthicsQuestions);
+        }
+        fetchData();
+    }, []);
+
     const getPercentage = (type: 'market' | 'ethics') => {
         const histories = getHistories(type);
     
@@ -35,17 +52,13 @@ const Home = () => {
         return histories.slice(-5);
     }
 
-
-    const wrongMarketQuestions = getWrongQuestions('market');
-    const wrongEthicsQuestions = getWrongQuestions('ethics');
-    
     let reviewItems = [];
-    if (wrongMarketQuestions.length) {
+    if (wrongMarket.length) {
         reviewItems.push(<div key="market" className="col-6">
             <Link to="/review/market" className="ans-btn review-bg">金融市場常識</Link>
         </div>);
     }
-    if (wrongEthicsQuestions.length) {
+    if (wrongEthics.length) {
         reviewItems.push(<div key="ethics" className="col-6">
             <Link to="/review/ethics" className="ans-btn review-bg">職業道德</Link>
         </div>);
@@ -67,7 +80,7 @@ const Home = () => {
                 </div>
 
                 {
-                    wrongMarketQuestions.length || wrongEthicsQuestions.length ? (
+                    wrongMarket.length || wrongEthics.length ? (
                         <div id="review-sec" className="mb-3">
                             <h3 className="section-heading">複習錯誤題目 Review</h3>
                             <div className="row align-items-center">

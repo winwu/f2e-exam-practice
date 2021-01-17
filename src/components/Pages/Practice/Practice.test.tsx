@@ -1,12 +1,9 @@
 import React from 'react';
-import { render, fireEvent, cleanup } from '@testing-library/react';
+import { render, fireEvent, cleanup, waitFor, screen } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
+import ethicsData from '../../../../public/data/ethics_formated.json';
+import marketData from '../../../../public/data/market_formated.json';
 import Practice from './index';
-// import LocalStorageMock from '../../../local-storage-mock.js';
-
-afterEach(cleanup);
-
-// (window as any).localStorage = LocalStorageMock;
 
 /* 
  * another way to mock router
@@ -20,7 +17,47 @@ afterEach(cleanup);
     }));
 */
 
+let originalWarn: any;
+beforeAll(() => {
+    originalWarn = global.console.warn;
+    // mock console.warn
+    global.console.warn = jest.fn();
+});
+
+afterAll(() => {
+    // revert original warn
+    global.console.warn = originalWarn;
+});
+
+beforeEach(() => {
+    jest.spyOn(window, 'fetch').mockImplementation((url) => {
+        if ((url as string).includes('market_formated.json')) {
+            return Promise.resolve({
+                headers: null,
+                ok: true,
+                json: () => Promise.resolve(marketData)
+            });
+        } else if ((url as string).includes('ethics_formated.json')) {
+            return Promise.resolve({
+                headers: null,
+                ok: true,
+                json: () => Promise.resolve(ethicsData)
+            });
+        } else {
+            // when the url is not /practice/market or /practice/ethics
+            return Promise.reject();
+        }
+    });
+});
+  
+afterEach(() => {
+    cleanup();
+    jest.restoreAllMocks();
+});
+
+
 describe('<Practice>', () => {
+
     it('render empty content if there is not question', () => {
         const { getByTestId } = render(
             <MemoryRouter initialEntries={['practice/notexists']}>
@@ -30,9 +67,10 @@ describe('<Practice>', () => {
             </MemoryRouter>
         ); 
         expect(getByTestId('loading')).toBeInTheDocument();
+        expect(global.console.warn).toHaveBeenCalledWith(`practiceType should be market or ethics`);
     });
 
-    it('render correct total question number if user choose to practice market type', () => {
+    it('render correct total question number if user choose to practice market type', async () => {
         const { getByTestId } = render(
             <MemoryRouter initialEntries={['practice/market']}>
                 <Route path='practice/:practiceType'>
@@ -40,21 +78,26 @@ describe('<Practice>', () => {
                 </Route>
             </MemoryRouter>
         ); 
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/504');
+        
+        expect(getByTestId('loading')).toBeInTheDocument();
+        await waitFor(() => screen.getByTestId('pra-heading'))
+        expect(screen.getByText("考題練習 1/504")).toBeInTheDocument();
     });
 
-    it('render correct total question number if user choose to practice ethics type', () => {
+    it('render correct total question number if user choose to practice ethics type', async () => {
         const { getByTestId } = render(
             <MemoryRouter initialEntries={['practice/ethics']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
             </MemoryRouter>
-        ); 
+        );
+        
+        await waitFor(() => screen.getByTestId('pra-heading'))
         expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/615');
     });
 
-    it('jump function', () => {
+    it('jump function', async () => {
         const { getByTestId, getAllByTestId } = render(
             <MemoryRouter initialEntries={['practice/market']}>
                 <Route path='practice/:practiceType'>
@@ -63,6 +106,8 @@ describe('<Practice>', () => {
             </MemoryRouter>
         ); 
         
+        await waitFor(() => screen.getByTestId('pra-heading'))
+
         expect(getAllByTestId('jump-btn').length).toBe(1);
     
         window.prompt = jest.fn();
@@ -72,14 +117,16 @@ describe('<Practice>', () => {
         expect(window.prompt).toHaveBeenCalledWith('直接移動到第幾題?');
     });
 
-    it('click prev and next button', () => {
+    it('click prev and next button', async () => {
         const { getByTestId } = render(
             <MemoryRouter initialEntries={['practice/market']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
             </MemoryRouter>
-        ); 
+        );
+
+        await waitFor(() => screen.getByTestId('pra-heading'));
         
         const prev = getByTestId('prev-btn');
         const next = getByTestId('next-btn');
@@ -97,14 +144,16 @@ describe('<Practice>', () => {
         expect(prev).toBeDisabled();
     });
 
-    it('should show message after go through all of questions', () => {
+    it('should show message after go through all of questions', async () => {
         const { getByTestId } = render(
             <MemoryRouter initialEntries={['practice/market']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
             </MemoryRouter>
-        ); 
+        );
+
+        await waitFor(() => screen.getByTestId('pra-heading'));
     
         const next = getByTestId('next-btn');
         for (let i = 0; i < 504; i++) {
