@@ -2,6 +2,8 @@
 
 <img src="../master/public/demo_localhost_3000_.png?raw=true" width="320">
 
+<img src="../master/public/demo_localhost_3000_2.png?raw=true" width="320">
+
 主要功能: 
 
 * 練習所有題目
