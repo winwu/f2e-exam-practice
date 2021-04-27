@@ -3,14 +3,16 @@ import * as d3 from 'd3';
 import './Line.scss';
 
 const LineChart = (props: {
-    datas: any[]
+    datas: {
+        time: number;
+        score: number;
+    }[]
 }) => {
     const [isShowTooltip, setIsShowTooltip] = useState<Boolean>(false);
     const [tooltipContent, setTooltipContent] = useState<JSX.Element | string>('');
-    const [datas] = useState(props.datas);
     const ref = useRef<SVGSVGElement>(null);
     const tooltipRef = useRef<HTMLDivElement>(null);
-    
+
     useEffect(() => {
         const timeFormat = d3.timeFormat('%H:%M:%S');
         const tooltipTimeFormat = d3.timeFormat('%Y-%b-%d %H:%M:%S');
@@ -18,7 +20,9 @@ const LineChart = (props: {
         const width = document?.querySelector('#root .container')?.clientWidth ?? 300;
         const height = 250;
 
-        const newData: any = [...datas];
+        const newData: any = JSON.parse(JSON.stringify(props.datas));
+        // [{"time":1619510720731,"score":2},{"time":1619510743700,"score":4}]
+        
         newData.forEach((d: any) => {
             // formar time
             // console.log('parseTime', parseTime("1607326845882"));
@@ -162,7 +166,7 @@ const LineChart = (props: {
                     setIsShowTooltip(false);
                 }
             });
-    }, [datas]);
+    }, [props.datas]);
 
     return (
         <div className="line-chart-container">

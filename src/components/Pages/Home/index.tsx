@@ -4,8 +4,10 @@ import LineChart from '../../Charts/Line';
 import ProgressLine from '../../Charts/ProgressLine';
 import { getHistories, getWrongQuestions } from '../../../services';
 import { IformatedQuestion } from '../../../helpers/data';
+import useLocalStorage from '../../../hooks/useLocalStorage';
 
 const Home = () => {
+    const [scoreHistory] = useLocalStorage('scoreHistory', []);
     const [wrongMarket, setWrongMarket] = useState<IformatedQuestion[]>([]);
     const [wrongEthics, setWrongEthics] = useState<IformatedQuestion[]>([]);
 
@@ -44,14 +46,7 @@ const Home = () => {
     const marketPercentage = getPercentage('market');
     const ethicsPercentage = getPercentage('ethics');
 
-    const getScoreHistory = () => {
-        const histories = JSON.parse(window.localStorage.getItem('scoreHistory') as string);
-        if (!histories || !Array.isArray(histories)) {
-            return [];
-        }
-        return histories.slice(-5);
-    }
-
+    
     let reviewItems = [];
     if (wrongMarket.length) {
         reviewItems.push(<div key="market" className="col-6">
@@ -118,7 +113,7 @@ const Home = () => {
                 <section>
                     <h3 className="section-heading">近期模擬測驗分數 Latest Score Histories</h3>
                     <div className="statistics-card">
-                        <LineChart datas={getScoreHistory()}/>
+                        <LineChart datas={scoreHistory.slice(-5)}/>
                     </div>
                 </section>
                 <section>

@@ -2,10 +2,12 @@ import React, { useState, useEffect, SyntheticEvent } from 'react';
 import { IformatedQuestion, pickHalfHalfQuestion } from '../../../helpers/data/index';
 import { getData } from '../../../services/index';
 import QuestionCard from '../../QuestionCard';
+import useLocalStorage from '../../../hooks/useLocalStorage';
 
 const TOTAL = 100;
 
 const Exam = () => {
+    const [scoreHistory, setScoreHistory] = useLocalStorage('scoreHistory', []);
     const [data, setData] = useState<IformatedQuestion[]>([]);
     const [userAnswer, updateUserAnswer] = useState<any[]>([]);
     const [score, setScore] = useState<null | number>(null);
@@ -33,6 +35,18 @@ const Exam = () => {
         }
     }, [data]);
 
+    useEffect(() => {
+        if (score === null) {
+            return;
+        }
+        const newRecord = JSON.parse(JSON.stringify(scoreHistory));
+        newRecord.push({
+            time: new Date().getTime(),
+            score
+        });
+        setScoreHistory(newRecord);
+    }, [score]) // eslint-disable-line react-hooks/exhaustive-deps
+
     const updateAnsArray = (newValue: string | number, questionIndex: number):void => {
         const newAnsAry = [...userAnswer];
         newAnsAry[questionIndex] = newValue;
@@ -49,19 +63,6 @@ const Exam = () => {
         const thisScore = calculateScore();
         alert(`成績 ${thisScore}`);
         setScore(thisScore);
-
-        let scoreHistory: any = localStorage.getItem('scoreHistory');
-        if (scoreHistory) {
-            scoreHistory = JSON.parse(scoreHistory);
-        } else {
-            scoreHistory = [];
-        }
-    
-        scoreHistory.push({
-            time: new Date().getTime(),
-            score: thisScore
-        });
-        localStorage.setItem('scoreHistory', JSON.stringify(scoreHistory));
     }
 
     const calculateScore = (): number => {
