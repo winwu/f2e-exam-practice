@@ -1,8 +1,3692 @@
 [
     {
-        "ans": 4,
-        "qn": 1,
-        "title":"下列那一項是錯的？ (1)... (2)... (3)... (4)...",
-        "category": "ethics"
+        "ans":-4,
+        "qn":1,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":2,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":3,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":4,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":5,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":6,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":7,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":8,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":9,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":10,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":11,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":12,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":13,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":14,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":15,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":16,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":17,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":18,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":19,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":20,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":21,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":22,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":23,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":24,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":25,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":26,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":27,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":28,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":29,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":30,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":31,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":32,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":33,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":34,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":35,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":36,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":37,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":38,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":39,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":40,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":41,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":42,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":43,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":44,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":45,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":46,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":47,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":48,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":49,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":50,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":51,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":52,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":53,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":54,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":55,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":56,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":57,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":58,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":59,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":60,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":61,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":62,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":63,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":64,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":65,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":66,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":67,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":68,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":69,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":70,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":71,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":72,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":73,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":74,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":75,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":76,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":77,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":78,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":79,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":80,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":81,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":82,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":83,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":84,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":85,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":86,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":87,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":88,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":89,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":90,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":91,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":92,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":93,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":94,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":95,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":96,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":97,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":98,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":99,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":100,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":101,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":102,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":103,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":104,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":105,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":106,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":107,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":108,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":109,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":110,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":111,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":112,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":113,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":114,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":115,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":116,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":117,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":118,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":119,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":120,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":121,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":122,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":123,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":124,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":125,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":126,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":127,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":128,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":129,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":130,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":131,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":132,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":133,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":134,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":135,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":136,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":137,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":138,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":139,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":140,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":141,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":142,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":143,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":144,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":145,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":146,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":147,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":148,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":149,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":150,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":151,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":152,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":153,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":154,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":155,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":156,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":157,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":158,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":159,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":160,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":161,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":162,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":163,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":164,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":165,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":166,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":167,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":168,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":169,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":170,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":171,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":172,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":173,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":174,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":175,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":176,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":177,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":178,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":179,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":180,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":181,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":182,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":183,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":184,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":185,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":186,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":187,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":188,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":189,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":190,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":191,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":192,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":193,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":194,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":195,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":196,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":197,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":198,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":199,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":200,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":201,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":202,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":203,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":204,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":205,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":206,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":207,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":208,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":209,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":210,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":211,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":212,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":213,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":214,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":215,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":216,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":217,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":218,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":219,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":220,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":221,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":222,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":223,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":224,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":225,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":226,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":227,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":228,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":229,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":230,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":231,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":232,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":233,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":234,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":235,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":236,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":237,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":238,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":239,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":240,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":241,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":242,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":243,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":244,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":245,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":246,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":247,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":248,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":249,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":250,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":251,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":252,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":253,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":254,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":255,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":256,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":257,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":258,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":259,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":260,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":261,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":262,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":263,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":264,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":265,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":266,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":267,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":268,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":269,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":270,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":271,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":272,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":273,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":274,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":275,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":276,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":277,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":278,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":279,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":280,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":281,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":282,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":283,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":284,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":285,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":286,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":287,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":288,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":289,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":290,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":291,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":292,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":293,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":294,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":295,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":296,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":297,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":298,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":299,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":300,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":301,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":302,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":303,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":304,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":305,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":306,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":307,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":308,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":309,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":310,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":311,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":312,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":313,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":314,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":315,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":316,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":317,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":318,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":319,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":320,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":321,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":322,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":323,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":324,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":325,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":326,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":327,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":328,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":329,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":330,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":331,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":332,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":333,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":334,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":335,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":336,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":337,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":338,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":339,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":340,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":341,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":342,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":343,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":344,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":345,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":346,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":347,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":348,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":349,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":350,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":351,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":352,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":353,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":354,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":355,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":356,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":357,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":358,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":359,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":360,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":361,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":362,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":363,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":364,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":365,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":366,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":367,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":368,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":369,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":370,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":371,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":372,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":373,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":374,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":375,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":376,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":377,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":378,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":379,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":380,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":381,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":382,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":383,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":384,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":385,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":386,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":387,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":388,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":389,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":390,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":391,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":392,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":393,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":394,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":395,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":396,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":397,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":398,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":399,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":400,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":401,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":402,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":403,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":404,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":405,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":406,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":407,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":408,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":409,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":410,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":411,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":412,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":413,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":414,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":415,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":416,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":417,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":418,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":419,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":420,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":421,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":422,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":423,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":424,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":425,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":426,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":427,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":428,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":429,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":430,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":431,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":432,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":433,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":434,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":435,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":436,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":437,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":438,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":439,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":440,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":441,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":442,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":443,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":444,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":445,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":446,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":447,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":448,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":449,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":450,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":451,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":452,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":453,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":454,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":455,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":456,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":457,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":458,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":459,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":460,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":461,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":462,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":463,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":464,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":465,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":466,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":467,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":468,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":469,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":470,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":471,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":472,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":473,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":474,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":475,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":476,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":477,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":478,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":479,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":480,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":481,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":482,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":483,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":484,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":485,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":486,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":487,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":488,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":489,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":490,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":491,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":492,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":493,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":494,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":495,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":496,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":497,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":498,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":499,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":500,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":501,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":502,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":503,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":504,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":505,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":506,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":507,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":508,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":509,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":510,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":511,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":512,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":513,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":514,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":515,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":516,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":517,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":518,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":519,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":520,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":521,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":522,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":523,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":524,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":525,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":526,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":527,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":528,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":529,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":530,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":531,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":532,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":533,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":534,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":535,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":536,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":537,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":538,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":539,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":540,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":541,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":542,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":543,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":544,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":545,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":546,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":547,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":548,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":549,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":550,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":551,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":552,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":553,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":554,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":555,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":556,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":557,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":558,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":559,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":560,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":561,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":562,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":563,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":564,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":565,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":566,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":567,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":568,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":569,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":570,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":571,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":572,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":573,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":574,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":575,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":576,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":577,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":578,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":579,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":580,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":581,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":582,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":583,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":584,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":585,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":586,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":587,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":588,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":589,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":590,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":591,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":592,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":593,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":594,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":595,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":596,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":597,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":598,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":599,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":600,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":601,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":602,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-1,
+        "qn":603,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":604,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":605,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":606,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":607,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":608,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":609,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":610,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":611,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":612,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-4,
+        "qn":613,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-3,
+        "qn":614,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
+    },
+    {
+        "ans":-2,
+        "qn":615,
+        "title": "demo title (1) ans 1 (2) ans 2 (3) ans 3 (4) and 4",
+        "category":"ethics"
     }
 ]

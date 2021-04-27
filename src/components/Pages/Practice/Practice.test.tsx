@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, cleanup, waitFor, screen } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
-import ethicsData from '../../../../public/data/ethics_formated.json';
-import marketData from '../../../../public/data/market_formated.json';
+import ethicsData from '../../../../public/data/ethics_formated.example.json';
+import marketData from '../../../../public/data/market_formated.example.json';
 import Practice from './index';
 
 /* 
@@ -31,13 +31,13 @@ afterAll(() => {
 
 beforeEach(() => {
     jest.spyOn(window, 'fetch').mockImplementation((url) => {
-        if ((url as string).includes('market_formated.json')) {
+        if ((url as string).includes('market_formated')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,
                 json: () => Promise.resolve(marketData)
             });
-        } else if ((url as string).includes('ethics_formated.json')) {
+        } else if ((url as string).includes('ethics_formated')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,

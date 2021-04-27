@@ -62,6 +62,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.tsx",
       "!src/react-app-env.d.ts",
       "!src/reportWebVitals.ts",
       "!src/local-storage-mock.js"
