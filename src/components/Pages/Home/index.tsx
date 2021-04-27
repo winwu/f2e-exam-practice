@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import LineChart from '../../Charts/Line';
 import ProgressLine from '../../Charts/ProgressLine';
 import { getHistories, getWrongQuestions } from '../../../services';
-import { IformatedQuestion } from '../../../helpers/data';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 
 const Home = () => {
     const [scoreHistory] = useLocalStorage('scoreHistory', []);
-    const [wrongMarket, setWrongMarket] = useState<IformatedQuestion[]>([]);
-    const [wrongEthics, setWrongEthics] = useState<IformatedQuestion[]>([]);
+    const [wrongMarket, setWrongMarket] = useState<FormatedQuestion[]>([]);
+    const [wrongEthics, setWrongEthics] = useState<FormatedQuestion[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,7 +22,7 @@ const Home = () => {
         fetchData();
     }, []);
 
-    const getPercentage = (type: 'market' | 'ethics') => {
+    const getPercentage = (type: QuestionTypes) => {
         const histories = getHistories(type);
     
         if (!histories) {
@@ -34,7 +33,7 @@ const Home = () => {
         return Math.round((finishCount/totalCount) * 100)
     }
 
-    const getFinisheCount = (type: 'market' | 'ethics') => {
+    const getFinisheCount = (type: QuestionTypes) => {
         const histories = getHistories(type);
 
         if (!histories) {

@@ -1,19 +1,6 @@
 var Chance = require('chance');
 var chance = new Chance();
 
-export interface IOption {
-    val: number;
-    text: string;
-};
-
-export interface IformatedQuestion {
-    ans: number;
-    qn: string | number;
-    title?: string;
-    options?: IOption[];
-    category: 'market' | 'ethics';
-}
-
 export const pickQuestion = (datas: any[], quantity?: number | null) => {
     if (quantity === null) {
         return datas;

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react';
 import { useParams } from 'react-router-dom';
-import { IformatedQuestion, pickQuestion } from '../../../helpers/data/index';
+import { pickQuestion } from '../../../helpers/data/index';
 import { getData } from '../../../services/index';
 import QuestionCard from '../../QuestionCard';
 
 const Practice = () => {
-    const { practiceType } = useParams<{ practiceType: 'market' | 'ethics' }>();
+    const { practiceType } = useParams<{ practiceType: QuestionTypes }>();
     
     let defaultIndex = 0;
     if (window.localStorage.getItem(`${practiceType}-pra-history`)) {
@@ -19,7 +19,7 @@ const Practice = () => {
         }
     }
 
-    const [data, setData] = useState<IformatedQuestion[]>([]);
+    const [data, setData] = useState<FormatedQuestion[]>([]);
     const [currentIndex, updateCurrent] = useState<number>(defaultIndex);
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
 

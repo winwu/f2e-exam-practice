@@ -1,12 +1,11 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react';
 import { useParams } from 'react-router-dom';
-import { IformatedQuestion } from '../../../helpers/data/index';
 import { getWrongQuestions } from '../../../services'; 
 import QuestionCard from '../../QuestionCard';
 
 const Review = () => {
-    const { practiceType } = useParams<{ practiceType: 'market' | 'ethics' }>();
-    const [data, setData] = useState<IformatedQuestion[]>([]);
+    const { practiceType } = useParams<{ practiceType: QuestionTypes }>();
+    const [data, setData] = useState<FormatedQuestion[]>([]);
     const [currentIndex, updateCurrent] = useState<number>(0);
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
   

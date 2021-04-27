@@ -14,9 +14,12 @@
 * 瀏覽答錯過的題目
 * 書籤功能及書籤列表
 
-<img src="../master/public/demo_localhost_3000_.png?raw=true" width="320">
 
+<img src="../master/public/demo_localhost_3000_.png?raw=true" width="320">
 <img src="../master/public/demo_localhost_3000_2.png?raw=true" width="320">
+
+(如下載最新的 code 並起始專案後並不會與此圖相同，因為真正的題庫須自行建置，此圖僅表示作者在 local 端開發時自行爬取 sfi 的題庫內容)
+
 
 ## 前置作業說明
 

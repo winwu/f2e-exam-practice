@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { bookmark, bookmarkFill } from '../../components/Icons/index';
-import { IformatedQuestion, IOption } from '../../helpers/data/index';
 import { getIsBookmarked, setBookmark, removeBookmark } from '../../services/index';
 
 import './QuestionCard.scss';
 
-const categoryMap: { [categoryKey: string]: string } = {
+const categoryMap: { [p in QuestionTypes]: string } = {
     market: '金融市場常識',
     ethics: '職業道德'
 };
 
 const QuestionCard = (props: {
     seq: number;
-    data: IformatedQuestion;
+    data: FormatedQuestion;
     haveSubmitted: boolean;
     onAnsChanged: Function;
 }) => {

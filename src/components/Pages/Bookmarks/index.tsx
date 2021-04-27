@@ -1,10 +1,9 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react';
-import { IformatedQuestion } from '../../../helpers/data/index';
 import { getBookmarkedList } from '../../../services'; 
 import QuestionCard from '../../QuestionCard';
 
 const Bookmarks = () => {
-    const [data, setData] = useState<IformatedQuestion[]>([]);
+    const [data, setData] = useState<FormatedQuestion[]>([]);
     const [currentIndex, updateCurrent] = useState<number>(0);
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
   

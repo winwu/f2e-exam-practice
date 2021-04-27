@@ -1,19 +1,3 @@
-import { IformatedQuestion } from '../helpers/data/index';
-
-type questionList = 'market' | 'ethics';
-
-type originalQuestion = {
-    ans: number;
-    qn: string | number;
-    title: string;
-    category: 'market' | 'ethics' | string;
-}
-
-interface IOption {
-    val: number;
-    text: string;
-};
-
 export const convertQuestionTitleToAnsMapping = (str: string) : {
     title: string;
     options: IOption[]
@@ -53,22 +37,24 @@ export const convertQuestionTitleToAnsMapping = (str: string) : {
 }
 
 
-export const formatJsonData = (datas: originalQuestion[]) : IformatedQuestion[] => {
+export const formatJsonData = (datas: OriginalQuestion[]) : FormatedQuestion[] => {
     const result = datas.map((d) => {
 
         const trimedTitle = d.title.replace(/\n/g, '');
+        const titleAndOptions = convertQuestionTitleToAnsMapping(trimedTitle);
 
         return {
             ans: Math.abs(d.ans),
             qn: d.qn,
-            category: d.category as 'market' | 'ethics',
-            ...convertQuestionTitleToAnsMapping(trimedTitle)
+            category: d.category as QuestionTypes,
+            title: titleAndOptions?.title ?? '',
+            options: titleAndOptions?.options
         }
     });
     return result;
 }   
 
-export const getData = async (type: questionList) => {
+export const getData = async (type: QuestionTypes) => {
     const response = await fetch(`${window.location.origin}/data/${type}_formated.json`);
     if (!response.ok) {
         throw new Error('An error has occured');
@@ -78,7 +64,7 @@ export const getData = async (type: questionList) => {
     return formatJsonData(datas);
 }
 
-export const getHistories = (type: questionList) => {
+export const getHistories = (type: QuestionTypes) => {
     const histories = JSON.parse(window.localStorage.getItem(`${type}-pra-history`) as string);
     if (!histories) {
         return null;
@@ -87,12 +73,12 @@ export const getHistories = (type: questionList) => {
     return histories;
 }
 
-export const getWrongQuestions = async (type: questionList) => {
+export const getWrongQuestions = async (type: QuestionTypes) => {
     const allQuestion = await getData(type);
 
     const histories = getHistories(type);
     
-    let pickedQuestions: IformatedQuestion[]= [];
+    let pickedQuestions: FormatedQuestion[]= [];
     
     if (histories) {
         histories.forEach((h: null | string, index: number) => {
@@ -120,7 +106,7 @@ export const getBookmarks = () => {
     return bookmarks;
 }
 
-export const setBookmark = (type: questionList, qn: number) => {
+export const setBookmark = (type: QuestionTypes, qn: number) => {
     const bookmarks = getBookmarks();
     
     if (!bookmarks[type].includes(qn)) {
@@ -130,7 +116,7 @@ export const setBookmark = (type: questionList, qn: number) => {
     }
 }
 
-export const removeBookmark = (type: questionList, qn: number) => {
+export const removeBookmark = (type: QuestionTypes, qn: number) => {
     const bookmarks = getBookmarks();
     
     let typeOfBookmarks = bookmarks[type];
@@ -141,7 +127,7 @@ export const removeBookmark = (type: questionList, qn: number) => {
     window.localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
 
-export const getIsBookmarked = (type: questionList, qn: number) => {
+export const getIsBookmarked = (type: QuestionTypes, qn: number) => {
     const bookmarks = getBookmarks();
     return bookmarks[type] && bookmarks[type].includes(qn) ? true : false;
 }
@@ -149,11 +135,11 @@ export const getIsBookmarked = (type: questionList, qn: number) => {
 export const getBookmarkedList = async () => {
     const { market = [], ethics = [] } = getBookmarks();
 
-    const marketQuestions: IformatedQuestion[] = await getData('market');
-    const ethicsQuestions: IformatedQuestion[] = await getData('ethics');
+    const marketQuestions: FormatedQuestion[] = await getData('market');
+    const ethicsQuestions: FormatedQuestion[] = await getData('ethics');
 
-    const filteredMarket = marketQuestions.filter((i: IformatedQuestion) => market.includes(i.qn));
-    const filteredEthics = ethicsQuestions.filter((i: IformatedQuestion) => ethics.includes(i.qn));
+    const filteredMarket = marketQuestions.filter((i: FormatedQuestion) => market.includes(i.qn));
+    const filteredEthics = ethicsQuestions.filter((i: FormatedQuestion) => ethics.includes(i.qn));
     return [...filteredMarket, ...filteredEthics];
 }
 

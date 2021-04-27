@@ -1,5 +1,5 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react';
-import { IformatedQuestion, pickHalfHalfQuestion } from '../../../helpers/data/index';
+import { pickHalfHalfQuestion } from '../../../helpers/data/index';
 import { getData } from '../../../services/index';
 import QuestionCard from '../../QuestionCard';
 import useLocalStorage from '../../../hooks/useLocalStorage';
@@ -8,13 +8,13 @@ const TOTAL = 100;
 
 const Exam = () => {
     const [scoreHistory, setScoreHistory] = useLocalStorage('scoreHistory', []);
-    const [data, setData] = useState<IformatedQuestion[]>([]);
+    const [data, setData] = useState<FormatedQuestion[]>([]);
     const [userAnswer, updateUserAnswer] = useState<any[]>([]);
     const [score, setScore] = useState<null | number>(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            const [market, ethics] : [IformatedQuestion[], IformatedQuestion[]] = [
+            const [market, ethics] : [FormatedQuestion[], FormatedQuestion[]] = [
                 await getData('market'),
                 await getData('ethics')
             ];
