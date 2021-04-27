@@ -1,10 +1,11 @@
-# 金融市場常識與職業道德題庫練習網頁
+# 題庫練習網頁
 
-<img src="../master/public/demo_localhost_3000_.png?raw=true" width="320">
+[![Build Status](https://travis-ci.com/winwu/sfi-exam-practice.svg?branch=master)](https://travis-ci.com/winwu/sfi-exam-practice)
 
-<img src="../master/public/demo_localhost_3000_2.png?raw=true" width="320">
 
-主要功能: 
+## TL;DR
+
+這個 Repo 主要是當初用來準備「金融市場常識與職業道德」考試而寫，其主要的功能包含: 
 
 * 練習所有題目
 * 查看所有練習進度百分比
@@ -13,15 +14,13 @@
 * 瀏覽答錯過的題目
 * 書籤功能及書籤列表
 
+<img src="../master/public/demo_localhost_3000_.png?raw=true" width="320">
+
+<img src="../master/public/demo_localhost_3000_2.png?raw=true" width="320">
+
 ## 前置作業說明
 
-因為尚未聯絡到 https://webline.sfi.org.tw/T/ethics/download.asp 該單位，不確定是否能公開題庫內容之重置為 JSON 格式後的內容及此練習網頁，因此如需使用此網頁須自行整理題庫之 PDF 等內容，不好意思...。
-
-### 匯入題庫並編譯
-
-1. 從 https://webline.sfi.org.tw/T/ethics/download.asp 下載兩份題庫後，分別將兩份題庫之 pdf 轉換為 csv 格式，可以使用 Adobe 的 pdf-to-excel 線上工具進行轉換
-
-2. 轉換後需整理 excel 檔案之格式，並製作 json 檔案，格式參考 public/data/ethics_formated.example.json 及 market_formated.example.json，並將檔名改為 ethics_formated.json 及 market_formated.json。
+題庫可改成自己所需要的內容。須將相對應的 public/data/ethics_formated.example.json 以及 market_formated.example.json 替換檔名及內容等等。
 
 
 ## 開發環境
