@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.com/winwu/f2e-exam-practice.svg?branch=master)](https://travis-ci.com/winwu/f2e-exam-practice)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/757a101d05abd8537431/test_coverage)](https://codeclimate.com/github/winwu/f2e-exam-practice/test_coverage)
 
 ## TL;DR
 
