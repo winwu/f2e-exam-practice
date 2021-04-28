@@ -1,3 +1,11 @@
+version: "2"         # required to adjust maintainability checks
+
+checks:
+  method-lines:
+    enabled: true
+    config:
+      threshold: 50
+
 ## other configuration excluded from example...
 exclude_patterns:
 - "**/*.test.**"
