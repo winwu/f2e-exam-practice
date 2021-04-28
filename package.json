@@ -67,6 +67,7 @@
       "!src/reportWebVitals.ts",
       "!src/local-storage-mock.js"
     ],
+    "coverageReporters": ["lcov"],
     "coverageThreshold": {
       "global": {
         "branches": 70,
