@@ -40,12 +40,12 @@ const Bookmarks = () => {
     let renderContent = null;
 
     if (data.length === 0) {
-        renderContent = (<div className="text-center m-4">尚未存有書籤的題目</div>);
+        renderContent = (<div className="text-center m-4" data-testid="no-bookmarks">尚未存有書籤的題目</div>);
     } else {
         renderContent = (
             <div className="container container-700 mt-3 mb-5">
-                <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}}>
-                    <div>我的書籤 {currentIndex + 1}/{data.length}</div>
+                <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
+                    <div data-testid="pra-heading">我的書籤 {currentIndex + 1}/{data.length}</div>
                 </nav>
                 <div className="exams-wrap">
                     <QuestionCard
@@ -60,10 +60,10 @@ const Bookmarks = () => {
                     <div className="container container-700">
                         <div className="row">
                             <div className="col-6 text-left">
-                                <button className="ans-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
+                                <button className="ans-btn" data-testid="prev-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
                             </div>
                             <div className="col-6 text-right">
-                                <button className="ans-btn" onClick={(e) => next(e)} disabled={currentIndex +1 === data.length}>下一題 Next</button>
+                                <button className="ans-btn" data-testid="next-btn" onClick={(e) => next(e)} disabled={currentIndex +1 === data.length}>下一題 Next</button>
                             </div>
                         </div>
                     </div>
