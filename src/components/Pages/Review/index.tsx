@@ -1,49 +1,37 @@
-import React, { useState, useEffect, SyntheticEvent } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getWrongQuestions } from '../../../services'; 
 import QuestionCard from '../../QuestionCard';
+import useNavigate from '../../../hooks/useNavigate';
 
 const Review = () => {
     const { practiceType } = useParams<{ practiceType: QuestionTypes }>();
     const [data, setData] = useState<FormatedQuestion[]>([]);
-    const [currentIndex, updateCurrent] = useState<number>(0);
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
-  
+    
+    const {navigateBody, index: curIndex, setLength} = useNavigate(0, () => {
+        updateHasSubmit(false);
+    });
 
     useEffect(() => {
         if (practiceType === 'market' || practiceType === 'ethics') {
             const fetchData = async () => {
                 const pickedQuestions = await getWrongQuestions(practiceType);
                 setData(pickedQuestions);
+                setLength(pickedQuestions.length);
             }
             fetchData();
         } else {
             console.warn('practiceType should be market or ethics');
         }
-    }, [practiceType]);
-
-
-    const prev = (e: SyntheticEvent) => {
-        // reset hasSubmit to false
-        updateHasSubmit(false);
-
-        updateCurrent(currentIndex - 1);
-    }
-
-    const next = (e: SyntheticEvent) => {
-        // reset hasSubmit to false
-        updateHasSubmit(false);
-
-        const newIndex = currentIndex + 1;
-        updateCurrent(newIndex);
-    }
+    }, [practiceType]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const updateAnsArray = (/* userChooseAns: string | number, questionIndex: number */):void => {
         // const isCorrect = Number(data[currentIndex].ans) === Number(userChooseAns);
         updateHasSubmit(true);
     }
 
-    const currentQuestion = data?.[currentIndex] ?? null;
+    const currentQuestion = data?.[curIndex] ?? null;
   
     let renderContent = null;
 
@@ -53,29 +41,18 @@ const Review = () => {
         renderContent = (
             <div className="container container-700 mt-3 mb-5">
                 <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
-                    <div data-testid="pra-heading">複習錯誤題目 {currentIndex + 1}/{data.length}</div>
+                    <div data-testid="pra-heading">複習錯誤題目 {curIndex + 1}/{data.length}</div>
                 </nav>
                 <div className="exams-wrap">
                     <QuestionCard
-                        key={currentIndex}
-                        seq={currentIndex}
+                        key={curIndex}
+                        seq={curIndex}
                         data={currentQuestion}
                         haveSubmitted={hasSubmit}
                         onAnsChanged={updateAnsArray}
                     />
                 </div>
-                <div className="ans-btn-fixed">
-                    <div className="container container-700">
-                        <div className="row">
-                            <div className="col-6 text-left">
-                                <button className="ans-btn" data-testid="prev-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
-                            </div>
-                            <div className="col-6 text-right">
-                                <button className="ans-btn" data-testid="next-btn" onClick={(e) => next(e)} disabled={currentIndex +1 === data.length}>下一題 Next</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                { navigateBody }
             </div>
         )
     }
