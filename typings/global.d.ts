@@ -1,4 +1,4 @@
-declare type QuestionTypes = 'market' | 'ethics';
+declare type QuestionTypes = 'html_css' | 'javascript';
 
 declare interface IOption {
     val: number;

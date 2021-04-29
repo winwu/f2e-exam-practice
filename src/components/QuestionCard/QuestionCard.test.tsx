@@ -33,7 +33,7 @@ describe('<QuestionCard>', () => {
                             text: 'ans 4'
                         }
                     ],
-                    category: "ethics"
+                    category: "html_css"
                 }}
                 haveSubmitted={false}
                 onAnsChanged={onAnsChanged} />
@@ -41,7 +41,7 @@ describe('<QuestionCard>', () => {
         
         
 
-        expect(getByTestId('que-badge').textContent).toBe('職業道德 1');
+        expect(getByTestId('que-badge').textContent).toBe('HTML/CSS 1');
         expect(getByTestId('que-title').textContent).toBe('下列那一項是錯的？');
         expect(getAllByTestId('que-input').length).toBe(4);
 
@@ -75,7 +75,7 @@ describe('<QuestionCard>', () => {
                         text: 'ans 4'
                     }
                 ],
-                category: "ethics"
+                category: "javascript"
             }}
             haveSubmitted={true}
             onAnsChanged={onAnsChanged} />)
@@ -111,7 +111,7 @@ describe('<QuestionCard>', () => {
                             text: 'ans 4'
                         }
                     ],
-                    category: "market"
+                    category: "javascript"
                 }}
                 haveSubmitted={false}
                 onAnsChanged={onAnsChanged} />
@@ -119,7 +119,7 @@ describe('<QuestionCard>', () => {
         
         
 
-        expect(getByTestId('que-badge').textContent).toBe('金融市場常識 1');
+        expect(getByTestId('que-badge').textContent).toBe('JavaScript 1');
         expect(getByTestId('que-title').textContent).toBe('下列那一項是錯的？');
         
         expect(getAllByTestId('que-input').length).toBe(4);
@@ -154,7 +154,7 @@ describe('<QuestionCard>', () => {
                         text: 'ans 4'
                     }
                 ],
-                category: "market"
+                category: "javascript"
             }}
             haveSubmitted={true}
             onAnsChanged={onAnsChanged} />)
@@ -191,7 +191,7 @@ describe('<QuestionCard>', () => {
                             text: 'ans 4'
                         }
                     ],
-                    category: "ethics"
+                    category: "javascript"
                 }}
                 haveSubmitted={false}
                 onAnsChanged={onAnsChanged} />

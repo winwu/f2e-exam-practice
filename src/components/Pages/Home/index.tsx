@@ -7,17 +7,17 @@ import useLocalStorage from '../../../hooks/useLocalStorage';
 
 const Home = () => {
     const [scoreHistory] = useLocalStorage('scoreHistory', []);
-    const [wrongMarket, setWrongMarket] = useState<FormatedQuestion[]>([]);
-    const [wrongEthics, setWrongEthics] = useState<FormatedQuestion[]>([]);
+    const [wrongHtmlCss, setWrongHtmlCss] = useState<FormatedQuestion[]>([]);
+    const [wrongJavascript, setWrongJavascript] = useState<FormatedQuestion[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
             // @FIX ME
-            const wrongMarketQuestions = await getWrongQuestions('market');
-            const wrongEthicsQuestions = await getWrongQuestions('ethics');
+            const wrongMarketQuestions = await getWrongQuestions('html_css');
+            const wrongEthicsQuestions = await getWrongQuestions('javascript');
 
-            setWrongMarket(wrongMarketQuestions);
-            setWrongEthics(wrongEthicsQuestions);
+            setWrongHtmlCss(wrongMarketQuestions);
+            setWrongJavascript(wrongEthicsQuestions);
         }
         fetchData();
     }, []);
@@ -42,19 +42,19 @@ const Home = () => {
         return histories.filter((d: any) => d !== null).length;
     }
 
-    const marketPercentage = getPercentage('market');
-    const ethicsPercentage = getPercentage('ethics');
+    const marketPercentage = getPercentage('html_css');
+    const ethicsPercentage = getPercentage('javascript');
 
     
     let reviewItems = [];
-    if (wrongMarket.length) {
-        reviewItems.push(<div key="market" className="col-6">
-            <Link to="/review/market" className="ans-btn review-bg">金融市場常識</Link>
+    if (wrongHtmlCss.length) {
+        reviewItems.push(<div key="html_css" className="col-6">
+            <Link to="/review/html_css" className="ans-btn review-bg">HTML/CSS</Link>
         </div>);
     }
-    if (wrongEthics.length) {
-        reviewItems.push(<div key="ethics" className="col-6">
-            <Link to="/review/ethics" className="ans-btn review-bg">職業道德</Link>
+    if (wrongJavascript.length) {
+        reviewItems.push(<div key="javascript" className="col-6">
+            <Link to="/review/javascript" className="ans-btn review-bg">JavaScript</Link>
         </div>);
     }
 
@@ -65,16 +65,16 @@ const Home = () => {
                     <h3 className="section-heading">考題練習 Practice</h3>
                     <div className="row align-items-center">
                         <div className="col-6">
-                            <Link to="/practice/market" className="ans-btn practice-bg">金融市場常識</Link>
+                            <Link to="/practice/html_css" className="ans-btn practice-bg">HTML/CSS</Link>
                         </div>
                         <div className="col-6">
-                            <Link to="/practice/ethics" className="ans-btn practice-bg">職業道德</Link>
+                            <Link to="/practice/javascript" className="ans-btn practice-bg">JavaScript</Link>
                         </div>
                     </div>
                 </div>
 
                 {
-                    wrongMarket.length || wrongEthics.length ? (
+                    wrongHtmlCss.length || wrongJavascript.length ? (
                         <div id="review-sec" className="mb-3">
                             <h3 className="section-heading">複習錯誤題目 Review</h3>
                             <div className="row align-items-center">
@@ -93,19 +93,19 @@ const Home = () => {
                 <section>
                     <h3 className="section-heading">作答完成率 Answer completion rate</h3>
                     <div className="progress-line-wrap">
-                        <div className="progress-line-item">金融市場常識</div>
+                        <div className="progress-line-item">HTML / CSS</div>
                         <ProgressLine percentage={marketPercentage} fillColor='#8c682f'/>
                         <dl className="progress-finished-dl">
                             <dt>已作答</dt>
-                            <dd>{ getFinisheCount('market') }</dd>
+                            <dd>{ getFinisheCount('html_css') }</dd>
                         </dl>
                     </div>
                     <div className="progress-line-wrap">
-                        <div className="progress-line-item">職業道德</div>
+                        <div className="progress-line-item">JavaScript</div>
                         <ProgressLine percentage={ethicsPercentage} fillColor='#8c682f'/>
                         <dl className="progress-finished-dl">
                             <dt>已作答</dt>
-                            <dd>{ getFinisheCount('ethics') }</dd>
+                            <dd>{ getFinisheCount('javascript') }</dd>
                         </dl>
                     </div>
                 </section>
@@ -114,10 +114,6 @@ const Home = () => {
                     <div className="statistics-card">
                         <LineChart datas={scoreHistory.slice(-5)}/>
                     </div>
-                </section>
-                <section>
-                    <h3 className="section-heading">注意事項</h3>
-                    <small>此網頁之題目內容皆取自<a href="https://webline.sfi.org.tw/T/ethics/download.asp" target="_blank" rel="noreferrer noopener">金融市場常識與職業道德題庫專區</a>，此網頁所取得之題庫內容之最後更新日期為 2020/12/04，如答案判斷有疑惑或錯誤，請以 webline.sfi.org.tw/T/ethics/download.asp 網站所提供之內容為主。</small>
                 </section>
             </div>
         </div>

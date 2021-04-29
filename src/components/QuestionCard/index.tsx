@@ -5,8 +5,8 @@ import { getIsBookmarked, setBookmark, removeBookmark } from '../../services/ind
 import './QuestionCard.scss';
 
 const categoryMap: { [p in QuestionTypes]: string } = {
-    market: '金融市場常識',
-    ethics: '職業道德'
+    html_css: 'HTML/CSS',
+    javascript: 'JavaScript'
 };
 
 const QuestionCard = (props: {

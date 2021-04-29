@@ -55,7 +55,7 @@ export const formatJsonData = (datas: OriginalQuestion[]) : FormatedQuestion[] =
 }   
 
 export const getData = async (type: QuestionTypes) => {
-    const response = await fetch(`${window.location.origin}/data/${type}_formated.json`);
+    const response = await fetch(`${window.location.origin}/data/${type}.json`);
     if (!response.ok) {
         throw new Error('An error has occured');
     }
@@ -95,8 +95,8 @@ export const getBookmarks = () => {
     const bookmarks = JSON.parse(window.localStorage.getItem('bookmarks') as string);
     if (!bookmarks) {
         const defaultBookmark = {
-            market: [],
-            ethics: []
+            html_css: [],
+            javascript: []
         };
 
         window.localStorage.setItem('bookmarks', JSON.stringify(defaultBookmark));
@@ -133,14 +133,14 @@ export const getIsBookmarked = (type: QuestionTypes, qn: number) => {
 }
 
 export const getBookmarkedList = async () => {
-    const { market = [], ethics = [] } = getBookmarks();
+    const { html_css = [], javascript = [] } = getBookmarks();
 
-    const marketQuestions: FormatedQuestion[] = await getData('market');
-    const ethicsQuestions: FormatedQuestion[] = await getData('ethics');
+    const htmlCssQuestions: FormatedQuestion[] = await getData('html_css');
+    const javascriptQuestions: FormatedQuestion[] = await getData('javascript');
 
-    const filteredMarket = marketQuestions.filter((i: FormatedQuestion) => market.includes(i.qn));
-    const filteredEthics = ethicsQuestions.filter((i: FormatedQuestion) => ethics.includes(i.qn));
-    return [...filteredMarket, ...filteredEthics];
+    const filteredHtmlCss = htmlCssQuestions.filter((i: FormatedQuestion) => html_css.includes(i.qn));
+    const filteredJavaScript = javascriptQuestions.filter((i: FormatedQuestion) => javascript.includes(i.qn));
+    return [...filteredHtmlCss, ...filteredJavaScript];
 }
 
 export const clean = () => {

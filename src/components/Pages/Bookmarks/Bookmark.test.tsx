@@ -1,27 +1,27 @@
 import React from 'react';
 import { render, fireEvent, cleanup, waitFor, screen } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
-import ethicsData from '../../../../public/data/ethics_formated.example.json';
-import marketData from '../../../../public/data/market_formated.example.json';
+import htmlCssData from '../../../../public/data/html_css.json';
+import javascriptData from '../../../../public/data/javascript.json';
 import Bookmarks from './index';
 
 beforeEach(() => {
     jest.spyOn(window, 'fetch').mockImplementation((url) => {
         console.log('url----------', url);
-        if ((url as string).includes('market_formated')) {
+        if ((url as string).includes('html_css.json')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,
-                json: () => Promise.resolve(marketData)
+                json: () => Promise.resolve(htmlCssData)
             });
-        } else if ((url as string).includes('ethics_formated')) {
+        } else if ((url as string).includes('javascript.json')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,
-                json: () => Promise.resolve(ethicsData)
+                json: () => Promise.resolve(javascriptData)
             });
         } else {
-            // when the url is not /practice/market or /practice/ethics
+            // when the url is not /practice/html_css or /practice/javascript
             return Promise.reject();
         }
     });
@@ -50,7 +50,7 @@ describe('<Bookmarks>', () => {
 describe('<Bookmarks>', () => {  
     beforeEach(() => {
         // add mock data for bookmark
-        window.localStorage.setItem('bookmarks', '{"market":[1,3,295],"ethics":[]}');
+        window.localStorage.setItem('bookmarks', '{"html_css":[1,2,3],"javascript":[]}');
     });
     
     afterEach(() => {

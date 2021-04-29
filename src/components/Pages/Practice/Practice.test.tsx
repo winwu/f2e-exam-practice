@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, cleanup, waitFor, screen } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
-import ethicsData from '../../../../public/data/ethics_formated.example.json';
-import marketData from '../../../../public/data/market_formated.example.json';
+import htmlCssData from '../../../../public/data/html_css.json';
+import javascriptData from '../../../../public/data/javascript.json';
 import Practice from './index';
 
 /* 
@@ -11,7 +11,7 @@ import Practice from './index';
     jest.mock('react-router-dom', () => ({
         ...jest.requireActual('react-router-dom') as any, // use actual for all non-hook parts
         useParams: () => ({
-            practiceType: 'market'
+            practiceType: 'html_css'
         }),
         useRouteMatch: () => ({ url: '/practice/' }),
     }));
@@ -31,20 +31,20 @@ afterAll(() => {
 
 beforeEach(() => {
     jest.spyOn(window, 'fetch').mockImplementation((url) => {
-        if ((url as string).includes('market_formated')) {
+        if ((url as string).includes('html_css.json')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,
-                json: () => Promise.resolve(marketData)
+                json: () => Promise.resolve(htmlCssData)
             });
-        } else if ((url as string).includes('ethics_formated')) {
+        } else if ((url as string).includes('javascript.json')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,
-                json: () => Promise.resolve(ethicsData)
+                json: () => Promise.resolve(javascriptData)
             });
         } else {
-            // when the url is not /practice/market or /practice/ethics
+            // when the url is not /practice/html_css or /practice/javascript
             return Promise.reject();
         }
     });
@@ -67,12 +67,12 @@ describe('<Practice>', () => {
             </MemoryRouter>
         ); 
         expect(getByTestId('loading')).toBeInTheDocument();
-        expect(global.console.warn).toHaveBeenCalledWith(`practiceType should be market or ethics`);
+        expect(global.console.warn).toHaveBeenCalledWith('practiceType is wrong');
     });
 
-    it('render correct total question number if user choose to practice market type', async () => {
+    it('render correct total question number if user choose to practice html/css type', async () => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['practice/market']}>
+            <MemoryRouter initialEntries={['practice/html_css']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
@@ -81,12 +81,12 @@ describe('<Practice>', () => {
         
         expect(getByTestId('loading')).toBeInTheDocument();
         await waitFor(() => screen.getByTestId('pra-heading'))
-        expect(screen.getByText("考題練習 1/504")).toBeInTheDocument();
+        expect(screen.getByText("考題練習 1/3")).toBeInTheDocument();
     });
 
-    it('render correct total question number if user choose to practice ethics type', async () => {
+    it('render correct total question number if user choose to practice javascript type', async () => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['practice/ethics']}>
+            <MemoryRouter initialEntries={['practice/javascript']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
@@ -94,12 +94,12 @@ describe('<Practice>', () => {
         );
         
         await waitFor(() => screen.getByTestId('pra-heading'))
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/615');
+        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/3');
     });
 
     it('jump function', async () => {
         const { getByTestId, getAllByTestId } = render(
-            <MemoryRouter initialEntries={['practice/market']}>
+            <MemoryRouter initialEntries={['practice/html_css']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
@@ -119,7 +119,7 @@ describe('<Practice>', () => {
 
     it('click prev and next button', async () => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['practice/market']}>
+            <MemoryRouter initialEntries={['practice/html_css']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
@@ -136,17 +136,17 @@ describe('<Practice>', () => {
 
 
         fireEvent.click(next);
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 2/504');
+        expect(getByTestId('pra-heading').textContent).toBe('考題練習 2/3');
         expect(prev).toBeEnabled();
 
         fireEvent.click(prev);
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/504');
+        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/3');
         expect(prev).toBeDisabled();
     });
 
     it('should show message after go through all of questions', async () => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['practice/market']}>
+            <MemoryRouter initialEntries={['practice/html_css']}>
                 <Route path='practice/:practiceType'>
                     <Practice />
                 </Route>
@@ -156,13 +156,13 @@ describe('<Practice>', () => {
         await waitFor(() => screen.getByTestId('pra-heading'));
     
         const next = getByTestId('next-btn');
-        for (let i = 0; i < 504; i++) {
+        for (let i = 0; i < 3; i++) {
             // click until to the last question
             fireEvent.click(next);
         }
         
         expect(getByTestId('empty-content')).toBeInTheDocument();
         fireEvent.click(getByTestId('reset-currentindex'));
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/504');
+        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/3');
     });
 });

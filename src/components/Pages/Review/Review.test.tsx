@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, cleanup, waitFor, screen } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
-import ethicsData from '../../../../public/data/ethics_formated.example.json';
-import marketData from '../../../../public/data/market_formated.example.json';
+import htmlCssData from '../../../../public/data/html_css.json';
+import javascriptData from '../../../../public/data/javascript.json';
 import Review from './index';
 
 let originalWarn: any;
@@ -13,20 +13,20 @@ beforeEach(() => {
 
     jest.spyOn(window, 'fetch').mockImplementation((url) => {
         // console.log('url----------', url);
-        if ((url as string).includes('market_formated')) {
+        if ((url as string).includes('html_css.json')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,
-                json: () => Promise.resolve(marketData)
+                json: () => Promise.resolve(htmlCssData)
             });
-        } else if ((url as string).includes('ethics_formated')) {
+        } else if ((url as string).includes('javascript.json')) {
             return Promise.resolve({
                 headers: null,
                 ok: true,
-                json: () => Promise.resolve(ethicsData)
+                json: () => Promise.resolve(javascriptData)
             });
         } else {
-            // when the url is not /practice/market or /practice/ethics
+            // when the url is not /practice/html_css or /practice/javascript
             return Promise.reject();
         }
     });
@@ -47,12 +47,12 @@ describe('<Review>', () => {
             </MemoryRouter>
         );
         expect(getByTestId('no-reviews')).toBeInTheDocument();
-        expect(global.console.warn).toHaveBeenCalledWith(`practiceType should be market or ethics`);
+        expect(global.console.warn).toHaveBeenCalledWith('practiceType is wrong');
     });
 
     it('should emtpy text when there is no record in localStorage', async() => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['review/market']}>
+            <MemoryRouter initialEntries={['review/html_css']}>
                 <Route path='review/:practiceType'>
                     <Review />
                 </Route>
@@ -67,17 +67,17 @@ describe('<Review>', () => {
 describe('<Review>', () => {  
     beforeEach(() => {
         // mock two wrong questions
-        window.localStorage.setItem('market-pra-history', '["false","false"]');
+        window.localStorage.setItem('html_css-pra-history', '["false","false"]');
     });
     
     afterEach(() => {
         // clear mock data
-        window.localStorage.setItem('market-pra-history', '[]');
+        window.localStorage.setItem('html_css-pra-history', '[]');
     });
 
-    it('market - should show content when there has record in localStorage', async() => {
+    it('html / css - should show content when there has record in localStorage', async() => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['review/market']}>
+            <MemoryRouter initialEntries={['review/html_css']}>
                 <Route path='review/:practiceType'>
                     <Review />
                 </Route>
@@ -108,17 +108,17 @@ describe('<Review>', () => {
 describe('<Review>', () => {  
     beforeEach(() => {
         // mock two wrong questions
-        window.localStorage.setItem('ethics-pra-history', '["false"]');
+        window.localStorage.setItem('javascript-pra-history', '["false"]');
     });
     
     afterEach(() => {
         // clear mock data
-        window.localStorage.setItem('ethics-pra-history', '[]');
+        window.localStorage.setItem('javascript-pra-history', '[]');
     });
 
-    it('ethics - should show content when there has record in localStorage', async() => {
+    it('javascript - should show content when there has record in localStorage', async() => {
         const { getByTestId } = render(
-            <MemoryRouter initialEntries={['review/ethics']}>
+            <MemoryRouter initialEntries={['review/javascript']}>
                 <Route path='review/:practiceType'>
                     <Review />
                 </Route>

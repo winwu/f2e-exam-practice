@@ -14,14 +14,14 @@ const Exam = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const [market, ethics] : [FormatedQuestion[], FormatedQuestion[]] = [
-                await getData('market'),
-                await getData('ethics')
+            const [htmlcss, javascript] : [FormatedQuestion[], FormatedQuestion[]] = [
+                await getData('html_css'),
+                await getData('javascript')
             ];
 
             const datas = {
-                market,
-                ethics
+                htmlcss,
+                javascript
             };
             // generate questions
             setData(pickHalfHalfQuestion(datas, TOTAL));

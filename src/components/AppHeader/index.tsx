@@ -43,7 +43,7 @@ const AppHeader = () => {
                         }                        
                     </div>
                     <div className="col-8 text-center">
-                        <div className="header-logo">⾦融市場常識與職業道德</div>
+                        <div className="header-logo">F2E Exam Practice</div>
                     </div>
                     <div className="col-auto d-flex justify-content-end align-items-center">
                         <button className={`btn btn-sm btn-menu ${showMenu ? 'active' : ''}`} onClick={toToggleMenu}>{threeDots}</button>

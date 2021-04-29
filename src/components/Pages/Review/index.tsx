@@ -14,7 +14,7 @@ const Review = () => {
     });
 
     useEffect(() => {
-        if (practiceType === 'market' || practiceType === 'ethics') {
+        if (practiceType === 'html_css' || practiceType === 'javascript') {
             const fetchData = async () => {
                 const pickedQuestions = await getWrongQuestions(practiceType);
                 setData(pickedQuestions);
@@ -22,7 +22,7 @@ const Review = () => {
             }
             fetchData();
         } else {
-            console.warn('practiceType should be market or ethics');
+            console.warn('practiceType is wrong');
         }
     }, [practiceType]); // eslint-disable-line react-hooks/exhaustive-deps
 

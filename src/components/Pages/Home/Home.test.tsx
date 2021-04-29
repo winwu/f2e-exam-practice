@@ -22,8 +22,8 @@ it('<Home /> render', () => {
     act(() => {
         render(<Router><Home /></Router>, container);
         expect(container).not.toBe(null);
-        expect(container.querySelectorAll('#practice-sec .ans-btn')[0].href).toBe('http://localhost/practice/market');
-        expect(container.querySelectorAll('#practice-sec .ans-btn')[1].href).toBe('http://localhost/practice/ethics');
+        expect(container.querySelectorAll('#practice-sec .ans-btn')[0].href).toBe('http://localhost/practice/html_css');
+        expect(container.querySelectorAll('#practice-sec .ans-btn')[1].href).toBe('http://localhost/practice/javascript');
     });
 });
 

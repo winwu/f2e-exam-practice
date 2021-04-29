@@ -13,11 +13,11 @@ export const pickQuestion = (datas: any[], quantity?: number | null) => {
     return chance.pickset(datas, quantity);
 }
 
-export const pickHalfHalfQuestion = (datas: { market: any[], ethics: any[]}, quantity: 50 | 100) => {
+export const pickHalfHalfQuestion = (datas: { htmlcss: any[], javascript: any[]}, quantity: 50 | 100) => {
     const amount = quantity / 2;
 
-    const marketPicked = chance.pickset(datas.market, amount);
-    const ethicsPicked = chance.pickset(datas.ethics, amount);
+    const marketPicked = chance.pickset(datas.htmlcss, amount);
+    const ethicsPicked = chance.pickset(datas.javascript, amount);
 
     return [...marketPicked, ...ethicsPicked];
 }

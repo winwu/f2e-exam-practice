@@ -2,9 +2,7 @@
 
 [![Build Status](https://travis-ci.com/winwu/f2e-exam-practice.svg?branch=master)](https://travis-ci.com/winwu/f2e-exam-practice) [![Maintainability](https://api.codeclimate.com/v1/badges/757a101d05abd8537431/maintainability)](https://codeclimate.com/github/winwu/f2e-exam-practice/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/757a101d05abd8537431/test_coverage)](https://codeclimate.com/github/winwu/f2e-exam-practice/test_coverage)
 
-## TL;DR
-
-這個 Repo 最初主要是用來準備「金融市場常識與職業道德」考試而寫，其主要的功能包含: 
+## 功能
 
 * 練習所有題目
 * 查看所有練習進度百分比
@@ -13,11 +11,9 @@
 * 瀏覽答錯過的題目
 * 書籤功能及書籤列表
 
-題庫可改成自己所需要的內容。須將相對應的 public/data/ethics_formated.example.json 以及 market_formated.example.json 替換檔名及內容等等。
+題庫可改成自己所需要的內容。須將相對應的 public/data/html_css.json 以及 javascript.json 替換檔名及內容等等。
 
 <img src="../master/public/demo_localhost_3000_.png?raw=true" width="320">
-<img src="../master/public/demo_localhost_3000_2.png?raw=true" width="320">
-(如下載最新的 code 並起始專案後並不會與此圖相同，因為真正的題庫須自行建置，此圖僅表示作者在 local 端開發時自行爬取 sfi 的題庫內容)
 
 
 ## 開發環境

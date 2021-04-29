@@ -24,7 +24,7 @@ const Practice = () => {
     const [hasSubmit, updateHasSubmit] = useState<boolean>(false);
 
     useEffect(() => {
-        if (practiceType === 'market' || practiceType === 'ethics') {
+        if (practiceType === 'html_css' || practiceType === 'javascript') {
             const fetchData = async () => {
                 let datas = await getData(practiceType);
                 
@@ -33,7 +33,7 @@ const Practice = () => {
             }
             fetchData();
         } else {
-            console.warn('practiceType should be market or ethics');
+            console.warn('practiceType is wrong');
         }
     }, [practiceType]);
 
