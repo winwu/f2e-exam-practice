@@ -33,8 +33,8 @@ const Bookmarks = () => {
         renderContent = (<div className="text-center m-4" data-testid="no-bookmarks">尚未存有書籤的題目</div>);
     } else {
         renderContent = (
-            <div className="container container-700 mt-3 mb-5">
-                <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
+            <div className="container max-width-700 mt-3 mb-5">
+                <nav className="navbar navbar-light" data-testid="navbar">
                     <div data-testid="pra-heading">我的書籤 {curIndex + 1}/{data.length}</div>
                 </nav>
                 <div className="exams-wrap">

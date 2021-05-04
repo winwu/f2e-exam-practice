@@ -1,13 +1,55 @@
+// root/default variables
+:root {
+    --body-font-color: #333;
+    --bg-color: #eee;
+    --font-link: #8c6830;
+    --heading-color: #333333;
+    --app-header-bg: #ffffff;
+    --app-header-font: #333333;
+    --side-menu-bg: #f1f1f1;
+    --footer-bar-bg: #dadada;
+    // question card
+    --bg-card: #ffffff;
+    --bg-wrong-ans-marked: #fff3f3;
+    --border-wrong-ans-marked: red;
+    --text-wrong-ans-marked: red;
+}
+
+// dark theme
+[data-theme="dark"] {
+    --body-font-color: #fff;
+    --bg-color: #333;
+    --font-link: #8c6830;
+    --heading-color: #ffffff;
+    --app-header-bg: #232323;
+    --app-header-font: #ffffff;
+    --side-menu-bg: #333;
+    --footer-bar-bg: #333;
+    // question card
+    --bg-card: #424242;
+    --bg-wrong-ans-marked: #ff5722;
+    --border-wrong-ans-marked: #ff5722;
+    --text-wrong-ans-marked: #fff;
+}
+
 // Override default variables before the import
-$body-bg: #ece9e7;
+$body-bg: var(--bg-color);
+$brand-primary: var(--primary);
 
 // Import Bootstrap and its default variables
 // you must prefix imports from node_modules with ~ as displayed above.
+
 @import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
 
 body {
     font-family: 'Noto Sans TC', sans-serif;
+    color: var(--body-font-color);
     font-size: 15px;
+}
+
+a, .btn {
+    color: var(--font-link);
 }
 
 .btn:focus,
@@ -15,7 +57,18 @@ body {
     box-shadow: none;
 }
 
-.container-700 {
+.btn-outline-primary {
+    border-color: var(--font-link);
+    &:hover,
+    &:active,
+    &.active {
+        border-color: inherit;
+        background-color: var(--font-link);
+        color: #fff;
+    }
+}
+
+.max-width-700 {
     max-width: 700px;
 }
 
@@ -28,8 +81,7 @@ body {
     bottom: 0;
     width: 100%;
     left: 0;
-    background: #ebe9e6;
-    box-shadow: 0px -2px 9px #d8d8d8;
+    background: var(--footer-bar-bg);
     padding: 10px 0;
     z-index: 10;
 }
@@ -114,7 +166,7 @@ body {
 .section-heading {
     font-size: 13px;
     font-weight: 600;
-    color: #333;
+    color: var(--heading-color);
     margin-bottom: 15px;
 }
 

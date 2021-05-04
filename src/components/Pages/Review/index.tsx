@@ -39,8 +39,8 @@ const Review = () => {
         renderContent = (<div className="text-center m-4" data-testid="no-reviews">尚未存有答錯的題目</div>);
     } else {
         renderContent = (
-            <div className="container container-700 mt-3 mb-5">
-                <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
+            <div className="container max-width-700 mt-3 mb-5">
+                <nav className="navbar navbar-light" data-testid="navbar">
                     <div data-testid="pra-heading">複習錯誤題目 {curIndex + 1}/{data.length}</div>
                 </nav>
                 <div className="exams-wrap">

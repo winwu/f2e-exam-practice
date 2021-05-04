@@ -78,13 +78,13 @@ const Exam = () => {
     }
 
     return (
-        <div className="container container-700 mt-3 mb-5" data-testid="exam-page">
+        <div className="container max-width-700 mt-3 mb-5" data-testid="exam-page">
             {
                 data.length === 0 ?
                     <div className="text-center" data-testid="loading">Loading</div>
                     :
                     <>
-                        <nav className="navbar navbar-light" style={{backgroundColor: '#ebe9e6'}} data-testid="navbar">
+                        <nav className="navbar navbar-light" data-testid="navbar">
                             <div>模擬考</div>
                         </nav>
                         <div className="exams-wrap">
@@ -102,7 +102,7 @@ const Exam = () => {
             }
             
             <div className="ans-btn-fixed">
-                <div className="container container-700">
+                <div className="container max-width-700">
                     <button className="ans-btn d-inline-block w-50" onClick={(e) => submit(e)} disabled={score !== null}>{score !== null ? '已' : ''}交卷</button>
                     {
                         score !== null && (<div className="score-result">成績: {score}</div>)

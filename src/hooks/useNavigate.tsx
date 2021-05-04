@@ -22,7 +22,7 @@ const useNavigate = (initialIndex: number, clearHasSubmit: Function) => {
 
     const navigateBody = (
         <div className="ans-btn-fixed">
-            <div className="container container-700">
+            <div className="container max-width-700">
                 <div className="row">
                     <div className="col-6 text-left">
                         <button className="ans-btn" 

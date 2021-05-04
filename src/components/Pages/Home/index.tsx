@@ -60,7 +60,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="container-fluid container-700 pt-2 pb-2">
+            <div className="container-fluid max-width-700 pt-4 pb-4">
                 <div id="practice-sec" className="mb-3">
                     <h3 className="section-heading">考題練習 Practice</h3>
                     <div className="row align-items-center">
@@ -89,7 +89,7 @@ const Home = () => {
             </div>
 
             
-            <div className="container container-700 mt-3 mb-5">
+            <div className="container-fluid max-width-700 mt-3 mb-3">
                 <section>
                     <h3 className="section-heading">作答完成率 Answer completion rate</h3>
                     <div className="progress-line-wrap">

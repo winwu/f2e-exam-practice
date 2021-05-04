@@ -3,7 +3,7 @@
     position: relative;
     &.has-error {
         .question-card-content {
-            border-color: red;
+            border-color: var(--border-wrong-ans-marked);
         }
     }
     .question-idx {
@@ -18,7 +18,7 @@
     }
     
     .question-card-content {
-        background: #fff;
+        background: var(--bg-card);
         padding: 10px 15px;
         border-radius: 5px;
         min-height: 200px;
@@ -32,11 +32,9 @@
         .question-title {
             font-weight: 400;
             font-size: 16px;
-            color: #333;
             line-height: 1.5em;
             vertical-align: middle;
             margin-bottom: 15px;
-            text-align: justify;
         }
         .question-badge {
             font-size: 12px;
@@ -73,16 +71,16 @@
             }
         }
         .ans-btn-group {
-            color: #192525;
-            
             .custom-control {
                 min-height: 2rem;
                 margin: 8px auto;
+                padding: 0 15px;
+                border-radius: 7px;
                 
                 &.wrong-ans-marked {
-                    background: #fff3f3;
+                    background: var(--bg-wrong-ans-marked);
                     .custom-control-label {
-                        color: red;
+                        color: var(--text-wrong-ans-marked);
                     }
                 }
                 &.correct-ans-marked {
@@ -94,8 +92,9 @@
             }
             label {
                 font-size: 15px;
-                text-align: justify;   
-                padding: 8px 0;
+                text-align: justify;
+                padding: 8px 0 8px 30px;
+                color: inherit;
             }
             .custom-control-label::before,
             .custom-file-label,
@@ -104,11 +103,10 @@
             }
             .custom-control-label {
                 cursor: pointer;
-                &:before {
-                    top: calc(0.25rem + 8px);
-                }
+                &:before,
                 &:after {
                     top: calc(0.25rem + 8px);
+                    left: 0;
                 }
             }
             .custom-control-input:checked ~ .custom-control-label::before {

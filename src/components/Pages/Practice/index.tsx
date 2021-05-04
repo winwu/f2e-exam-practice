@@ -103,7 +103,7 @@ const Practice = () => {
 
     const pager = (
         <div className="ans-btn-fixed">
-            <div className="container container-700">
+            <div className="container max-width-700">
                 <div className="row">
                     <div className="col-6 text-left">
                         <button className="ans-btn" data-testid="prev-btn" onClick={(e) => prev(e)} disabled={currentIndex <= 0}>上一題 Prev</button>
@@ -127,12 +127,12 @@ const Practice = () => {
                 <div data-testid="empty-content">
                     沒有題目了
                 </div>
-                <span className="btn btn-link" data-testid="reset-currentindex" onClick={() => jumpTo(1)}>回到第一題</span>
+                <span className="btn" data-testid="reset-currentindex" onClick={() => jumpTo(1)}>回到第一題</span>
             </div>);
     } else {
         renderContent = (
             <>
-                <nav className="navbar p-0 mb-3" style={{backgroundColor: '#ebe9e6'}}>
+                <nav className="navbar p-0 mb-3">
                     <div data-testid="pra-heading">考題練習 {currentIndex + 1}/{data.length}</div>
                     <button className="btn btn-outline-primary btn-sm pt-0 pb-0" data-testid="jump-btn" onClick={promptJump}>移至</button>
                 </nav>
@@ -150,7 +150,7 @@ const Practice = () => {
     }
 
     return (
-        <div className="container container-700 mt-3 mb-5">
+        <div className="container max-width-700 mt-3 mb-5">
             { renderContent }
             { pager }
         </div>
