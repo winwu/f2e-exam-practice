@@ -5,6 +5,10 @@ import htmlCssData from '../../../../public/data/html_css.json';
 import javascriptData from '../../../../public/data/javascript.json';
 import Practice from './index';
 
+const totalHtmlCSS = 4;
+const totalJs = 3;
+
+
 /* 
  * another way to mock router
  
@@ -81,7 +85,7 @@ describe('<Practice>', () => {
         
         expect(getByTestId('loading')).toBeInTheDocument();
         await waitFor(() => screen.getByTestId('pra-heading'))
-        expect(screen.getByText("考題練習 1/3")).toBeInTheDocument();
+        expect(screen.getByText(`考題練習 1/${totalHtmlCSS}`)).toBeInTheDocument();
     });
 
     it('render correct total question number if user choose to practice javascript type', async () => {
@@ -94,7 +98,7 @@ describe('<Practice>', () => {
         );
         
         await waitFor(() => screen.getByTestId('pra-heading'))
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/3');
+        expect(getByTestId('pra-heading').textContent).toBe(`考題練習 1/${totalJs}`);
     });
 
     it('jump function', async () => {
@@ -117,7 +121,7 @@ describe('<Practice>', () => {
         expect(window.prompt).toHaveBeenCalledWith('直接移動到第幾題?');
     });
 
-    it('click prev and next button', async () => {
+    it('click prev and next button html_css', async () => {
         const { getByTestId } = render(
             <MemoryRouter initialEntries={['practice/html_css']}>
                 <Route path='practice/:practiceType'>
@@ -136,11 +140,11 @@ describe('<Practice>', () => {
 
 
         fireEvent.click(next);
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 2/3');
+        expect(getByTestId('pra-heading').textContent).toBe(`考題練習 2/${totalHtmlCSS}`);
         expect(prev).toBeEnabled();
 
         fireEvent.click(prev);
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/3');
+        expect(getByTestId('pra-heading').textContent).toBe(`考題練習 1/${totalHtmlCSS}`);
         expect(prev).toBeDisabled();
     });
 
@@ -156,13 +160,13 @@ describe('<Practice>', () => {
         await waitFor(() => screen.getByTestId('pra-heading'));
     
         const next = getByTestId('next-btn');
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < totalHtmlCSS; i++) {
             // click until to the last question
             fireEvent.click(next);
         }
         
         expect(getByTestId('empty-content')).toBeInTheDocument();
         fireEvent.click(getByTestId('reset-currentindex'));
-        expect(getByTestId('pra-heading').textContent).toBe('考題練習 1/3');
+        expect(getByTestId('pra-heading').textContent).toBe(`考題練習 1/${totalHtmlCSS}`);
     });
 });

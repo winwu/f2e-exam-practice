@@ -45,7 +45,7 @@ afterEach(() => {
 });
 
 describe('<Exam>', () => {
-    it('should render 6 question', async () => {
+    it('should render 7 question', async () => {
         const { getByTestId, getAllByTestId } = render(
             <MemoryRouter initialEntries={['exam']}>
                 <Route path='exam'>
@@ -59,7 +59,7 @@ describe('<Exam>', () => {
 
         await waitFor(() => screen.getByTestId('navbar'));
         expect(getByTestId('navbar').textContent).toContain('模擬考');
-        expect(getAllByTestId('que-card').length).toBe(6);
+        expect(getAllByTestId('que-card').length).toBe(7);
         const submitButton = getByTestId('exam-page').querySelector('.ans-btn-fixed .ans-btn');
         expect(submitButton).toBeInTheDocument();
         expect(getByTestId('exam-page').querySelector('.ans-btn-fixed .ans-btn')?.textContent).toBe('交卷');
