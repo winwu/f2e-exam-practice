@@ -22,5 +22,11 @@
         "qn":4,
         "title": "下列何者不是 <button> 可用的 type 屬性值? (1) submit (2) button (3) reset (4) cancel",
         "category":"html_css"
+    },
+    {
+        "ans":1,
+        "qn":5,
+        "title": "下列何種 CSS class name 命名方式不合法? (1) <div class=\"520\"></div> (2) <div class=\"_520\"></div> (3) <div class=\"_\"></div> (4) <div class=\"-520\"></div>",
+        "category":"html_css"
     }
 ]
