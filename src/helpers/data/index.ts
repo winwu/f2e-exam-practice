@@ -13,7 +13,7 @@ export const pickQuestion = (datas: any[], quantity?: number | null) => {
     return chance.pickset(datas, quantity);
 }
 
-export const pickHalfHalfQuestion = (datas: { htmlcss: any[], javascript: any[]}, quantity: 50 | 100) => {
+export const pickHalfHalfQuestion = (datas: { htmlcss: any[], javascript: any[]}, quantity: number) => {
     const amount = quantity / 2;
 
     const marketPicked = chance.pickset(datas.htmlcss, amount);

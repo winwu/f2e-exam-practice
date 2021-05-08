@@ -4,7 +4,7 @@ import { getData } from '../../../services/index';
 import QuestionCard from '../../QuestionCard';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 
-const TOTAL = 100;
+const TOTAL = 10;
 
 const Exam = () => {
     const [scoreHistory, setScoreHistory] = useLocalStorage('scoreHistory', []);
