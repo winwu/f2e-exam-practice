@@ -49,7 +49,7 @@ const AppHeader = () => {
                             F2E Exam Practice
                         </Link>
                     </div>
-                    <div className="col-3 d-flex justify-content-end align-items-center">
+                    <div className="col-3 text-right">
                         <ThemeSwitch />
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './ThemeSwitch.scss';
 
 const ThemeSwitch = () => {
     const [isDarkTheme, setDarkTheme] = useState<boolean>(false);
@@ -26,10 +27,10 @@ const ThemeSwitch = () => {
     return (
         <div id="theme-swtich" className="custom-control custom-switch">
             <i className="bi bi-moon-stars-fill"></i>
-            <label htmlFor="theme-swtich-input">
+            <div className="custom-control custom-switch">
                 <input type="checkbox" className="custom-control-input" id="theme-swtich-input" data-testid="theme-swtich-input" aria-label="Toogle Theme" checked={isDarkTheme} onChange={(e) => { setDarkTheme(e.target.checked) }}/>
-                <div className="custom-control-label" role="button"></div>
-            </label>
+                <label className="custom-control-label" htmlFor="theme-swtich-input"></label>
+            </div>
         </div>
     )
 }

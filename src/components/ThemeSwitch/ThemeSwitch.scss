@@ -1,0 +1,50 @@
+#theme-swtich {
+    padding: 0;
+    i {
+        font-size: 12px;
+        color: tan;;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .custom-control-label {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .custom-switch {
+        padding: 0;
+        margin: 0 auto 0 5px;
+        width: 40px;
+        min-height: 12px;
+        display: inline-block;
+        .custom-control-label::after { 
+            top: 2px;
+            left: 3px;
+        }
+        .custom-control-label::before {
+            top: 0;
+            left: 0;
+        }
+    }
+    
+
+    .custom-control-input:checked ~ .custom-control-label {
+        &:after {
+            background-color: #232323;
+        }
+        &:before {
+            border-color: #8c6830;
+            background-color: #8c6830;
+        }
+    }
+    .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+        border-color: rgba(140, 104, 48, 0.5);
+    }
+    .custom-control-input:focus ~ .custom-control-label::before {
+        box-shadow: 0 0 0 0.2rem rgba(140, 104, 48, 0.2);
+    }
+}

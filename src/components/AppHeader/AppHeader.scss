@@ -42,14 +42,14 @@
     .menu {
         position: fixed;
         top: 55px;
-        left: 100%;
+        right: 100%;
         width: 100%;
         min-height: 100vh;
         transition: all .33s ease;
         z-index: 10;
         background: var(--side-menu-bg);
         &.active {
-            left: 0%;
+            right: 0%;
         }
 
         ul {
@@ -83,39 +83,3 @@
 }
 
 
-#theme-swtich {
-    width: 50px;
-    i {
-        font-size: 12px;
-        color: tan;
-        position: absolute;
-        left: 0;
-        top: 3px;
-    }
-
-    label {
-        margin: 0 auto;
-    }
-    .custom-control-label {
-        top: 0;
-        position: absolute;
-        width: 100%;
-        left: 53px;
-    }
-
-    .custom-control-input:checked ~ .custom-control-label {
-        &:after {
-            background-color: #232323;
-        }
-        &:before {
-            border-color: #8c6830;
-            background-color: #8c6830;
-        }
-    }
-    .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-        border-color: rgba(140, 104, 48, 0.5);
-    }
-    .custom-control-input:focus ~ .custom-control-label::before {
-        box-shadow: 0 0 0 0.2rem rgba(140, 104, 48, 0.2);
-    }
-}
