@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route
 } from "react-router-dom";
@@ -19,7 +19,7 @@ import ScrollToTop from './ScrollToTop';
 
 function App() {
     return (
-        <Router basename="/f2e-exam-practice">
+        <Router basename="/">
             <ScrollToTop />
             <AppHeader />
             <Switch>
