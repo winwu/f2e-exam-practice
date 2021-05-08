@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
     Link,
     // useLocation,
@@ -6,13 +6,13 @@ import {
 } from "react-router-dom";
 
 import { threeDots, bookmarkFill, trash } from '../Icons';
+import ThemeSwitch from '../ThemeSwitch';
 import { clean } from '../../services';
 
 import './AppHeader.scss';
 
 const AppHeader = () => {
     const [showMenu, toggleMenu] = useState<boolean>(false);
-    const [isDarkTheme, setDarkTheme] = useState<boolean>(false);
     // const location = useLocation();
     const history = useHistory();
 
@@ -33,26 +33,6 @@ const AppHeader = () => {
             clean();
         }
     }
-    
-    useEffect(() => {
-        // set default theme mode by prefer-color-scheme
-        if (window.matchMedia) {
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                // dark mode
-                setDarkTheme(true);
-            }
-    
-            // detect prefers-color-scheme
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                const newColorScheme = e.matches ? 'dark' : 'light';
-                setDarkTheme(newColorScheme === 'dark');
-            });
-        }
-    }, []);
-
-    useEffect(() => {
-        document.querySelector('body')!.setAttribute('data-theme', isDarkTheme ? 'dark' : 'light')
-    }, [isDarkTheme])
 
     return (
         <header className="app-header sticky-top px-0" data-testid="app-header">
@@ -70,13 +50,7 @@ const AppHeader = () => {
                         </Link>
                     </div>
                     <div className="col-3 d-flex justify-content-end align-items-center">
-                        <div id="theme-swtich" className="custom-control custom-switch">
-                            <i className="bi bi-moon-stars-fill"></i>
-                            <label htmlFor="switch-theme">
-                                <input type="checkbox" className="custom-control-input" id="switch-theme" aria-label="Toogle Theme" checked={isDarkTheme} onChange={(e) => { setDarkTheme(e.target.checked) }}/>
-                                <div className="custom-control-label" role="button"></div>
-                            </label>
-                        </div>
+                        <ThemeSwitch />
                     </div>
                 </div>
                 <div className={`menu ${showMenu ? 'active' : ''}`}>
