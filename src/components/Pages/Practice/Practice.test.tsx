@@ -5,8 +5,8 @@ import htmlCssData from '../../../../public/data/html_css.json';
 import javascriptData from '../../../../public/data/javascript.json';
 import Practice from './index';
 
-const totalHtmlCSS = 4;
-const totalJs = 3;
+const totalHtmlCSS = 5;
+const totalJs = 8;
 
 
 /* 
