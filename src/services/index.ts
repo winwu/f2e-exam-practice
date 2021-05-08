@@ -55,7 +55,8 @@ export const formatJsonData = (datas: OriginalQuestion[]) : FormatedQuestion[] =
 }   
 
 export const getData = async (type: QuestionTypes) => {
-    const response = await fetch(`${window.location.origin}/data/${type}.json`);
+    const response = await fetch(`/data/${type}.json`);
+    // const response = await fetch(`${process.env.PUBLIC_URL}/data/${type}.json`);
     if (!response.ok) {
         throw new Error('An error has occured');
     }
