@@ -1,0 +1,20 @@
+[
+    {
+        "ans":3,
+        "qn":1,
+        "title": "下列何者不屬於 ECMAScript 定義的資料型別? (1) null (2) Symbol (3) Array (4) Number",
+        "category":"javascript"
+    },
+    {
+        "ans":1,
+        "qn":2,
+        "title": "下列何者不是 JavaScript 宣告變數 (Declarations) 的方式? (1) final (2) let (3) const (4) var",
+        "category":"javascript"
+    },
+    {
+        "ans":4,
+        "qn":3,
+        "title": "下列何者執行結果為 false? (1) typeof '123' === 'string' (2) new Array(100).length === 100 (3) Object.values({ a: 0, b: 0  }).every(e => e == false) (4) Object.keys({ a: 0, b: 0  }).length === 0",
+        "category":"javascript"
+    }
+]

@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/f2e-exam-practice/static/css/main.1ae02087.chunk.css",
+    "main.js": "/f2e-exam-practice/static/js/main.bee8170f.chunk.js",
+    "main.js.map": "/f2e-exam-practice/static/js/main.bee8170f.chunk.js.map",
+    "runtime-main.js": "/f2e-exam-practice/static/js/runtime-main.48fa4413.js",
+    "runtime-main.js.map": "/f2e-exam-practice/static/js/runtime-main.48fa4413.js.map",
+    "static/css/2.67a65496.chunk.css": "/f2e-exam-practice/static/css/2.67a65496.chunk.css",
+    "static/js/2.0cbfdf3c.chunk.js": "/f2e-exam-practice/static/js/2.0cbfdf3c.chunk.js",
+    "static/js/2.0cbfdf3c.chunk.js.map": "/f2e-exam-practice/static/js/2.0cbfdf3c.chunk.js.map",
+    "static/js/3.e00586c3.chunk.js": "/f2e-exam-practice/static/js/3.e00586c3.chunk.js",
+    "static/js/3.e00586c3.chunk.js.map": "/f2e-exam-practice/static/js/3.e00586c3.chunk.js.map",
+    "index.html": "/f2e-exam-practice/index.html",
+    "static/css/2.67a65496.chunk.css.map": "/f2e-exam-practice/static/css/2.67a65496.chunk.css.map",
+    "static/css/main.1ae02087.chunk.css.map": "/f2e-exam-practice/static/css/main.1ae02087.chunk.css.map",
+    "static/js/2.0cbfdf3c.chunk.js.LICENSE.txt": "/f2e-exam-practice/static/js/2.0cbfdf3c.chunk.js.LICENSE.txt",
+    "static/media/custom_bootstrap.scss": "/f2e-exam-practice/static/media/bootstrap-icons.0f69dcdb.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.48fa4413.js",
+    "static/css/2.67a65496.chunk.css",
+    "static/js/2.0cbfdf3c.chunk.js",
+    "static/css/main.1ae02087.chunk.css",
+    "static/js/main.bee8170f.chunk.js"
+  ]
+}
