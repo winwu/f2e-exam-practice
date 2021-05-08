@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, ChangeEvent, SyntheticEvent } from 'react';
 import { bookmark, bookmarkFill } from '../../components/Icons/index';
 import { getIsBookmarked, setBookmark, removeBookmark } from '../../services/index';
 
@@ -23,13 +23,13 @@ const QuestionCard = (props: {
     const idx = props.seq;
     const { data, haveSubmitted, onAnsChanged } = props;
     
-    const onSelect = (e: React.ChangeEvent<HTMLInputElement>):void => {
+    const onSelect = (e: ChangeEvent<HTMLInputElement>):void => {
         updateSelected(e.target.value);
         // pass value to parent component
         onAnsChanged(e.target.value, idx);
     }
 
-    const toggleBookmark = (e: React.SyntheticEvent) => {
+    const toggleBookmark = (e: SyntheticEvent) => {
         e.preventDefault();
         const current = !bookmarked;
         

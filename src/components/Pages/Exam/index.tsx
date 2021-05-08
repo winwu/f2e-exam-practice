@@ -1,4 +1,4 @@
-import React, { useState, useEffect, SyntheticEvent } from 'react';
+import { useState, useEffect, SyntheticEvent } from 'react';
 import { pickHalfHalfQuestion } from '../../../helpers/data/index';
 import { getData } from '../../../services/index';
 import QuestionCard from '../../QuestionCard';

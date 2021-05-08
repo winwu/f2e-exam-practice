@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getBookmarkedList } from '../../../services'; 
 import QuestionCard from '../../QuestionCard';
 import useNavigate from '../../../hooks/useNavigate';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, SyntheticEvent } from 'react';
+import { useState, useEffect, SyntheticEvent } from 'react';
 import { useParams } from 'react-router-dom';
 import { pickQuestion } from '../../../helpers/data/index';
 import { getData } from '../../../services/index';
@@ -74,7 +74,7 @@ const Practice = () => {
         }
     }
 
-    const promptJump = (e: React.SyntheticEvent) => {
+    const promptJump = (e: SyntheticEvent) => {
         e.preventDefault();
         jumpTo((window as any).prompt('直接移動到第幾題?'));
     }

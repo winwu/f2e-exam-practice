@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, SyntheticEvent } from 'react';
 import {
     Link,
     // useLocation,
@@ -16,17 +16,17 @@ const AppHeader = () => {
     // const location = useLocation();
     const history = useHistory();
 
-    const toToggleMenu = (e: React.SyntheticEvent) => {
+    const toToggleMenu = (e: SyntheticEvent) => {
         e.preventDefault();
         toggleMenu(!showMenu);
     };
 
-    const goToBookmarks = (e: React.SyntheticEvent) => {
+    const goToBookmarks = (e: SyntheticEvent) => {
         toToggleMenu(e);
         history.push("/bookmarks");
     }
 
-    const localstorageClean = (e: React.SyntheticEvent) => {
+    const localstorageClean = (e: SyntheticEvent) => {
         e.preventDefault();
         const ans = window.confirm('您確定要清除所有作答記錄嗎?');
         if (ans) {

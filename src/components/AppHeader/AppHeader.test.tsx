@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent, cleanup } from '@testing-library/react';
 import { Route, MemoryRouter } from 'react-router-dom';
 import AppHeader from './';
