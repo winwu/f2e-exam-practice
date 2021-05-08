@@ -5,6 +5,7 @@ import {
     Route
 } from "react-router-dom";
 
+
 // pages
 import Home from './Pages/Home';
 import Exam from './Pages/Exam';
@@ -18,7 +19,7 @@ import ScrollToTop from './ScrollToTop';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/f2e-exam-practice">
             <ScrollToTop />
             <AppHeader />
             <Switch>

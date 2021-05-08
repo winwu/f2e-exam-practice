@@ -79,3 +79,9 @@ Specify JSX code generation: 'preserve', 'react', 'react-jsx', 'react-jsxdev' or
 npm install -g typescript
 
 3. vscode 右下角選擇 typescrip -> 使用工作區的版本
+
+
+### commit
+
+1. to skip ci: `git ci -m 'xxxx [skip ci]'`
+2. to skip actions: `git ci -m 'xxxx [skip actions]'`
