@@ -90,15 +90,14 @@ const Practice = () => {
         
         resetSubmitRecord();
         
+        let updateCurrentNum = Number(goto) - 1;
+
         if (Number(goto) <= 0) {    
-            return updateCurrent(0);
+            updateCurrentNum = 0;
+        } else if (Number(goto) > data.length) {
+            updateCurrentNum = data.length - 1;
         }
-        
-        if (Number(goto) > data.length) {
-            return updateCurrent(data.length - 1);
-        }
-        
-        return updateCurrent(Number(goto) - 1);
+        return updateCurrent(updateCurrentNum);
     }
 
     const pager = (

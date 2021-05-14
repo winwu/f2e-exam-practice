@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getBookmarkedList } from '../../../services'; 
 import QuestionCard from '../../QuestionCard';
+import NoData from '../../NoData';
 import useNavigate from '../../../hooks/useNavigate';
 
 const Bookmarks = () => {
@@ -30,7 +31,7 @@ const Bookmarks = () => {
     let renderContent = null;
 
     if (data.length === 0) {
-        renderContent = (<div className="text-center m-4" data-testid="no-bookmarks">尚未存有書籤的題目</div>);
+        renderContent = (<NoData text="尚未存有書籤的題目" />);
     } else {
         renderContent = (
             <div className="container max-width-700 mt-3 mb-5">

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getWrongQuestions } from '../../../services'; 
 import QuestionCard from '../../QuestionCard';
+import NoData from '../../NoData';
 import useNavigate from '../../../hooks/useNavigate';
 
 const Review = () => {
@@ -36,7 +37,7 @@ const Review = () => {
     let renderContent = null;
 
     if (data.length === 0) {
-        renderContent = (<div className="text-center m-4" data-testid="no-reviews">尚未存有答錯的題目</div>);
+        renderContent = <NoData text="尚未存有答錯的題目" />;
     } else {
         renderContent = (
             <div className="container max-width-700 mt-3 mb-5">

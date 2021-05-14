@@ -46,7 +46,7 @@ describe('<Review>', () => {
                 </Route>
             </MemoryRouter>
         );
-        expect(getByTestId('no-reviews')).toBeInTheDocument();
+        expect(getByTestId('no-data')).toBeInTheDocument();
         expect(global.console.warn).toHaveBeenCalledWith('practiceType is wrong');
     });
 
@@ -59,8 +59,8 @@ describe('<Review>', () => {
             </MemoryRouter>
         );
         // debug();
-        await waitFor(() => screen.getByTestId('no-reviews'));
-        expect(getByTestId('no-reviews').textContent).toContain('尚未存有答錯的題目');
+        await waitFor(() => screen.getByTestId('no-data'));
+        expect(getByTestId('no-data').textContent).toContain('尚未存有答錯的題目');
     });
 });
 

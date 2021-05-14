@@ -42,8 +42,8 @@ describe('<Bookmarks>', () => {
             </MemoryRouter>
         );
         
-        await waitFor(() => screen.getByTestId('no-bookmarks'));
-        expect(getByTestId('no-bookmarks').textContent).toContain('尚未存有書籤的題目');
+        await waitFor(() => screen.getByTestId('no-data'));
+        expect(getByTestId('no-data').textContent).toContain('尚未存有書籤的題目');
     });
 });
 
