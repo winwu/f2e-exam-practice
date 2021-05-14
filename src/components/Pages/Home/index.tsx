@@ -5,6 +5,11 @@ import ProgressLine from '../../Charts/ProgressLine';
 import { getHistories, getWrongQuestions } from '../../../services';
 import useLocalStorage from '../../../hooks/useLocalStorage';
 
+const categoryMap: { [p in QuestionTypes]: string } = {
+    html_css: 'HTML/CSS',
+    javascript: 'JavaScript'
+};
+
 const Home = () => {
     const [scoreHistory] = useLocalStorage('scoreHistory', []);
     const [wrongHtmlCss, setWrongHtmlCss] = useState<FormatedQuestion[]>([]);
@@ -22,31 +27,38 @@ const Home = () => {
         fetchData();
     }, []);
 
-    const getPercentage = (type: QuestionTypes) => {
+    const getAnalytics = (type: QuestionTypes, resultType: 'percentage' | 'totalCount') => {
         const histories = getHistories(type);
     
         if (!histories) {
             return 0;
         }
-        const totalCount = histories.length;
+
         const finishCount = histories.filter((d: null | string) => d !== null).length;
-        return Math.round((finishCount/totalCount) * 100)
-    }
 
-    const getFinisheCount = (type: QuestionTypes) => {
-        const histories = getHistories(type);
-
-        if (!histories) {
-            return 0;
+        if (resultType === 'percentage') {
+            const totalCount = histories.length;
+            return Math.round((finishCount/totalCount) * 100)
+        } else {
+            return finishCount;
         }
-        return histories.filter((d: any) => d !== null).length;
     }
 
-    const marketPercentage = getPercentage('html_css');
-    const ethicsPercentage = getPercentage('javascript');
-
+    const marketPercentage = getAnalytics('html_css', 'percentage');
+    const ethicsPercentage = getAnalytics('javascript', 'percentage');
     
     let reviewItems = [];
+    
+    let practiceLinks: JSX.Element[] = [];
+    for (let pageOfCategory in categoryMap) {
+        practiceLinks.push(
+            <div className="col-6" key={pageOfCategory}>
+                <Link to={`/practice/${pageOfCategory}`} className="ans-btn practice-bg">{(categoryMap as any)[pageOfCategory]}</Link>
+            </div>
+        );
+    }
+    
+
     if (wrongHtmlCss.length) {
         reviewItems.push(<div key="html_css" className="col-6">
             <Link to="/review/html_css" className="ans-btn review-bg">HTML/CSS</Link>
@@ -64,12 +76,7 @@ const Home = () => {
                 <div id="practice-sec" className="mb-3">
                     <h3 className="section-heading">考題練習 Practice</h3>
                     <div className="row align-items-center">
-                        <div className="col-6">
-                            <Link to="/practice/html_css" className="ans-btn practice-bg">HTML/CSS</Link>
-                        </div>
-                        <div className="col-6">
-                            <Link to="/practice/javascript" className="ans-btn practice-bg">JavaScript</Link>
-                        </div>
+                        {practiceLinks}
                     </div>
                 </div>
 
@@ -97,7 +104,7 @@ const Home = () => {
                         <ProgressLine percentage={marketPercentage} fillColor='#8c682f'/>
                         <dl className="progress-finished-dl">
                             <dt>已作答</dt>
-                            <dd>{ getFinisheCount('html_css') }</dd>
+                            <dd>{ getAnalytics('html_css', 'totalCount') }</dd>
                         </dl>
                     </div>
                     <div className="progress-line-wrap">
@@ -105,7 +112,7 @@ const Home = () => {
                         <ProgressLine percentage={ethicsPercentage} fillColor='#8c682f'/>
                         <dl className="progress-finished-dl">
                             <dt>已作答</dt>
-                            <dd>{ getFinisheCount('javascript') }</dd>
+                            <dd>{ getAnalytics('javascript', 'totalCount') }</dd>
                         </dl>
                     </div>
                 </section>
