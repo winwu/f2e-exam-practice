@@ -1,6 +1,9 @@
 {
   "name": "sfi-exam-practice",
   "version": "0.1.0",
+  "engines": {
+    "node": ">=16.19.1"
+  },
   "private": true,
   "homepage": "./",
   "dependencies": {
@@ -16,7 +19,7 @@
     "bootstrap-icons": "^1.4.0",
     "d3": "~5.9.x",
     "chance": "^1.1.7",
-    "node-sass": "^7.0.0",
+    "node-sass": "^6.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
